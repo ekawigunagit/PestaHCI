@@ -37,61 +37,63 @@
         <h2>Katalog Produk</h2>
         <div class="row">
 
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-12 col-md-4 col-lg-3">
                 <div class="card" style="height: 18rem;">
                     <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="index.php?page=promoPage" class="link">
+                    <a href="index.php?page=thankyouPage" class="link">
                         <div class="card-footer">
-                            <p class="text-visit-katalog">Visist</p>
+                            <p class="text-visit-katalog">Apply Now</p>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-12 col-md-4 col-lg-3">
                 <div class="card" style="height: 18rem;">
-                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
+                    <img src="./images/product/glass02.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="index.php?page=promoPage" class="link">
+                    <a href="index.php?page=thankyouPage" class="link">
                         <div class="card-footer">
-                            <p class="text-visit-katalog">Visist</p>
+                            <p class="text-visit-katalog">Apply Now</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card" style="height: 18rem;">
+                    <img src="./images/product/glass03.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card </p>
+                    </div>
+                    <a href="index.php?page=thankyouPage" class="link">
+                        <div class="card-footer">
+                            <p class="text-visit-katalog">Apply Now</p>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <div class="col-6 col-md-4 col-lg-3">
+            <div class="col-12 col-md-4 col-lg-3">
                 <div class="card" style="height: 18rem;">
-                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
+                    <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="index.php?page=promoPage" class="link">
+                    <a href="index.php?page=thankyouPage" class="link">
                         <div class="card-footer">
-                            <p class="text-visit-katalog">Visist</p>
+                            <p class="text-visit-katalog">Apply Now</p>
                         </div>
                     </a>
                 </div>
             </div>
 
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
-                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card </p>
-                    </div>
-                    <a href="index.php?page=promoPage" class="link">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Visist</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            
 
         </div>
     </div>

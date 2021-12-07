@@ -49,7 +49,7 @@
                     <li>Nilai maksimum pembiayaan dan uang muka ditentukan oleh riwayat pembiayaan pelanggan</li>
                 </ul>
                 <div class="bnt-ajukan">
-                    <button class="btn" type="submit">Ajukan Sekarang</button>
+                    <a href="" target="_self"><button class="btn" type="submit">Ajukan Sekarang</button></a>
                 </div>
             </div>
         </div>
@@ -64,21 +64,21 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <a href="./index.html">
+                        <a href="index.php?page=promoPage">
                             <div class="card promo">
                                 <img src="./images/promo/promo01.png" alt="...">
                             </div>
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="./index.html">
+                        <a href="index.php?page=promoPage">
                             <div class="card promo">
                                 <img src="./images/promo/promo01.png" alt="...">
                             </div>
                         </a>
                     </div>
                     <div class="swiper-slide">
-                        <a href="./index.html">
+                        <a href="index.php?page=promoPage">
                             <div class="card promo">
                                 <img src="./images/promo/promo01.png" alt="...">
                             </div>

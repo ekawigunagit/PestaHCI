@@ -2534,6 +2534,7 @@ label
 {
 	width: 100%;
 	margin-top: 46px;
+	text-align: left;
 }
 .checkout_form > div:not(:last-child)
 {
@@ -2821,6 +2822,7 @@ label
     color: white;
     height: 40px;
     width: 180px;
+	cursor: pointer;
 }
 
 /* promo */
@@ -2876,4 +2878,26 @@ footer .site-map-all .site-map-buttom {
 .contact {
     display: grid;
     grid-template-rows: 25% 25% 25% 25%;
+}
+
+
+/************
+10. 767px
+************/
+
+@media only screen and (max-width: 767px)
+{
+	.card
+	{
+		margin-top: 50px;
+		margin-bottom: 150px;
+		padding-bottom: 50px;
+	}
+	.card-body {
+		margin-bottom: 0px;
+	}
+
+	.card-text {
+		margin-bottom: 10px;
+	}
 }
