@@ -37,8 +37,8 @@
         <h2>Katalog Produk</h2>
         <div class="row">
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <div class="card" >
                     <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -51,8 +51,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <div class="card">
                     <img src="./images/product/glass02.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -65,9 +65,9 @@
                 </div>
             </div>
             
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
-                    <img src="./images/product/glass03.png" class="card-img-top" alt="...">
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <div class="card">
+                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
@@ -79,8 +79,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
+            <div class="col-6 col-md-6 col-lg-3 mt-4 mb-4">
+                <div class="card" >
                     <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
