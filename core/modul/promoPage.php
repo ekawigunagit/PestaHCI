@@ -165,7 +165,7 @@
                     </div> -->
                 </div>
                 <div class="modal-footer">
-                    <img src="images/ellipsis.gif" id="loading-img" alt="loading-img">
+                    <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img">
                     <div class="system_error"></div><br />
                     <!-- <label class="checkbox-inline pull-left"><a href="#myModalRegist" class="trigger-btn" data-toggle="modal">Register</a></label> -->
                     <input type="submit" class="btn btn-primary pull-right" value="Apply Now">
