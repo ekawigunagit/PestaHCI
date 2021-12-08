@@ -1,3 +1,24 @@
+<div class="why-wrapper">
+    <div class="container">
+        <div class="row why-item-all">
+            <div class="col why-item">
+               <a href=""> <img src="./images/product/icons8-mobile-phone-64.png" alt=""></a>
+            </div>
+            <div class="col why-item">
+                <img src="./images/product/icons8-sofa-100.png" alt="">
+            </div>
+            <div class="col why-item active">
+                 <img src="./images/product/icons8-glasses-100.png" alt="">
+            </div>
+            <div class="co why-item ">
+                 <img src="./images/product/icons8-bike-60.png" alt="">
+            </div>
+            <div class="col why-item">
+                 <img src="./images/product/icons8-glasses-100.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="promo">
         <h2>Promo Untukmu</h2>

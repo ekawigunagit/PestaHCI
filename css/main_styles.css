@@ -48,7 +48,7 @@ body {
 	font-size: 14px;
 	font-weight: 400;
 	background: #FFFFFF;
-	color: #a5a5a5;
+	color: #0a0a0a;
 }
 
 div {
@@ -336,7 +336,6 @@ section {
 
 .header_container {
 	width: 100%;
-	z-index: 1;
 	background: #FFFFFF;
 }
 
@@ -840,8 +839,8 @@ section {
 
 .home {
 	width: 100%;
-	height: 750px;
 	/* Tinggi Home Slider */
+	padding: 100px 0 0 0;
 	background: #FFFFFF;
 	/* z-index: 2; */
 }
@@ -2757,6 +2756,7 @@ label {
 }
 
 .promo h2 {
+	color: black;
 	margin-top: 20px;
 }
 
@@ -2811,6 +2811,22 @@ label {
 	height: 40px;
 	width: 180px;
 	cursor: pointer;
+}
+/* why-wrapper */
+.why-wrapper{
+	background-color:  rgb(247, 56, 65);
+}
+.why-item{
+	padding: 50px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.why-item:hover{
+	background-color: rgba(63, 78, 100, 0.15);
+} 
+.active{
+	background-color: rgba(99, 22, 22, 0.377);
 }
 
 /* promo */
