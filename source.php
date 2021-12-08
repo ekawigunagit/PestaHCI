@@ -73,11 +73,11 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
-                    </a>
+                    </span>
                 </div>
             </div>
 
@@ -87,11 +87,11 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
-                    </a>
+                    </span>
                 </div>
             </div>
 
@@ -102,11 +102,11 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
-                    </a>
+                    </span>
                 </div>
             </div>
 
@@ -117,11 +117,11 @@
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
                     <!--  -->
-                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
-                    </a>
+                    </span>
                 </div>
             </div>
 
@@ -131,11 +131,11 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
-                    </a>
+                    </span>
                 </div>
             </div>
 
@@ -145,11 +145,11 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
-                    </a>
+                    </span>
                 </div>
             </div>
 
@@ -160,11 +160,11 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
-                    </a>
+                    </span>
                 </div>
             </div>
 
@@ -175,11 +175,11 @@
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
                     <!--  -->
-                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
-                    </a>
+                    </span>
                 </div>
             </div>
 

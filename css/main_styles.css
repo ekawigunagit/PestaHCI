@@ -2922,3 +2922,15 @@ footer .site-map-all .site-map-buttom {
 .modal {
 	background-color: rgba(0,0,0,.7);
 }
+
+.trigger-btn {
+	cursor: pointer;
+}
+
+.close {
+	cursor: pointer;
+}
+
+.btn-primary {
+	cursor: pointer;
+}
