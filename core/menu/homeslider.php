@@ -1,103 +1,35 @@
 <!-- Home Slider -->
-
 <div class="home">
-    <div class="home_slider_container">
-
-        <!-- Home Slider -->
-        <div class="owl-carousel owl-theme home_slider">
-
-            <!-- Slider Item -->
-            <div class="owl-item home_slider_item">
-                <img src="./images/home_slider_1.png" alt="">
-                <div class="home_slider_content_container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <!-- <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-										<div class="home_slider_title">A new Online Shop experience.</div>
-										<div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-										<div class="button button_light home_button"><a href="#">Shop Now</a></div>
-									</div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slider Item -->
-            <div class="owl-item home_slider_item">
-              <img src="./images/home_slider_2.png" alt="">
-                <div class="home_slider_content_container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <!-- <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-										<div class="home_slider_title">A new Online Shop experience.</div>
-										<div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-										<div class="button button_light home_button"><a href="#">Shop Now</a></div>
-									</div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slider Item -->
-            <div class="owl-item home_slider_item">
-            <img src="./images/home_slider_3.png" alt="">>
-                <div class="home_slider_content_container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <!-- <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-										<div class="home_slider_title">A new Online Shop experience.</div>
-										<div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-										<div class="button button_light home_button"><a href="#">Shop Now</a></div>
-									</div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slider Item -->
-            <div class="owl-item home_slider_item">
-            <img src="./images/home_slider_4.png" alt="">
-                <div class="home_slider_content_container">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col">
-                                <!-- <div class="home_slider_content"  data-animation-in="fadeIn" data-animation-out="animate-out fadeOut">
-										<div class="home_slider_title">A new Online Shop experience.</div>
-										<div class="home_slider_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viverra velit venenatis fermentum luctus.</div>
-										<div class="button button_light home_button"><a href="#">Shop Now</a></div>
-									</div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
-
-        <!-- Home Slider Dots -->
-
-        <div class="home_slider_dots_container">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="home_slider_dots">
-                            <ul id="home_slider_custom_dots" class="home_slider_custom_dots">
-                                <li class="home_slider_custom_dot active">01.</li>
-                                <li class="home_slider_custom_dot">02.</li>
-                                <li class="home_slider_custom_dot">03.</li>
-                                <li class="home_slider_custom_dot">04.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/home_slider_1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/home_slider_2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/home_slider_3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/home_slider_4.png" class="d-block w-100" alt="...">
             </div>
         </div>
-
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button> -->
     </div>
 </div>
