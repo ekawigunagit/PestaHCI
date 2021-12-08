@@ -2,19 +2,19 @@
     <div class="container">
         <div class="row why-item-all">
             <div class="col why-item">
-               <a href=""> <img src="./images/product/icons8-mobile-phone-64.png" alt=""></a>
+               <a href=""><img src="./images/iconcategory/handphone.png" alt=""></a>
             </div>
             <div class="col why-item">
-            <a href=""> <img src="./images/product/icons8-sofa-100.png" alt=""> </a>
+            <a href=""> <img src="./images/iconcategory/sofa.png" alt=""> </a>
             </div>
             <div class="col why-item active-item">
-            <a href=""> <img src="./images/product/icons8-glasses-100.png" alt=""></a>
+            <a href=""> <img src="./images/iconcategory/glasses.png" alt=""></a>
             </div>
-            <div class="co why-item ">
-            <a href=""><img src="./images/product/icons8-bike-60.png" alt=""> </a>
+            <div class="col why-item ">
+            <a href=""><img src="./images/iconcategory/bycicle.png" alt=""> </a>
             </div>
             <div class="col why-item">
-                <a href=""> <img src="./images/product/icons8-glasses-100.png" alt=""></a>
+                <a href=""><img src="./images/iconcategory/washmacine.png" alt=""></a>
             </div>
         </div>
         <div class="item-brand">
