@@ -842,7 +842,7 @@ section {
 	/* Tinggi Home Slider */
 	padding: 100px 0 0 0;
 	background: #FFFFFF;
-	/* z-index: 2; */
+	z-index: 2;
 }
 
 .home_slider_container {
@@ -2750,7 +2750,11 @@ label {
 /*********************************
 18. Home Page HCI
 *********************************/
-
+@media (min-width : 480px) {
+	.promo-page{
+		padding: 50px 0;
+	}
+}
 .promo {
 	margin: 10px 0 30px 0;
 }
@@ -2796,6 +2800,18 @@ label {
 }
 
 /* btn */
+.detail-text-product p{
+	color: black;
+}
+.detail-text-product h5 {
+	font-size: large;
+	margin: 10px 0;
+}
+.detail-text-product ul li{
+	list-style: initial;
+	font-weight: bold;
+	margin: 10px 100px 0 90px;
+}
 .detail-list .bnt-ajukan {
 	margin: 30px 0;
 	display: flex;
@@ -2825,7 +2841,7 @@ label {
 .why-item:hover{
 	background-color: rgba(63, 78, 100, 0.15);
 } 
-.active{
+.active-item{
 	background-color: rgba(99, 22, 22, 0.377);
 }
 
@@ -2839,13 +2855,13 @@ label {
 }
 
 .detail-promo {
-	padding: 50px;
+	padding: 50px 0;
 	text-align: center;
 }
 
 .detail-promo .sosmed img {
 	width: 35px;
-	margin-left: 15px;
+	margin-left: 10px;
 }
 
 .ojk img {

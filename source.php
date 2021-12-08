@@ -5,16 +5,25 @@
                <a href=""> <img src="./images/product/icons8-mobile-phone-64.png" alt=""></a>
             </div>
             <div class="col why-item">
-                <img src="./images/product/icons8-sofa-100.png" alt="">
+            <a href=""> <img src="./images/product/icons8-sofa-100.png" alt=""> </a>
             </div>
-            <div class="col why-item active">
-                 <img src="./images/product/icons8-glasses-100.png" alt="">
+            <div class="col why-item active-item">
+            <a href=""> <img src="./images/product/icons8-glasses-100.png" alt=""></a>
             </div>
             <div class="co why-item ">
-                 <img src="./images/product/icons8-bike-60.png" alt="">
+            <a href=""><img src="./images/product/icons8-bike-60.png" alt=""> </a>
             </div>
             <div class="col why-item">
-                 <img src="./images/product/icons8-glasses-100.png" alt="">
+                <a href=""> <img src="./images/product/icons8-glasses-100.png" alt=""></a>
+            </div>
+        </div>
+        <div class="item-brand">
+            <div class="row item-brand-all">
+                <div class="col item-brand-list">
+                    <a href=""></a>
+                </div>
+                <div class="col item-brand-list"></div>
+                <div class="col item-brand-list"></div>
             </div>
         </div>
     </div>
@@ -116,8 +125,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <div class="card" >
                     <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -130,8 +139,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <div class="card">
                     <img src="./images/product/glass02.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -144,9 +153,10 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
-                    <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
+            
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <div class="card">
+                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
@@ -158,8 +168,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
+            <div class="col-6 col-md-6 col-lg-3 mt-4 mb-4">
+                <div class="card" >
                     <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>

@@ -1,4 +1,5 @@
 <!-- <img src="./images/promo/promo_img.jpg" class="img-fluid w-100"> -->
+<div class="promo-page">
 <div class="container">
     <div class="promo-product">
         <div class="detail-promo">
@@ -52,6 +53,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <div class="product-lainnya">
