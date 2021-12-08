@@ -37,8 +37,8 @@
         <h2>Katalog Produk</h2>
         <div class="row">
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <div class="card" >
                     <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -51,8 +51,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <div class="card">
                     <img src="./images/product/glass02.png" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -65,9 +65,10 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
-                    <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
+            
+            <div class="col-6 col-md-6 col-lg-3 mt-4">
+                <div class="card">
+                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
@@ -79,8 +80,8 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
+            <div class="col-6 col-md-6 col-lg-3 mt-4 mb-4">
+                <div class="card" >
                     <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -232,7 +233,7 @@
                     </div> -->
                 </div>
                 <div class="modal-footer">
-                    <img src="images/ellipsis.gif" id="loading-img" alt="loading-img">
+                    <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img">
                     <div class="system_error"></div><br />
                     <!-- <label class="checkbox-inline pull-left"><a href="#myModalRegist" class="trigger-btn" data-toggle="modal">Register</a></label> -->
                     <input type="submit" class="btn btn-primary pull-right" value="Apply Now">

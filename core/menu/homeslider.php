@@ -8,7 +8,7 @@
 
             <!-- Slider Item -->
             <div class="owl-item home_slider_item">
-                <div class="home_slider_background" style="background-image:url(images/home_slider_1.png)"></div>
+                <img src="./images/home_slider_1.png" alt="">
                 <div class="home_slider_content_container">
                     <div class="container">
                         <div class="row">
@@ -26,7 +26,7 @@
 
             <!-- Slider Item -->
             <div class="owl-item home_slider_item">
-                <div class="home_slider_background" style="background-image:url(images/home_slider_2.png)"></div>
+              <img src="./images/home_slider_2.png" alt="">
                 <div class="home_slider_content_container">
                     <div class="container">
                         <div class="row">
@@ -44,7 +44,7 @@
 
             <!-- Slider Item -->
             <div class="owl-item home_slider_item">
-                <div class="home_slider_background" style="background-image:url(images/home_slider_3.png)"></div>
+            <img src="./images/home_slider_3.png" alt="">>
                 <div class="home_slider_content_container">
                     <div class="container">
                         <div class="row">
@@ -62,7 +62,7 @@
 
             <!-- Slider Item -->
             <div class="owl-item home_slider_item">
-                <div class="home_slider_background" style="background-image:url(images/home_slider_4.png)"></div>
+            <img src="./images/home_slider_4.png" alt="">
                 <div class="home_slider_content_container">
                     <div class="container">
                         <div class="row">
