@@ -43,7 +43,7 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="index.php?page=thankyouPage" class="link">
+                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
@@ -57,21 +57,7 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="index.php?page=thankyouPage" class="link">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Apply Now</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-4 col-lg-3">
-                <div class="card" style="height: 18rem;">
-                    <img src="./images/product/glass03.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card </p>
-                    </div>
-                    <a href="index.php?page=thankyouPage" class="link">
+                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
@@ -85,7 +71,7 @@
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
                     </div>
-                    <a href="index.php?page=thankyouPage" class="link">
+                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
                         <div class="card-footer">
                             <p class="text-visit-katalog">Apply Now</p>
                         </div>
@@ -93,125 +79,165 @@
                 </div>
             </div>
 
-            
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card" style="height: 18rem;">
+                    <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card </p>
+                    </div>
+                    <!--  -->
+                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                        <div class="card-footer">
+                            <p class="text-visit-katalog">Apply Now</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card" style="height: 18rem;">
+                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card </p>
+                    </div>
+                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                        <div class="card-footer">
+                            <p class="text-visit-katalog">Apply Now</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card" style="height: 18rem;">
+                    <img src="./images/product/glass02.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card </p>
+                    </div>
+                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                        <div class="card-footer">
+                            <p class="text-visit-katalog">Apply Now</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card" style="height: 18rem;">
+                    <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card </p>
+                    </div>
+                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                        <div class="card-footer">
+                            <p class="text-visit-katalog">Apply Now</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="card" style="height: 18rem;">
+                    <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card </p>
+                    </div>
+                    <!--  -->
+                    <a href="#" class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                        <div class="card-footer">
+                            <p class="text-visit-katalog">Apply Now</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
 
         </div>
     </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-<!-- Ads -->
-
-<!-- <div class="avds">
-    <div class="avds_container d-flex flex-lg-row flex-column align-items-start justify-content-between">
-        <div class="avds_small owl-carousel owl-theme ads_slider">
-
-            <div class="avds_background" style="background-image:url(images/avds_small_1.png)"></div>
-            <div class="avds_background" style="background-image:url(images/avds_small_2.png)"></div>
-            <div class="avds_background" style="background-image:url(images/avds_small_3.png)"></div>
-
-        </div>
-
-        <div class="avds_large owl-carousel owl-theme ads_slider">
-
-            <div class="avds_background" style="background-image:url(images/avds_large_1.png)"></div>
-            <div class="avds_background" style="background-image:url(images/avds_large_2.png)"></div>
-            <div class="avds_background" style="background-image:url(images/avds_large_3.png)"></div>
-            <div class="avds_large_container">
-                <div class="avds_large_content">
-                    <div class="avds_title">Professional Cameras</div>
-                    <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus. Sed nec molestie eros. Sed viver ra velit venenatis fermentum luctus.</div>
-                    <div class="avds_link avds_link_large"><a href="categories.html">See More</a></div>
+<!-- Modal HTML PRODUCT -->
+<div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <form action="index.php?page=thankyouPage" method="post" class="submitForm" data-type="login">
+                <div class="modal-header">
+                    <h4 class="modal-title">Product XXX</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div> -->
-
-<!-- Products -->
-
-
-<!-- <div class="products">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                
-                <div class="product_grid">
-
-                    Product
-                    <div class="product">
-                        <div class="product_image"><a href="index.php?page=productList"><img src="images/product_hp.png" alt=""></a></div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input name="customer_name" type="text" class="form-control">
                     </div>
-
-                    Product
-                    <div class="product">
-                        <div class="product_image"><a href="index.php?page=productList"><img src="images/product_fashion.png" alt=""></a></div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input name="email_address" type="email" class="form-control">
                     </div>
-
-                    Product
-                    <div class="product">
-                        <div class="product_image"><a href="index.php?page=productList"><img src="images/product_electronic.png" alt=""></a></div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input name="customer_phone_number" type="text" class="form-control">
                     </div>
-
-                    Product
-                    <div class="product">
-                        <div class="product_image"><a href="index.php?page=productList"><img src="images/product_furniture.png" alt=""></a></div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <select name="city" class="form-control">
+                            <option> --Choose One-- </option>
+                            <option>Balikpapan</option>
+                            <option>Bandung</option>
+                            <option>Banjarmasin</option>
+                            <option>Batam</option>
+                            <option>Bekasi</option>
+                            <option>Bengkulu</option>
+                            <option>Bogor</option>
+                            <option>Cirebon</option>
+                            <option>Denpasar</option>
+                            <option>Depok</option>
+                            <option>Gorontalo</option>
+                            <option>Jakarta</option>
+                            <option>Jambi</option>
+                            <option>Karawang</option>
+                            <option>Kediri</option>
+                            <option>Lampung</option>
+                            <option>Makassar</option>
+                            <option>Malang</option>
+                            <option>Manado</option>
+                            <option>Medan</option>
+                            <option>Melayu Deli</option>
+                            <option>Padang</option>
+                            <option>Palembang</option>
+                            <option>Pekanbaru</option>
+                            <option>Pontianak</option>
+                            <option>Semarang</option>
+                            <option>Surabaya</option>
+                            <option>Tangerang</option>
+                            <option>Tangerang Selatan</option>
+                            <option>Yogyakarta</option>
+                        </select>
                     </div>
-
-                    Product
-                    <div class="product">
-                        <div class="product_image"><a href="index.php?page=productList"><img src="images/product_wellness.png" alt=""></a></div>
+                    <div class="form-group">
+                        <label>Area</label>
+                        <select name="area" class="form-control">
+                            <option>Area 1</option>
+                            <option>Area 2</option>
+                            <option>Area 3</option>
+                            <option>Area 4</option>
+                            <option>Area 5</option>
+                        </select>
                     </div>
-
-                    Product
-                    <div class="product">
-                        <div class="product_image"><a href="index.php?page=productList"><img src="images/product_optic.png" alt=""></a></div>
-                    </div>
-
-                    Product
-                    <div class="product">
-                        <div class="product_image"><a href="index.php?page=productList"><img src="images/product_bicycle.png" alt=""></a></div>
-                    </div>
-
-                    Product
-                    <div class="product">
-                        <div class="product_image"><a href="index.php?page=productList"><img src="images/product_other.png" alt=""></a></div>
-                    </div>
-
+                    <!-- <div class="form-group">
+                        <div class="clearfix">
+                            <label><a href="#myModalForgotPassword" class="pull-right text-muted trigger-btn" data-dismiss="modal" data-toggle="modal"><small>Forgot Password ?</small></a></label>
+                        </div>
+                    </div> -->
                 </div>
-                    
-            </div>
+                <div class="modal-footer">
+                    <img src="images/ellipsis.gif" id="loading-img" alt="loading-img">
+                    <div class="system_error"></div><br />
+                    <!-- <label class="checkbox-inline pull-left"><a href="#myModalRegist" class="trigger-btn" data-toggle="modal">Register</a></label> -->
+                    <input type="submit" class="btn btn-primary pull-right" value="Apply Now">
+                </div>
+            </form>
         </div>
     </div>
-</div> -->
-
-<!-- Ad -->
-
-<!-- <div class="avds_xl">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="avds_xl_container clearfix">
-                    <div class="avds_xl_background" style="background-image:url(images/avds_xl.jpg)"></div>
-                    <div class="avds_xl_content">
-                        <div class="avds_title">Amazing Devices</div>
-                        <div class="avds_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ultricies metus.</div>
-                        <div class="avds_link avds_xl_link"><a href="categories.html">See More</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
+</div>

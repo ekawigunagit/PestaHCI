@@ -2901,3 +2901,13 @@ footer .site-map-all .site-map-buttom {
 		margin-bottom: 10px;
 	}
 }
+
+
+/************
+10. Modal Apply
+************/
+
+
+.modal {
+	background-color: rgba(0,0,0,.7);
+}

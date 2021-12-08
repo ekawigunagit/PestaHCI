@@ -7,13 +7,13 @@
 
 <body>
 
-	
+<?php //include 'test.php'; ?>
 
 		<!-- Top Menu -->
 		<?php include 'core/menu/topmenu.php'; ?>
 		
 		<!-- Home Page -->
-		<?php include 'core/menu/homeslider.php'; ?>		
+		<?php include 'core/menu/homeslider.php'; ?>
 
 		<!-- Home Page -->
 		<?php include 'core/code/route.php'; ?>
