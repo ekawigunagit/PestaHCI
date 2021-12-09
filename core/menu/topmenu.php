@@ -49,12 +49,12 @@
                                         <li><a href="index.php?page=productList">Manado</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Our Promo</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="index.php?page=promoPage">Our Promo</a></li>
+                                <li><a href="index.php?page=hadiahPage">Hadiah Pesta</a></li>
                             </ul>
                         </nav>
                         <div class="header_extra ml-auto">
-                            <div class="shopping_cart">
+                            <!-- <div class="shopping_cart">
                                 <a href="index.php?page=cartPage">
                                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                 viewBox="0 0 489 489" style="enable-background:new 0 0 489 489;" xml:space="preserve">
@@ -68,7 +68,7 @@
                                     </svg>
                                     <div>Cart <span>(0)</span></div>
                                 </a>
-                            </div>
+                            </div> -->
                             <div class="search">
                                 <div class="search_icon">
                                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -172,8 +172,8 @@
                         <li class="page_menu_item menu_mm"><a href="#">Manado<i class="fa fa-angle-down"></i></a></li>
                     </ul>
                 </li>
-                <li class="page_menu_item menu_mm"><a href="#">Our Promo<i class="fa fa-angle-down"></i></a></li>
-                <li class="page_menu_item menu_mm"><a href="#">Contact<i class="fa fa-angle-down"></i></a></li>
+                <li class="page_menu_item menu_mm"><a href="index.php?page=promoPage">Our Promo<i class="fa fa-angle-down"></i></a></li>
+                <li class="page_menu_item menu_mm"><a href="index.php?page=hadiahPage">Hadiah Pesta<i class="fa fa-angle-down"></i></a></li>
             </ul>
         </div>
     </div>
@@ -182,10 +182,8 @@
 
     <div class="menu_social">
         <ul>
-            <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         </ul>
     </div>
 </div>

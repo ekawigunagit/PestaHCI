@@ -49,21 +49,21 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 <div class="swiper-slide">
-                    <a href="index.php?page=promoPage">
+                    <a href="index.php?page=detailpromoPage">
                         <div class="card promo">
                             <img src="./images/promo/promo01.png" alt="...">
                         </div>
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="index.php?page=promoPage">
+                    <a href="index.php?page=detailpromoPage">
                         <div class="card promo">
                             <img src="./images/promo/promo01.png" alt="...">
                         </div>
                     </a>
                 </div>
                 <div class="swiper-slide">
-                    <a href="index.php?page=promoPage">
+                    <a href="index.php?page=detailpromoPage">
                         <div class="card promo">
                             <img src="./images/promo/promo01.png" alt="...">
                         </div>
@@ -268,6 +268,16 @@
                             <option>Area 3</option>
                             <option>Area 4</option>
                             <option>Area 5</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Pilih Hadiah</label>
+                        <select name="hadiah" class="form-control">
+                            <option>Hadiah 1</option>
+                            <option>Hadiah 2</option>
+                            <option>Hadiah 3</option>
+                            <option>Hadiah 4</option>
+                            <option>Hadiah 5</option>
                         </select>
                     </div>
                     <!-- <div class="form-group">

