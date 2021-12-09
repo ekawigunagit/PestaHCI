@@ -2824,6 +2824,7 @@ label {
 	border: none;
 	width: 100px;
 	height: 35px;
+	cursor: pointer;
 }
 .card-footer .text-visit-katalog {
 	text-align: center;
