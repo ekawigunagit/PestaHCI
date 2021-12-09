@@ -57,7 +57,8 @@
             $(this).addClass("active-item");
     })
 
-    $("#myModal .close").on("click", function() {
-        $("#myModal").hide()
+    $(".item-brand-list").on("click", function() {
+        $('.item-brand-list').removeClass("active-logo");
+            $(this).addClass("active-logo");
     })
 </script>
