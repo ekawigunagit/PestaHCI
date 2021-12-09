@@ -454,5 +454,5 @@ $(document).ready(function()
 			});
 		}
 	}
-
+	
 });

@@ -378,7 +378,7 @@ section {
 
 	.why-wrapper{
 		background-color:  rgb(247, 56, 65);
-		margin: 70px 0;
+		margin: 70px 0 0 0;
 		padding: 0;
 	}
 
@@ -2944,4 +2944,23 @@ footer .site-map-all .site-map-buttom {
 
 .btn-primary {
 	cursor: pointer;
+}
+.item-brand-all {
+	padding: 0;
+	
+}
+.item-brand {
+	padding: 0;
+
+}
+.item-brand-list {
+	text-align: center;
+	padding: 30px 0;
+}
+.item-brand-list img{
+	width: 80px;
+}
+
+.active-logo {
+	background-color: slategrey;
 }

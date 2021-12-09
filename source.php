@@ -2,28 +2,40 @@
     <div class="container">
         <div class="row why-item-all">
             <div class="col why-item">
-               <a href=""><img src="./images/iconcategory/handphone.png" alt=""></a>
+                <a href="#"><img src="./images/iconcategory/handphone.png" alt=""></a>
             </div>
             <div class="col why-item">
-            <a href=""> <img src="./images/iconcategory/sofa.png" alt=""> </a>
+                <a href="#"> <img src="./images/iconcategory/sofa.png" alt=""> </a>
             </div>
             <div class="col why-item active-item">
-            <a href=""> <img src="./images/iconcategory/glasses.png" alt=""></a>
+                <a href="#"> <img src="./images/iconcategory/glasses.png" alt=""></a>
             </div>
             <div class="col why-item ">
-            <a href=""><img src="./images/iconcategory/bycicle.png" alt=""> </a>
+                <a href="#"><img src="./images/iconcategory/bycicle.png" alt=""> </a>
             </div>
             <div class="col why-item">
-                <a href=""><img src="./images/iconcategory/washmacine.png" alt=""></a>
+                <a href="#"><img src="./images/iconcategory/washmacine.png" alt=""></a>
             </div>
         </div>
-        <div class="item-brand">
-            <div class="row item-brand-all">
-                <div class="col item-brand-list">
-                    <a href=""></a>
-                </div>
-                <div class="col item-brand-list"></div>
-                <div class="col item-brand-list"></div>
+    </div>
+</div>
+<div class="item-brand">
+    <div class="container">
+        <div class="row item-brand-all">
+            <div class="col item-brand-list active-logo">
+                <a href="#"> <img src="./images/logobrand/samsung.png" alt=""> </a>
+            </div>
+            <div class="col item-brand-list">
+                <a href="#"> <img src="./images/logobrand/hitachi.png" alt=""> </a>
+            </div>
+            <div class="col item-brand-list">
+                <a href="#"> <img src="./images/logobrand/panasonic.png" alt=""> </a>
+            </div>
+            <div class="col item-brand-list">
+                <a href="#"> <img src="./images/logobrand/sony.png" alt=""> </a>
+            </div>
+            <div class="col item-brand-list">
+                <a href="#"> <img src="./images/logobrand/toshiba.png" alt=""> </a>
             </div>
         </div>
     </div>
@@ -68,7 +80,7 @@
         <div class="row">
 
             <div class="col-6 col-md-6 col-lg-3 mt-4">
-                <div class="card" >
+                <div class="card">
                     <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -95,7 +107,7 @@
                 </div>
             </div>
 
-            
+
             <div class="col-6 col-md-6 col-lg-3 mt-4">
                 <div class="card">
                     <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
@@ -111,7 +123,7 @@
             </div>
 
             <div class="col-6 col-md-6 col-lg-3 mt-4 mb-4">
-                <div class="card" >
+                <div class="card">
                     <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -126,7 +138,7 @@
             </div>
 
             <div class="col-6 col-md-6 col-lg-3 mt-4">
-                <div class="card" >
+                <div class="card">
                     <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -153,7 +165,7 @@
                 </div>
             </div>
 
-            
+
             <div class="col-6 col-md-6 col-lg-3 mt-4">
                 <div class="card">
                     <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
@@ -169,7 +181,7 @@
             </div>
 
             <div class="col-6 col-md-6 col-lg-3 mt-4 mb-4">
-                <div class="card" >
+                <div class="card">
                     <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Some quick example text to build on the card </p>
@@ -190,7 +202,8 @@
 </div>
 
 <!-- Modal HTML PRODUCT -->
-<div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+<div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false"
+    data-backdrop="static">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <form action="index.php?page=thankyouPage" method="post" class="submitForm" data-type="login">

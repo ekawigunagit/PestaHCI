@@ -52,4 +52,12 @@
             },
         }
     });
+    $(".why-item").on("click", function() {
+        $('.why-item').removeClass("active-item");
+            $(this).addClass("active-item");
+    })
+
+    $("#myModal .close").on("click", function() {
+        $("#myModal").hide()
+    })
 </script>
