@@ -2815,6 +2815,16 @@ label {
 	text-decoration: none;
 }
 
+.card-footer-promo button {
+	background-color: rgb(247, 56, 65); 
+	color: white;
+	border-radius: 5px;
+	margin: 20px;
+	float: right;
+	border: none;
+	width: 100px;
+	height: 35px;
+}
 .card-footer .text-visit-katalog {
 	text-align: center;
 	margin: 0;
@@ -2881,6 +2891,10 @@ label {
 }
 
 @media(min-width:1024px){
+	.card-img-top-1 {
+		height: 230px;
+		object-fit: cover;
+	}
 	.why-item{
 		padding: 50px 0;
 		display: flex;
@@ -2908,6 +2922,13 @@ label {
 }
 
 /* promo */
+.promo-card-wrapper {
+	padding:50px 0;
+	margin: 30px 0 0 0;
+}
+.promo-card-wrapper .promo-card{
+	margin-top: 25px;
+}
 .promo {
 	margin: 10px 0 30px 0;
 }

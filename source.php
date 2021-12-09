@@ -19,6 +19,7 @@
         </div>
     </div>
 </div>
+
 <div class="item-brand">
     <div class="container">
         <div class="row item-brand-all">
@@ -40,6 +41,7 @@
         </div>
     </div>
 </div>
+
 <div class="container">
     <div class="promo">
         <h2>Promo Untukmu</h2>
