@@ -92,8 +92,8 @@
 <footer>
     <div class="container">
         <div class="row" >
-            <div class="col-6 ">
-                <img src="./images/footer/black_homecredit.svg">
+            <div class="col-6">
+                <img src="./images/footer/black_homecredit.svg" class="logo-footer">
                 <p class="mt-3">PT Home Credit Indonesia Plaza Oleos Lantai 8 Jl. TB Simatupang No. 53A,
                     Jakarta Selatan 12520
                 </p>
@@ -106,13 +106,15 @@
 
             <div class="col-6" style="text-align: right;">
                 <p>Hubungi Kami</p>
-                <p><img src="./images/footer/email.svg">@homecredit.co.id</p>
-                <p><img src="./images/footer/telpn.svg">021 2953 9600</p>
-                <p><img src="./images/footer/wa.svg">021 2953 9600</p>
+                <p><img src="./images/footer/email.svg" class="mr-2">@homecredit.co.id</p>
+                <p><img src="./images/footer/telpn.svg" class="mr-2">021 2953 9600</p>
+                <p><img src="./images/footer/wa.svg" class="mr-2">021 2953 9600</p>
                 <p>Unduh My Home Credit App</p>
 
-                <div class="app"><img src="./images/footer/app1.svg">
-                    <img src="./images/footer/app2.svg"></div>
+                <div class="app">
+                    <img src="./images/footer/app1.svg" class="mt-2">
+                    <img src="./images/footer/app2.svg" class="mt-2">
+                </div>
                 <div class="ojk">
                     <img src="./images/footer/ojk1.png">
                 </div>

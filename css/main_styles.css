@@ -383,11 +383,27 @@ section {
 	}
 
 	.why-item{
+	
+		padding: 0;
+		margin: 0;
+	}
+	.why-item a img{
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		padding: 0;
 	}
 
-}
+	.ojk img {
+		text-align: right;
+		margin-top: 30px;
+		width: 150px;
+	}
+	footer .logo-footer{
+		width: 200px;
+	}
 
+}
 .header.scrolled .logo img {
 	width: 70%;
 	-webkit-transition: all 200ms ease;
@@ -2843,11 +2859,46 @@ label {
 .why-wrapper{
 	background-color:  rgb(247, 56, 65);
 }
-.why-item{
-	padding: 50px 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+@media(min-width:460px){
+	.why-item{
+		padding: 20px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.why-item img{
+		padding: 0;
+		height: 60px;
+	}
+	.ojk img {
+		text-align: right;
+		margin-top: 30px;
+		width: 200px;
+	}
+	footer .logo-footer{
+		width: 180px;
+	}
+}
+
+@media(min-width:1024px){
+	.why-item{
+		padding: 50px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.why-item img{
+		padding: 0;
+		height: 70px;
+	}
+	.ojk img {
+		text-align: right;
+		margin-top: 30px;
+		width: 300px;
+	}
+	footer .logo-footer{
+		width: 300px;
+	}
 }
 .why-item:hover{
 	background-color: rgba(63, 78, 100, 0.15);
@@ -2875,11 +2926,7 @@ label {
 	margin-left: 10px;
 }
 
-.ojk img {
-	text-align: right;
-	margin-top: 30px;
-	width: 200px;
-}
+
 
 footer {
 	font-size: 12px;
@@ -2888,17 +2935,21 @@ footer {
 	background-color: black;
 }
 
-footer .contact {
-	text-align: right;
+footer .sosmed {
+	margin-top: 10px;
 }
-footer .footer-base {
+
+footer .sosmed img{
+	margin-left: 4px;
+}
+/* footer .footer-base {
 	width: 100%;
 	padding: 0;
 	margin: 0;
 }
 footer .site-map-all .site-map-2{
 	text-align: right;
-}
+} */
 /* }
 footer .site-map-all .site-map-top {
 	display: grid;
