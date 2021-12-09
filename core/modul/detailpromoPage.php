@@ -160,6 +160,16 @@
                             <option>Area 5</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label>Pilih Hadiah</label>
+                        <select name="area" class="form-control">
+                            <option>Hadiah 1</option>
+                            <option>Hadiah 2</option>
+                            <option>Hadiah 3</option>
+                            <option>Hadiah 4</option>
+                            <option>Hadiah 5</option>
+                        </select>
+                    </div>
                     <!-- <div class="form-group">
                         <div class="clearfix">
                             <label><a href="#myModalForgotPassword" class="pull-right text-muted trigger-btn" data-dismiss="modal" data-toggle="modal"><small>Forgot Password ?</small></a></label>

@@ -1,7 +1,7 @@
 <title>PESTA ONLINE HCI</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Sublime project">
+<meta name="description" content="Pesta Home Credit">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="images/favicon.ico" type="image/x-icon" rel="shortcut icon">
 <link href="images/favicon.ico" type="image/x-icon" rel="icon">
