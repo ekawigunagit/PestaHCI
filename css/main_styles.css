@@ -2870,6 +2870,7 @@ label {
 	background-color:  rgb(247, 56, 65);
 }
 @media(min-width:460px){
+
 	.why-item{
 		padding: 20px 0;
 		display: flex;
@@ -2914,6 +2915,7 @@ label {
 		width: 300px;
 	}
 }
+
 .why-item:hover{
 	background-color: rgba(63, 78, 100, 0.15);
 } 
@@ -2922,6 +2924,9 @@ label {
 }
 
 /* promo */
+.promo-wrapper .container{
+	padding: 0 20px;
+}
 .promo-card-wrapper {
 	padding:50px 0;
 	margin: 30px 0 0 0;
@@ -2946,7 +2951,6 @@ label {
 	width: 35px;
 	margin-left: 10px;
 }
-
 
 
 footer {
@@ -3036,4 +3040,10 @@ footer .site-map-all .site-map-buttom {
 .active-logo {
 	cursor: pointer;
 	background-color: rgba(63, 63, 63, 0.377);
+}
+.hadiah-item {
+	margin: 20px 0;
+}
+.hadiah-item .card-footer{
+	margin-top: 30px;
 }

@@ -9,7 +9,7 @@
                         <p class="card-text">Periode 24 Desember 2021 - 31 Desember 2021</p>
                     </div>
                     <div class="card-footer-promo">
-                        <a href="index.php?page=detailpromoPage"><button>lihat</button></a>
+                        <a href="index.php?page=detailpromoPage"><button class="btn">Lihat</button></a>
                     </div>
                 </div>
             </div>
@@ -21,7 +21,7 @@
                         <p class="card-text">Periode 6 Desember 2021 - 31 Desember 2021</p>
                     </div>
                     <div class="card-footer-promo">
-                    <a href="index.php?page=detailpromoPage"><button class="btn">lihat</button></a>
+                    <a href="index.php?page=detailpromoPage"><button class="btn">Lihat</button></a>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                         <p class="card-text">Periode 4 Desember 2021 - 12 Desember 2021</p>
                     </div>
                     <div class="card-footer-promo">
-                    <a href="index.php?page=detailpromoPage"><button class="btn">lihat</button></a>
+                    <a href="index.php?page=detailpromoPage"><button class="btn">Lihat</button></a>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                         <p class="card-text">Periode 3 Desember 2021 - 31 Desember 2021</p>
                     </div>
                     <div class="card-footer-promo">
-                    <a href="index.php?page=detailpromoPage"><button class="btn">lihat</button></a>
+                    <a href="index.php?page=detailpromoPage"><button class="btn">Lihat</button></a>
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                         <p class="card-text">Periode 3 Desember 2021 - 31 Desember 2021</p>
                     </div>
                     <div class="card-footer-promo">
-                    <a href="index.php?page=detailpromoPage"><button class="btn">lihat</button></a>
+                    <a href="index.php?page=detailpromoPage"><button class="btn">Lihat</button></a>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                         <p class="card-text">Periode 1 Desember 2021 - 31 Desember 2021</p>
                     </div>
                     <div class="card-footer-promo">
-                    <a href="index.php?page=detailpromoPage"><button class="btn">lihat</button></a>
+                    <a href="index.php?page=detailpromoPage"><button class="btn">Lihat</button></a>
                     </div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                         <p class="card-text">Periode 1 Desember 2021 - 31 Desember 2021</p>
                     </div>
                     <div class="card-footer-promo">
-                    <a href="index.php?page=detailpromoPage"><button class="btn">lihat</button></a>
+                    <a href="index.php?page=detailpromoPage"><button class="btn">Lihat</button></a>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
                         <p class="card-text">Periode 19 November 2021 - 31 Desember 2021</p>
                     </div>
                     <div class="card-footer-promo">
-                    <a href="index.php?page=detailpromoPage"><button class="btn">lihat</button></a>
+                    <a href="index.php?page=detailpromoPage"><button class="btn">Lihat</button></a>
                     </div>
                 </div>
             </div>
