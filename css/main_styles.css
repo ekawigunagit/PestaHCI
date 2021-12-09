@@ -3002,7 +3002,7 @@ footer .site-map-all .site-map-buttom {
 }
 .item-brand {
 	padding: 0;
-
+	border-bottom: 1px solid rgba(139, 134, 134, 0.205);
 }
 .item-brand-list {
 	text-align: center;
@@ -3013,5 +3013,6 @@ footer .site-map-all .site-map-buttom {
 }
 
 .active-logo {
+	cursor: pointer;
 	background-color: rgba(99, 22, 22, 0.377);
 }
