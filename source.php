@@ -42,163 +42,165 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="promo">
-        <h2>Promo Untukmu</h2>
-        <!-- Slider main container -->
-        <div class="swiper mt-3">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <a href="index.php?page=detailpromoPage">
-                        <div class="card promo">
-                            <img src="./images/promo/promo01.png" alt="...">
-                        </div>
-                    </a>
+<div class="home-product">
+    <div class="container">
+        <div class="promo">
+            <h2>Promo Untukmu</h2>
+            <!-- Slider main container -->
+            <div class="swiper mt-3">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <a href="index.php?page=detailpromoPage">
+                            <div class="card promo">
+                                <img src="./images/promo/promo01.png" alt="...">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="index.php?page=detailpromoPage">
+                            <div class="card promo">
+                                <img src="./images/promo/promo01.png" alt="...">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="index.php?page=detailpromoPage">
+                            <div class="card promo">
+                                <img src="./images/promo/promo01.png" alt="...">
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <a href="index.php?page=detailpromoPage">
-                        <div class="card promo">
-                            <img src="./images/promo/promo01.png" alt="...">
-                        </div>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="index.php?page=detailpromoPage">
-                        <div class="card promo">
-                            <img src="./images/promo/promo01.png" alt="...">
-                        </div>
-                    </a>
-                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
         </div>
-    </div>
 
-    <div class="katalog-product">
-        <h2>Katalog Produk</h2>
-        <div class="row">
+        <div class="katalog-product">
+            <h2>Katalog Produk</h2>
+            <div class="row">
 
-            <div class="col-6 col-md-6 col-lg-3 mt-4">
-                <div class="card">
-                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card </p>
-                    </div>
-                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Apply Now</p>
+                <div class="col-6 col-md-6 col-lg-3 mt-4">
+                    <div class="card katalog-item">
+                        <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card </p>
                         </div>
-                    </span>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-6 col-lg-3 mt-4">
-                <div class="card">
-                    <img src="./images/product/glass02.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card </p>
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                            <div class="card-footer">
+                                <p class="text-visit-katalog">Apply Now</p>
+                            </div>
+                        </span>
                     </div>
-                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Apply Now</p>
-                        </div>
-                    </span>
                 </div>
-            </div>
 
-
-            <div class="col-6 col-md-6 col-lg-3 mt-4">
-                <div class="card">
-                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card </p>
+                <div class="col-6 col-md-6 col-lg-3 mt-4">
+                    <div class="card katalog-item">
+                        <img src="./images/product/glass02.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card </p>
+                        </div>
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                            <div class="card-footer">
+                                <p class="text-visit-katalog">Apply Now</p>
+                            </div>
+                        </span>
                     </div>
-                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Apply Now</p>
-                        </div>
-                    </span>
                 </div>
-            </div>
 
-            <div class="col-6 col-md-6 col-lg-3 mt-4 mb-4">
-                <div class="card">
-                    <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card </p>
+
+                <div class="col-6 col-md-6 col-lg-3 mt-4">
+                    <div class="card katalog-item">
+                        <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card </p>
+                        </div>
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                            <div class="card-footer">
+                                <p class="text-visit-katalog">Apply Now</p>
+                            </div>
+                        </span>
                     </div>
-                    <!--  -->
-                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Apply Now</p>
-                        </div>
-                    </span>
                 </div>
-            </div>
 
-            <div class="col-6 col-md-6 col-lg-3 mt-4">
-                <div class="card">
-                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card </p>
+                <div class="col-6 col-md-6 col-lg-3 mt-4 mb-4">
+                    <div class="card katalog-item">
+                        <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card </p>
+                        </div>
+                        <!--  -->
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                            <div class="card-footer">
+                                <p class="text-visit-katalog">Apply Now</p>
+                            </div>
+                        </span>
                     </div>
-                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Apply Now</p>
-                        </div>
-                    </span>
                 </div>
-            </div>
 
-            <div class="col-6 col-md-6 col-lg-3 mt-4">
-                <div class="card">
-                    <img src="./images/product/glass02.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card </p>
+                <div class="col-6 col-md-6 col-lg-3 mt-4">
+                    <div class="card katalog-item">
+                        <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card </p>
+                        </div>
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                            <div class="card-footer">
+                                <p class="text-visit-katalog">Apply Now</p>
+                            </div>
+                        </span>
                     </div>
-                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Apply Now</p>
-                        </div>
-                    </span>
                 </div>
-            </div>
 
-
-            <div class="col-6 col-md-6 col-lg-3 mt-4">
-                <div class="card">
-                    <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card </p>
+                <div class="col-6 col-md-6 col-lg-3 mt-4">
+                    <div class="card katalog-item">
+                        <img src="./images/product/glass02.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card </p>
+                        </div>
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                            <div class="card-footer">
+                                <p class="text-visit-katalog">Apply Now</p>
+                            </div>
+                        </span>
                     </div>
-                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Apply Now</p>
-                        </div>
-                    </span>
                 </div>
-            </div>
 
-            <div class="col-6 col-md-6 col-lg-3 mt-4 mb-4">
-                <div class="card">
-                    <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card </p>
+
+                <div class="col-6 col-md-6 col-lg-3 mt-4">
+                    <div class="card katalog-item">
+                        <img src="./images/product/glass01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card </p>
+                        </div>
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                            <div class="card-footer">
+                                <p class="text-visit-katalog">Apply Now</p>
+                            </div>
+                        </span>
                     </div>
-                    <!--  -->
-                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Apply Now</p>
-                        </div>
-                    </span>
                 </div>
+
+                <div class="col-6 col-md-6 col-lg-3 mt-4 mb-4">
+                    <div class="card katalog-item">
+                        <img src="./images/product/glass04.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Some quick example text to build on the card </p>
+                        </div>
+                        <!--  -->
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                            <div class="card-footer">
+                                <p class="text-visit-katalog">Apply Now</p>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+
+
+
             </div>
-
-
-
         </div>
     </div>
 </div>
