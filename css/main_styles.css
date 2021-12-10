@@ -2899,10 +2899,9 @@ label {
 	background-color:  rgb(247, 56, 65);
 }
 @media(min-width:460px){
-	.QR_Scan img {
+	.QR_Scan .QR_Scan img {
 		height: 80%;
 		margin: 0;
-		background-color: darkslategray;
 	}
 	.home-product h2 {
 		font-size: 20px;
@@ -2929,7 +2928,8 @@ label {
 
 @media(min-width:1024px){
 	.QR_Scan img {
-		height: 100%;
+		object-fit: cover;
+		height: 590px;
 	}
 	.imgthankyou img {
 		margin: 0;
