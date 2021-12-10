@@ -369,7 +369,10 @@ section {
 		margin-bottom: 80px;
 	}
 	.imgthankyou {
-		margin-top: 0;
+		margin: 0;
+	}
+	.imgthankyou img{
+		height: 150px;
 	}
 	.home-product h2 {
 		font-size: 22px;
