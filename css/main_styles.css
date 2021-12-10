@@ -365,6 +365,12 @@ section {
 }
 
 @media (max-width: 585px) {
+	.home {
+		margin-bottom: 80px;
+	}
+	.imgthankyou {
+		margin-top: 0;
+	}
 	.home-product h2 {
 		font-size: 22px;
 	}
@@ -2780,6 +2786,11 @@ label {
 18. Home Page HCI
 *********************************/
 @media (min-width : 480px) {
+	.imgthankyou img {
+		margin-top: 0px;
+		height: 200px;
+		background-color: darksalmon;
+	}
 	.promo-page{
 		padding: 50px 0;
 	}
@@ -2906,6 +2917,10 @@ label {
 }
 
 @media(min-width:1024px){
+	.imgthankyou img {
+		margin: 0;
+		height: 400px;
+	}
 	.home-product h2 {
 		font-size: 28px;
 	}
