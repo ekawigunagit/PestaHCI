@@ -54,9 +54,9 @@
             </div>
         </div>
 
-        <div class="gamethankyou">
+        <!-- <div class="gamethankyou">
             <script src="https://cdn.htmlgames.com/embed.js?game=Avoider&amp;bgcolor=white"></script>
-        </div>
+        </div> -->
     </div>
 </div>
 

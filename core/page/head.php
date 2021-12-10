@@ -17,11 +17,3 @@
 <link rel="stylesheet" type="text/css" href="css/checkout_responsive.css">
 <link rel="stylesheet" type="text/css" href="css/cart_responsive.css">
 <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
-
-<!-- <link rel="stylesheet" type="text/css" href="css/categories.css"> -->
-<!-- <link rel="stylesheet" type="text/css" href="css/categories_responsive.css"> -->
-<!-- <link rel="stylesheet" type="text/css" href="css/product.css"> -->
-
-<!-- <link rel="stylesheet" type="text/css" href="css/checkout.css"> -->
-
-<!-- <link rel="stylesheet" type="text/css" href="css/cart.css"> -->
