@@ -2792,6 +2792,10 @@ label {
 18. Home Page HCI
 *********************************/
 @media (min-width : 480px) {
+	.thankyou-card {
+		display: block;
+		background-color: #1b1b1b;
+	}
 	.imgthankyou img {
 		margin-top: 0px;
 		height: 200px;
@@ -2927,10 +2931,6 @@ label {
 }
 
 @media(min-width:1024px){
-	.QR_Scan img {
-		object-fit: cover;
-		height: 590px;
-	}
 	.imgthankyou img {
 		margin: 0;
 		height: 400px;

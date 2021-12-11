@@ -22,7 +22,7 @@
 
                     <div class="col-lg-6">
                         <!-- Coloum 2 -->
-                        <div class="order checkout_section">
+                        <div class="order checkout_section" style="height: 100%;">
                             <div class="section_title">Your order</div>
                             <div class="section_subtitle">Order details</div>
 
