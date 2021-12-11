@@ -13,9 +13,7 @@
                     <!-- QR Code -->
                     <div class="col-lg-6 QR_Scan">
                         <!-- Coloum 1 -->
-                        <div class="card">
                              <img src="images/items/QR Code.jpg" >
-                        </div>
                     </div> <!-- End of Coloum 1 -->
 
                     <!-- Order Info -->
