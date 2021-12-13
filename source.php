@@ -23,7 +23,7 @@
 <div class="item-brand">
     <div class="container">
         <div class="row item-brand-all">
-            <div class="col item-brand-list active-logo">
+           <div class="col item-brand-list active-logo">
                 <a href="#"> <img src="./images/logobrand/samsung.png" alt=""> </a>
             </div>
             <div class="col item-brand-list">
@@ -54,21 +54,21 @@
                     <div class="swiper-slide">
                         <a href="index.php?page=detailpromoPage">
                             <div class="card promo">
-                                <img src="./images/promo/promo01.png" alt="...">
+                                <img src="./images/promo/promo01.png" alt="..." class="card-img-top">
                             </div>
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a href="index.php?page=detailpromoPage">
                             <div class="card promo">
-                                <img src="./images/promo/promo01.png" alt="...">
+                                <img src="./images/promo/promo01.png" alt="..." class="card-img-top">
                             </div>
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a href="index.php?page=detailpromoPage">
                             <div class="card promo">
-                                <img src="./images/promo/promo01.png" alt="...">
+                                <img src="./images/promo/promo01.png" alt="..." class="card-img-top">
                             </div>
                         </a>
                     </div>
