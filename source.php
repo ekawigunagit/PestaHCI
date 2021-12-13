@@ -23,7 +23,7 @@
 <div class="item-brand">
     <div class="container">
         <div class="row item-brand-all">
-            <div class="col item-brand-list active-logo">
+           <div class="col item-brand-list active-logo">
                 <a href="#"> <img src="./images/logobrand/samsung.png" alt=""> </a>
             </div>
             <div class="col item-brand-list">
