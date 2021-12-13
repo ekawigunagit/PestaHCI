@@ -23,7 +23,7 @@
 <div class="item-brand">
     <div class="container">
         <div class="row item-brand-all">
-           <div class="col item-brand-list active-logo">
+            <div class="col item-brand-list active-logo">
                 <a href="#"> <img src="./images/logobrand/samsung.png" alt=""> </a>
             </div>
             <div class="col item-brand-list">
@@ -106,7 +106,7 @@
             // $second_last_en = base64_encode("$second_last"); 
             $linkaddress = "index.php";
             ?>
-            
+
             <!-- Paging atas -->
             <div class="row custome_paging justify-content-center">
                 <nav aria-label="...">
@@ -204,19 +204,20 @@
                 //Tampil data
                 while ($show_product = mysqli_fetch_array($query_product)) {
                 ?>
-                    <div class="col-6 col-md-6 col-lg-3 mt-4">
-                        <div class="card katalog-item">
-                            <img src="./images/product/<?php echo $show_product['image_product']; ?>" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <p class="card-text"><?php echo $show_product['product_name']; ?></p>
-                            </div>
-                            <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
-                                <div class="card-footer">
-                                    <p class="text-visit-katalog">Apply Now</p>
-                                </div>
-                            </span>
+                <div class="col-6 col-md-6 col-lg-3 mt-4">
+                    <div class="card katalog-item h-100">
+                        <img src="./images/product/<?php echo $show_product['image_product']; ?>" class="card-img-top"
+                            alt="...">
+                        <div class="card-body">
+                            <p class="card-text"><?php echo $show_product['product_name']; ?></p>
                         </div>
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                            <div class="card-footer">
+                                <p class="text-visit-katalog">Apply Now</p>
+                            </div>
+                        </span>
                     </div>
+                </div>
                 <?php
                 }
                 ?>
@@ -225,10 +226,11 @@
         </div>
     </div>
     <!-- Paging -->
-    <div class="row custome_paging justify-content-center">
-        <nav aria-label="...">
-            <ul class="pagination">
-                <?php
+    <div class="container">
+        <div class="row custome_paging justify-content-center">
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <?php
                 // link awal
                 if ($pagenow <= 1) { // bu   
                     echo "
@@ -289,7 +291,7 @@
                 }
                 ?>
 
-                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
                 <li class="page-item active">
                     <span class="page-link">
                         2
@@ -297,7 +299,7 @@
                     </span>
                 </li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li> -->
-                <?php
+                    <?php
                 if ($pagenow >= $total_data_page) {
                     echo "
                         <li class='page-item disabled'>
@@ -312,14 +314,16 @@
                         ";
                 }
                 ?>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </div>
     </div>
 </div>
 
 
 <!-- Modal HTML PRODUCT -->
-<div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+<div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false"
+    data-backdrop="static">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <form action="index.php?page=thankyouPage" method="post" class="submitForm" data-type="login">
