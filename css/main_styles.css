@@ -365,6 +365,26 @@ section {
 }
 
 @media (max-width: 585px) {
+	.promo-product .detail-promo h2 {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	.promo-product {
+		padding: 0;
+	}
+	.detail-promo {
+		padding: 0;
+		margin: 0 0 30px 0;
+	}
+	.detail-list{
+		margin: 0;
+		padding: 0;
+	}
+	.detail-text-product ul li{
+		list-style: initial;
+		font-weight: bold;
+		margin: 10px 20px 0 50px;
+	}
 	.QR_Scan img{
 		width: 200px;
 	}
@@ -2880,7 +2900,7 @@ label {
 .detail-text-product ul li{
 	list-style: initial;
 	font-weight: bold;
-	margin: 10px 100px 0 90px;
+	margin: 10px 20px 0 50px;
 }
 .detail-list .bnt-ajukan {
 	margin: 30px 0;
@@ -2931,6 +2951,10 @@ label {
 }
 
 @media(min-width:1024px){
+	/* promo-product */
+	.promo-product {
+		margin: 0 0 50px 0;
+	}
 	.imgthankyou img {
 		margin: 0;
 		height: 400px;
@@ -2989,7 +3013,6 @@ label {
 }
 
 .detail-promo {
-	padding: 50px 0;
 	text-align: center;
 }
 
