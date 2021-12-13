@@ -54,21 +54,21 @@
                     <div class="swiper-slide">
                         <a href="index.php?page=detailpromoPage">
                             <div class="card promo">
-                                <img src="./images/promo/promo01.png" alt="...">
+                                <img src="./images/promo/promo01.png" alt="..." class="card-img-top">
                             </div>
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a href="index.php?page=detailpromoPage">
                             <div class="card promo">
-                                <img src="./images/promo/promo01.png" alt="...">
+                                <img src="./images/promo/promo01.png" alt="..." class="card-img-top">
                             </div>
                         </a>
                     </div>
                     <div class="swiper-slide">
                         <a href="index.php?page=detailpromoPage">
                             <div class="card promo">
-                                <img src="./images/promo/promo01.png" alt="...">
+                                <img src="./images/promo/promo01.png" alt="..." class="card-img-top">
                             </div>
                         </a>
                     </div>
