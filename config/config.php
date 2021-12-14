@@ -5,9 +5,9 @@ $databaseUsername = 'root';
 $databasePassword = '';
 
 // $databaseHost = 'localhost';
-// $databaseName = 'souq2557_dbsoulofjakarta';
-// $databaseUsername = 'souq2557_souja';
-// $databasePassword = 'lantai13';
+// $databaseName = 'pesta_hci';
+// $databaseUsername = 'usr_prod';
+// $databasePassword = 'db@hc!k3c3';
 
 $koneksi = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
  
