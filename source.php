@@ -51,27 +51,23 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide">
-                        <a href="index.php?page=detailpromoPage">
-                            <div class="card promo">
-                                <img src="./images/promo/promo01.png" alt="..." class="card-img-top">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="index.php?page=detailpromoPage">
-                            <div class="card promo">
-                                <img src="./images/promo/promo01.png" alt="..." class="card-img-top">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="index.php?page=detailpromoPage">
-                            <div class="card promo">
-                                <img src="./images/promo/promo01.png" alt="..." class="card-img-top">
-                            </div>
-                        </a>
-                    </div>
+                    <?php
+                    $data_promohci = "SELECT * FROM promos WHERE status=1 ORDER BY id DESC";
+                    $query_promohci = mysqli_query($koneksi, $data_promohci);
+
+                    while ($show_promohci = mysqli_fetch_array($query_promohci)) {
+                    ?>
+                        <div class="swiper-slide">
+                            <a href="index.php?page=detailpromoPage?idpr=<?php echo $show_promohci['id']; ?>">
+                                <div class="card promo">
+                                    <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" alt="..." class="card-img-top">
+                                </div>
+                            </a>
+                        </div>
+                    <?php
+                    }
+                    ?>
+
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -204,20 +200,19 @@
                 //Tampil data
                 while ($show_product = mysqli_fetch_array($query_product)) {
                 ?>
-                <div class="col-6 col-md-6 col-lg-3 mt-4">
-                    <div class="card katalog-item h-100">
-                        <img src="./images/product/<?php echo $show_product['image_product']; ?>" class="card-img-top"
-                            alt="...">
-                        <div class="card-body">
-                            <p class="card-text"><?php echo $show_product['product_name']; ?></p>
-                        </div>
-                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
-                            <div class="card-footer">
-                                <p class="text-visit-katalog">Apply Now</p>
+                    <div class="col-6 col-md-6 col-lg-3 mt-4">
+                        <div class="card katalog-item h-100">
+                            <img src="./images/product/<?php echo $show_product['image_product']; ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text"><?php echo $show_product['product_name']; ?></p>
                             </div>
-                        </span>
+                            <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                                <div class="card-footer">
+                                    <p class="text-visit-katalog">Apply Now</p>
+                                </div>
+                            </span>
+                        </div>
                     </div>
-                </div>
                 <?php
                 }
                 ?>
@@ -231,25 +226,25 @@
             <nav aria-label="...">
                 <ul class="pagination">
                     <?php
-                // link awal
-                if ($pagenow <= 1) { // bu   
-                    echo "
+                    // link awal
+                    if ($pagenow <= 1) { // bu   
+                        echo "
                         <li class='page-item disabled'>
                             <span class='page-link'>Previous</span>
                         </li>
                         ";
-                } else if ($pagenow > 1) {
-                    echo "
+                    } else if ($pagenow > 1) {
+                        echo "
                         <li class='page-item'>
                             <a class='page-link' href='$linkaddress?pagenow=$previous_page'>Previous</a>
                         </li>
                         ";
-                }
+                    }
 
-                if ($pagenow <= 1) {
-                    $pagenow1 = $pagenow + 1;
-                    $pagenow2 = $pagenow + 2;
-                    echo "
+                    if ($pagenow <= 1) {
+                        $pagenow1 = $pagenow + 1;
+                        $pagenow2 = $pagenow + 2;
+                        echo "
                         <li class='page-item active'>
                             <a class='page-link'>" . $pagenow . "</a>
                         </li>
@@ -260,10 +255,10 @@
                             <a class='page-link' href='$linkaddress?pagenow=$pagenow2'>" . $pagenow2 . "</a>
                         </li>
                         ";
-                } else if (($pagenow > 1) && ($pagenow < $total_data_page)) {
-                    $pagenowMin1 = $pagenow - 1;
-                    $pagenowPlus1 = $pagenow + 1;
-                    echo "
+                    } else if (($pagenow > 1) && ($pagenow < $total_data_page)) {
+                        $pagenowMin1 = $pagenow - 1;
+                        $pagenowPlus1 = $pagenow + 1;
+                        echo "
                         <li class='page-item'>
                             <a class='page-link' href='$linkaddress?pagenow=$pagenowMin1'>" . $pagenowMin1 . "</a>
                         </li>
@@ -274,10 +269,10 @@
                             <a class='page-link' href='$linkaddress?pagenow=$pagenowPlus1'>" . $pagenowPlus1 . "</a>
                         </li>
                         ";
-                } else if ($pagenow >= $total_data_page) {
-                    $pagenowMin1 = $total_data_page - 1;
-                    $pagenowMin2 = $total_data_page - 2;
-                    echo "
+                    } else if ($pagenow >= $total_data_page) {
+                        $pagenowMin1 = $total_data_page - 1;
+                        $pagenowMin2 = $total_data_page - 2;
+                        echo "
                         <li class='page-item'>
                             <a class='page-link' href='$linkaddress?pagenow=$pagenowMin2'>" . $pagenowMin2 . "</a>
                         </li>
@@ -288,8 +283,8 @@
                             <a class='page-link'>" . $pagenow . "</a>
                         </li>
                         ";
-                }
-                ?>
+                    }
+                    ?>
 
                     <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
                 <li class="page-item active">
@@ -300,20 +295,20 @@
                 </li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li> -->
                     <?php
-                if ($pagenow >= $total_data_page) {
-                    echo "
+                    if ($pagenow >= $total_data_page) {
+                        echo "
                         <li class='page-item disabled'>
                             <span class='page-link'>Next</span>
                         </li>
                         ";
-                } else if ($pagenow < $total_data_page) {
-                    echo "
+                    } else if ($pagenow < $total_data_page) {
+                        echo "
                         <li class='page-item'>
                             <a class='page-link' href='$linkaddress?pagenow=$next_page'>Next</a>
                         </li>
                         ";
-                }
-                ?>
+                    }
+                    ?>
                 </ul>
             </nav>
         </div>
@@ -322,8 +317,7 @@
 
 
 <!-- Modal HTML PRODUCT -->
-<div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false"
-    data-backdrop="static">
+<div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <form action="index.php?page=thankyouPage" method="post" class="submitForm" data-type="login">

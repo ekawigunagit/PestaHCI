@@ -3,51 +3,40 @@
     <div class="container">
         <div class="promo-product">
             <div class="detail-promo">
-                <h2>Promo Bunga Bisa 0% di TransLiving</h2>
-                <p>Periode 24 Desember 2021 - 31 Desember 2021</p>
-                <div class="sosmed">
-                    <img src="./images/footer/linkidin.png">
-                    <img src="./images/footer/fb2.png">
-                    <img src="./images/footer/twiter.png">
-                    <img src="./images/footer/whatsapp.png">
-                    <img src="./images/footer/line.png">
-                    <img src="./images/footer/link_copy.png">
-                </div>
+                <h2>PESTA Online </h2>
+                <p>Ajukan Pembiayaan dan Ikuti Kompetisi dengan Hadiah Barang Impian Rp99 Ribu!</p>
             </div>
         </div>
         <div class="detail-text-product">
-            <p>
-                Kabar baik buat kaum rebahan!
-            </p>
-            <p>
-                Agar rebahan jadi maksimal, #SobatBelanja mau kasih kamu promo ✨ bunga bisa 0% ✨ buat nyicil kasur
-                premium di Transmart. Cukup bayar cicilan tepat waktu selama 6 bulan berturut-turut dan kamu gak perlu
-                bayar cicilan di bulan ketujuh.
-            </p>
-            <p>
-                Promo berlaku hingga akhir tahun. Cus belanja sekarang!
-            </p>
-            <h5>Detail Promo</h5>
+            <h5>SYARAT & KETENTUAN </h5>
 
             <div class="detail-list">
-                <ul>
-                    <li>Periode Promo: 24 November – 31 Desember 2021</li>
-                    <li>Nilai Pembiayaan: Rp900.000 – Rp30.000.000</li>
-                    <li>Berlaku di: Transmart</li>
-                    <li>Komoditas: Springbed merek SIMMONS, RESTA, ELITE, LADY AMERICANA, ROYAL FOAM, SERENITY,
-                        COMFORTA, THERAPEDIC</li>
-                    <li>Tenor: 7 Bulan</li>
-                    <li>Uang Muka: Mulai dari 0%</li>
-                    <li>Biaya Admin: Rp199.000</li>
-                    <li>Biaya Bulanan: Rp8.000</li>
-                    <li>
-                        Kamu juga bisa memilih tambahan produk perlindungan kami:
+                <ol>
+                    <li>Periode kompetisi 17 Desember 2021 – 28 Februari 2022.</li>
+                    <li>Terbuka untuk Warga Negara Indonesia yang berusia minimal 17 (tujuh belas) tahun.</li>
+                    <li>Kompetisi ini merupakan program berhadiah barang pilihan di mana kesempatan ini hanya diberikan jika peserta melakukan transaksi dan menandatangani kontrak pembiayaan dengan Home Credit selama periode kompetisi (17 Desember 2021 – 28 Februari 2022).</li>
+                    <li>Untuk dapat memenangkan kompetisi PESTA Online, peserta wajib menyelesaikan transaksi dan memiliki kontrak pembiayaan, selanjutnya memilih salah satu dari beberapa barang pilihan dan peserta dengan nilai kontrak tertinggi akan memenangkan hadiah barang pilihan.</li>
+                    <li>Pemenang akan dipilih setiap bulan selama periode PESTA Online (17 Desember 2021 – 28 Februari 2022).</li>
+                    <li>Pemenang akan diumumkan di minggu pertama di bulan selanjutnya melalui akun Instagram @homecreditid dan [link website].</li>
+                    <li>Home Credit akan menghubungi pemenang melalui nomor yang didaftarkan melalui website. Pemenang wajib memastikan bahwa nomor telepon yang terdaftar di website sama dengan nomor telepon yang ada di kontrak pembiayaan Home Credit Indonesia.</li>
+                    <li>Pemenang berhak mendapatkan barang pilihan di bawah dengan harga Rp99.000:
                         <ul>
-                            <li>AMAN (proteksi tambahan untuk cicilan/pembiayaan)</li>
+                            <li>Gadget: (tbc)</li>
+                            <li>Furnitur: (tbc)</li>
+                            <li>Optik: (tbc)</li>
+                            <li>Sepeda: (tbc)</li>
+                            <li>Elektronik: (tbc)</li>
                         </ul>
                     </li>
-                    <li>Nilai maksimum pembiayaan dan uang muka ditentukan oleh riwayat pembiayaan pelanggan</li>
-                </ul>
+                    <li>Pengiriman hadiah akan diproses dilaksanakan 30 hari setelah pengumunan pemenang diumumkan dan telah mendapatkan konfirmasi alamat tujuan.</li>
+                    <li>Hadiah tidak dapat dialihkan, ditukar barang lain, atau diganti dengan uang.</li>
+                    <li>Home Credit Indonesia berhak mengubah syarat dan ketentuan kompetisi dari waktu ke waktu yang akan diumumkan melalui akun Instagram @homecreditid dan [link website]. Perubahan syarat dan ketentuan kompetisi tidak akan berlaku surut.</li>
+                    <li>Peserta diharapkan untuk melakukan pengecekan berkala atas syarat dan ketentuan programkompetisi.</li>
+                    <li>Home Credit berhak mendiskualifikasi peserta dan/atau menarik status pemenang dan hadiah yang telah diberikan kepada pemenang jika ditemukan kecurangan, pelanggaran syarat dan ketentuan dan/atau pemalsuan data.</li>
+                    <li>Kompetisi ini tidak bisa diikuti oleh karyawan Home Credit Indonesia.</li>
+                    <li>Pajak hadiah ditanggung oleh Home Credit Indonesia dan kompetisi ini tidak dipungut biaya. Hati-hati penipuan.</li>
+                    <li>Pemenang setuju untuk dihubungi dan memberikan dokumentasi penerimaan hadiah dan menjamin izin bebas royalty kepada Home Credit Indonesia untuk menggunakan dokumentasi selama jangka waktu tertentu.</li>
+                </ol>
             </div>
         </div>
 
