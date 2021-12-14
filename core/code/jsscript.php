@@ -61,4 +61,75 @@
         $('.item-brand-list').removeClass("active-logo");
             $(this).addClass("active-logo");
     })
+
+    window.addEventListener('load', function () {
+        setTimeout(() => {
+            $("#myModalLocation").show()
+        }, 1000)
+    })
+
+    $("#myModalLocation .close").on("click", function() {
+        $("#myModalLocation").hide()
+    })
+
+    $("#city_select").on("change", function() {
+        const value = $(this).val();
+        if(value != '') {
+            $.get('core/code/get-districts.php?id='+value, function(results) {
+                const values = JSON.parse(results)
+                let chtml;
+                $.each(values, (key, result) => {
+                    chtml += '<option value="'+result.id+'">'+result.district_name+'</option>'
+                });
+
+                $("#area_select").html(chtml)
+            });
+        }
+        else {
+            $("#area_select").html('')
+        }
+    });
+
+    $("#productcity_select").on("change", function() {
+        const value = $(this).val();
+        if(value != '') {
+            $.get('core/code/get-districts.php?id='+value, function(results) {
+                const values = JSON.parse(results)
+                let html;
+                $.each(values, (key, result) => {
+                    html += '<option value="'+result.id+'">'+result.district_name+'</option>'
+                });
+                $("#productarea_select").html(html)
+            });
+        }
+        else {
+            $("#productarea_select").html('')
+        }
+    });
+
+    $("#promocity_select").on("change", function() {
+        const value = $(this).val();
+        if(value != '') {
+            $.get('core/code/get-districts.php?id='+value, function(results) {
+                const values = JSON.parse(results)
+                let html;
+                $.each(values, (key, result) => {
+                    html += '<option value="'+result.id+'">'+result.district_name+'</option>'
+                });
+                $("#promoarea_select").html(html)
+            });
+        }
+        else {
+            $("#promoarea_select").html('')
+        }
+    });
+
+    $('#myModal').on('shown.bs.modal', function(event) {
+        const productName = $(event.relatedTarget).data('productname')
+        $("#myModal .modal-title").text(productName)
+        $("input[name=product_name]").val(productName)
+        
+        const brandProduct = $(event.relatedTarget).data('brandproduct')
+        $("input[name=brand_product]").val(brandProduct)
+    })
 </script>

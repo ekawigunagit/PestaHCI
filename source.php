@@ -1,3 +1,10 @@
+<?php
+$ip = $_SERVER['REMOTE_ADDR'];
+$data_promohci = "SELECT * FROM temp_locations WHERE ip_visitor='" . $ip . "' ORDER BY id ASC";
+// echo $data_promohci; exit;
+$query_promohci = mysqli_query($koneksi, $data_promohci);
+$row = mysqli_fetch_row($query_promohci);
+?>
 <div class="why-wrapper">
     <div class="container">
         <div class="row why-item-all">
@@ -58,7 +65,7 @@
                     while ($show_promohci = mysqli_fetch_array($query_promohci)) {
                     ?>
                         <div class="swiper-slide">
-                            <a href="index.php?page=detailpromoPage?idpr=<?php echo $show_promohci['id']; ?>">
+                            <a href="index.php?page=detailpromoPage&idpr=<?php echo $show_promohci['id']; ?>">
                                 <div class="card promo">
                                     <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" alt="..." class="card-img-top">
                                 </div>
@@ -206,7 +213,7 @@
                             <div class="card-body">
                                 <p class="card-text"><?php echo $show_product['product_name']; ?></p>
                             </div>
-                            <span class="link trigger-btn" data-toggle="modal" data-target="#myModal">
+                            <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_product['product_name']; ?>" data-brandProduct="<?php echo $show_product['brand_product']; ?>">
                                 <div class="card-footer">
                                     <p class="text-visit-katalog">Apply Now</p>
                                 </div>
@@ -320,12 +327,14 @@
 <div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
-            <form action="index.php?page=thankyouPage" method="post" class="submitForm" data-type="login">
+            <form action="core/code/addDataApply.php" method="post" class="submitForm" data-type="login">
                 <div class="modal-header">
-                    <h4 class="modal-title">Product XXX</h4>
+                    <h4 class="modal-title"></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
+                    <input type="hidden" name="product_name">
+                    <input type="hidden" name="brand_product">
                     <div class="form-group">
                         <label>Full Name</label>
                         <input name="customer_name" type="text" class="form-control">
@@ -340,49 +349,23 @@
                     </div>
                     <div class="form-group">
                         <label>City</label>
-                        <select name="city" class="form-control">
+                        <select name="city" id="productcity_select" class="form-control">
                             <option> --Choose One-- </option>
-                            <option>Balikpapan</option>
-                            <option>Bandung</option>
-                            <option>Banjarmasin</option>
-                            <option>Batam</option>
-                            <option>Bekasi</option>
-                            <option>Bengkulu</option>
-                            <option>Bogor</option>
-                            <option>Cirebon</option>
-                            <option>Denpasar</option>
-                            <option>Depok</option>
-                            <option>Gorontalo</option>
-                            <option>Jakarta</option>
-                            <option>Jambi</option>
-                            <option>Karawang</option>
-                            <option>Kediri</option>
-                            <option>Lampung</option>
-                            <option>Makassar</option>
-                            <option>Malang</option>
-                            <option>Manado</option>
-                            <option>Medan</option>
-                            <option>Melayu Deli</option>
-                            <option>Padang</option>
-                            <option>Palembang</option>
-                            <option>Pekanbaru</option>
-                            <option>Pontianak</option>
-                            <option>Semarang</option>
-                            <option>Surabaya</option>
-                            <option>Tangerang</option>
-                            <option>Tangerang Selatan</option>
-                            <option>Yogyakarta</option>
+                            <?php
+                            $data_provinces = "SELECT * FROM provinces WHERE status=1 ORDER BY id ASC";
+                            $query_provinces = mysqli_query($koneksi, $data_provinces);
+
+                            while ($show_provinces = mysqli_fetch_array($query_provinces)) {
+                            ?>
+                                <option value="<?php echo $show_provinces['id']; ?>"><?php echo $show_provinces['province_name']; ?></option>
+                            <?php
+                            }
+                            ?>
                         </select>
                     </div>
                     <div class="form-group">
                         <label>Area</label>
-                        <select name="area" class="form-control">
-                            <option>Area 1</option>
-                            <option>Area 2</option>
-                            <option>Area 3</option>
-                            <option>Area 4</option>
-                            <option>Area 5</option>
-                        </select>
+                        <select name="area" class="form-control" id="productarea_select"></select>
                     </div>
                     <div class="form-group">
                         <label>Pilih Hadiah</label>
@@ -410,3 +393,47 @@
         </div>
     </div>
 </div>
+
+<!-- Modal HTML LOCATION -->
+<?php if (!$row) : ?>
+    <div id="myModalLocation" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <form action="core/code/addLocation.php" method="post" class="submitForm">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Pilih Lokasi Anda</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>City</label>
+                            <select name="location_city" id="city_select" class="form-control">
+                                <option> --Choose One-- </option>
+                                <?php
+                                $data_provinces = "SELECT * FROM provinces WHERE status=1 ORDER BY id ASC";
+                                $query_provinces = mysqli_query($koneksi, $data_provinces);
+
+                                while ($show_provinces = mysqli_fetch_array($query_provinces)) {
+                                ?>
+                                    <option value="<?php echo $show_provinces['id']; ?>"><?php echo $show_provinces['province_name']; ?></option>
+                                <?php
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Area</label>
+                            <select name="location_area" class="form-control" id="area_select"></select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img">
+                        <div class="system_error"></div><br />
+                        <!-- <label class="checkbox-inline pull-left"><a href="#myModalRegist" class="trigger-btn" data-toggle="modal">Register</a></label> -->
+                        <input type="submit" class="btn btn-primary pull-right" value="Apply Now">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
