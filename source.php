@@ -52,7 +52,7 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <?php
-                    $data_promohci = "SELECT * FROM promos WHERE status=1 ORDER BY id DESC";
+                    $data_promohci = "SELECT * FROM promos WHERE status=1 ORDER BY id ASC";
                     $query_promohci = mysqli_query($koneksi, $data_promohci);
 
                     while ($show_promohci = mysqli_fetch_array($query_promohci)) {
