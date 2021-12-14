@@ -14,39 +14,36 @@
                         <nav class="main_nav">
                             <ul>
                                 <li class="active"><a href="index.php">Home</a>
-                                    
+
                                 </li>
                                 <li class="hassubs">
                                     <a href="index.php?page=productList">Categories</a>
                                     <ul>
-                                        <li><a href="index.php?page=productList">Handphone</a></li>
-                                        <li><a href="index.php?page=productList">Fashion</a></li>
-                                        <li><a href="index.php?page=productList">Electronic</a></li>
-                                        <li><a href="index.php?page=productList">Furniture</a></li>
-                                        <li><a href="index.php?page=productList">Wellness</a></li>
-                                        <li><a href="index.php?page=productList">Optic</a></li>
-                                        <li><a href="index.php?page=productList">Bicycle</a></li>
-                                        <li><a href="index.php?page=productList">Other</a></li>
+                                        <?php
+                                        $data_menucategory = "SELECT * FROM category_products WHERE status=1 ORDER BY category_name ASC";
+                                        $query_data_menucategory = mysqli_query($koneksi, $data_menucategory);
+
+                                        while ($show_data_menucategory = mysqli_fetch_array($query_data_menucategory)) {
+                                        ?>
+                                            <li class="page_menu_item menu_mm"><a href="index.php"><?php echo $show_data_menucategory['category_name']; ?><i class="fa fa-angle-down"></i></a></li>
+                                        <?php
+                                        }
+                                        ?>
                                     </ul>
                                 </li>
                                 <li class="hassubs">
                                     <a href="index.php?page=productList">Cities</a>
                                     <ul>
-                                        <li><a href="index.php?page=productList">Jakarta</a></li>
-                                        <li><a href="index.php?page=productList">Tangerang</a></li>
-                                        <li><a href="index.php?page=productList">Depok</a></li>
-                                        <li><a href="index.php?page=productList">Bekasi</a></li>
-                                        <li><a href="index.php?page=productList">Bogor</a></li>
-                                        <li><a href="index.php?page=productList">Bandung</a></li>
-                                        <li><a href="index.php?page=productList">Medan</a></li>
-                                        <li><a href="index.php?page=productList">Pekanbaru</a></li>
-                                        <li><a href="index.php?page=productList">Palembang</a></li>
-                                        <li><a href="index.php?page=productList">Yogyakarta</a></li>
-                                        <li><a href="index.php?page=productList">Surabaya</a></li>
-                                        <li><a href="index.php?page=productList">Denpasar</a></li>
-                                        <li><a href="index.php?page=productList">Banjarmasin</a></li>
-                                        <li><a href="index.php?page=productList">Makassar</a></li>
-                                        <li><a href="index.php?page=productList">Manado</a></li>
+                                        <?php
+                                        $data_menucities = "SELECT * FROM provinces WHERE status=1 ORDER BY province_name ASC";
+                                        $query_data_menucities = mysqli_query($koneksi, $data_menucities);
+
+                                        while ($show_data_menucities = mysqli_fetch_array($query_data_menucities)) {
+                                        ?>
+                                            <li><a href="index.php"><?php echo $show_data_menucities['province_name']; ?></a></li>
+                                        <?php
+                                        }
+                                        ?>
                                     </ul>
                                 </li>
                                 <li><a href="index.php?page=promoPage">Our Promo</a></li>
@@ -71,11 +68,9 @@
                             </div> -->
                             <div class="search">
                                 <div class="search_icon">
-                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                    viewBox="0 0 475.084 475.084" style="enable-background:new 0 0 475.084 475.084;"
-                                        xml:space="preserve">
-                                    <g>
-                                        <path d="M464.524,412.846l-97.929-97.925c23.6-34.068,35.406-72.047,35.406-113.917c0-27.218-5.284-53.249-15.852-78.087
+                                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 475.084 475.084" style="enable-background:new 0 0 475.084 475.084;" xml:space="preserve">
+                                        <g>
+                                            <path d="M464.524,412.846l-97.929-97.925c23.6-34.068,35.406-72.047,35.406-113.917c0-27.218-5.284-53.249-15.852-78.087
                                             c-10.561-24.842-24.838-46.254-42.825-64.241c-17.987-17.987-39.396-32.264-64.233-42.826
                                             C254.246,5.285,228.217,0.003,200.999,0.003c-27.216,0-53.247,5.282-78.085,15.847C98.072,26.412,76.66,40.689,58.673,58.676
                                             c-17.989,17.987-32.264,39.403-42.827,64.241C5.282,147.758,0,173.786,0,201.004c0,27.216,5.282,53.238,15.846,78.083
@@ -85,9 +80,9 @@
                                                 M291.363,291.358c-25.029,25.033-55.148,37.549-90.364,37.549c-35.21,0-65.329-12.519-90.36-37.549
                                             c-25.031-25.029-37.546-55.144-37.546-90.36c0-35.21,12.518-65.334,37.546-90.36c25.026-25.032,55.15-37.546,90.36-37.546
                                             c35.212,0,65.331,12.519,90.364,37.546c25.033,25.026,37.548,55.15,37.548,90.36C328.911,236.214,316.392,266.329,291.363,291.358z
-                                            "/>
-                                    </g>
-                                </svg>
+                                            " />
+                                        </g>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
@@ -97,7 +92,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Search Panel -->
     <div class="search_panel trans_300">
         <div class="container">
@@ -129,7 +124,7 @@
 <div class="menu menu_mm trans_300">
     <div class="menu_container menu_mm">
         <div class="page_menu_content">
-                        
+
             <div class="page_menu_search menu_mm">
                 <form action="#">
                     <input type="search" required="required" class="page_menu_search_input menu_mm" placeholder="Search for products...">
@@ -140,22 +135,34 @@
                     <a href="index.php">Home<i class="fa fa-angle-down"></i></a>
                 </li>
                 <li class="page_menu_item has-children menu_mm">
-                    <a href="#">Product<i class="fa fa-angle-down"></i></a>
+                    <a href="#">Categories<i class="fa fa-angle-down"></i></a>
                     <ul class="page_menu_selection menu_mm">
-                        <li class="page_menu_item menu_mm"><a href="#">Handphone<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Fashion<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Electronic<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Furniture<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Wellness<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Optic<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Bicycle<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Other<i class="fa fa-angle-down"></i></a></li>
+                        <?php
+                        $data_menucategory = "SELECT * FROM category_products WHERE status=1 ORDER BY category_name ASC";
+                        $query_data_menucategory = mysqli_query($koneksi, $data_menucategory);
+
+                        while ($show_data_menucategory = mysqli_fetch_array($query_data_menucategory)) {
+                        ?>
+                            <li class="page_menu_item menu_mm"><a href="index.php"><?php echo $show_data_menucategory['category_name']; ?><i class="fa fa-angle-down"></i></a></li>
+                        <?php
+                        }
+                        ?>
                     </ul>
                 </li>
                 <li class="page_menu_item has-children menu_mm">
                     <a href="#">Cities<i class="fa fa-angle-down"></i></a>
                     <ul class="page_menu_selection menu_mm">
-                        <li class="page_menu_item menu_mm"><a href="#">Jakarta<i class="fa fa-angle-down"></i></a></li>
+                        <?php
+                        $data_menucities = "SELECT * FROM provinces WHERE status=1 ORDER BY province_name ASC";
+                        $query_data_menucities = mysqli_query($koneksi, $data_menucities);
+
+                        while ($show_data_menucities = mysqli_fetch_array($query_data_menucities)) {
+                        ?>
+                            <li class="page_menu_item menu_mm"><a href="index.php"><?php echo $show_data_menucities['province_name']; ?><i class="fa fa-angle-down"></i></a></li>
+                        <?php
+                        }
+                        ?>
+                        
                         <li class="page_menu_item menu_mm"><a href="#">Tangerang<i class="fa fa-angle-down"></i></a></li>
                         <li class="page_menu_item menu_mm"><a href="#">Depok<i class="fa fa-angle-down"></i></a></li>
                         <li class="page_menu_item menu_mm"><a href="#">Bekasi<i class="fa fa-angle-down"></i></a></li>
