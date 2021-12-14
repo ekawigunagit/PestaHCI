@@ -390,9 +390,13 @@ section {
 		margin: 0;
 		padding: 0;
 	}
+	.detail-list ol li {
+		text-align: left;
+		margin: 10px 20px 0 50px;
+	}
 	.detail-text-product ul li{
 		list-style: initial;
-		font-weight: bold;
+		/* font-weight: bold; */
 		margin: 10px 20px 0 50px;
 	}
 	.QR_Scan img{
@@ -2942,10 +2946,12 @@ label {
 	font-size: large;
 	margin: 10px 0;
 }
-
+.detail-text-product ol li{
+	margin: 10px 50px 0 15px;
+}
 .detail-text-product ul li {
 	list-style: initial;
-	font-weight: bold;
+	/* font-weight: bold; */
 	margin: 10px 20px 0 50px;
 }
 
