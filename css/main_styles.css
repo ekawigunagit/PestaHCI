@@ -3205,5 +3205,8 @@ footer .site-map-all .site-map-buttom {
 
 .page-item .page-link {
 	color: #ea0129 !important;
-	
+}
+
+.error {
+	color: #ea0129 !important;
 }
