@@ -8,19 +8,11 @@ $query_data_promos = mysqli_query($koneksi, $data_promos);
 while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
     //start date
     $ambil_startdate = $show_data_promos['start'];
-    $startdate_tgl = substr($ambil_startdate, 8, 2);
-    $startdate_bln = substr($ambil_startdate, 5, 2);
-    $startdate_bln = $nama_bln[$startdate_bln];
-    $startdate_thn = substr($ambil_startdate, 0, 4);
-    $show_startdate = $startdate_tgl . " " . $startdate_bln . " " . $startdate_thn;
+    $show_startdate = cleanTgl($ambil_startdate);
 
     //start date
     $ambil_enddate = $show_data_promos['end'];
-    $enddate_tgl = substr($ambil_enddate, 8, 2);
-    $enddate_bln = substr($ambil_enddate, 5, 2);
-    $enddate_bln = $nama_bln[$enddate_bln];
-    $enddate_thn = substr($ambil_enddate, 0, 4);
-    $show_enddate = $enddate_tgl . " " . $enddate_bln . " " . $enddate_thn;
+    $show_enddate = cleanTgl($ambil_enddate);
 ?>
     <div class="promo-page">
         <div class="container">
