@@ -109,14 +109,12 @@
     </div>
 
     <!-- Social -->
-    <div class="header_social">
+    <!-- <div class="header_social">
         <ul>
-            <!-- <li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li> -->
             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <!-- <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li> -->
         </ul>
-    </div>
+    </div> -->
 </header>
 
 <!-- Menu -->
@@ -162,21 +160,6 @@
                         <?php
                         }
                         ?>
-                        
-                        <li class="page_menu_item menu_mm"><a href="#">Tangerang<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Depok<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Bekasi<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Bogor<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Bandung<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Medan<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Pekanbaru<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Palembang<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Yogyakarta<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Surabaya<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Denpasar<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Banjarmasin<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Makassar<i class="fa fa-angle-down"></i></a></li>
-                        <li class="page_menu_item menu_mm"><a href="#">Manado<i class="fa fa-angle-down"></i></a></li>
                     </ul>
                 </li>
                 <li class="page_menu_item menu_mm"><a href="index.php?page=promoPage">Our Promo<i class="fa fa-angle-down"></i></a></li>
@@ -187,10 +170,10 @@
 
     <div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 
-    <div class="menu_social">
+    <!-- <div class="menu_social">
         <ul>
             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
         </ul>
-    </div>
+    </div> -->
 </div>
