@@ -213,7 +213,7 @@ $row = mysqli_fetch_row($query_promohci);
                             <div class="card-body">
                                 <p class="card-text"><?php echo $show_product['product_name']; ?></p>
                             </div>
-                            <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_product['product_name']; ?>" data-brandProduct="<?php echo $show_product['brand_product']; ?>">
+                            <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_product['product_name']; ?>" data-brandProduct="<?php echo $show_product['brand_product']; ?>" data-idProduct="<?php echo $show_product['id']; ?>">
                                 <div class="card-footer">
                                     <p class="text-visit-katalog">Apply Now</p>
                                 </div>
@@ -335,17 +335,18 @@ $row = mysqli_fetch_row($query_promohci);
                 <div class="modal-body">
                     <input type="hidden" name="product_name">
                     <input type="hidden" name="brand_product">
+                    <input type="hidden" name="product_id">
                     <div class="form-group">
                         <label>Full Name</label>
-                        <input name="customer_name" type="text" class="form-control">
+                        <input name="name" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input name="email_address" type="email" class="form-control">
+                        <input name="email" type="email" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input name="customer_phone_number" type="text" class="form-control">
+                        <input name="phone" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>City</label>
@@ -368,8 +369,9 @@ $row = mysqli_fetch_row($query_promohci);
                         <select name="area" class="form-control" id="productarea_select"></select>
                     </div>
                     <div class="form-group">
-                        <label>Pilih Hadiah</label>
+                        <label>Pilih untuk kesempatan memenangkan hadiah</label>
                         <select name="hadiah" class="form-control">
+                            <option> --Choose One-- </option>
                             <option>Hadiah 1</option>
                             <option>Hadiah 2</option>
                             <option>Hadiah 3</option>
@@ -384,8 +386,11 @@ $row = mysqli_fetch_row($query_promohci);
                     </div> -->
                 </div>
                 <div class="modal-footer">
-                    <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img">
-                    <div class="system_error"></div><br />
+                    <!-- <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img"> -->
+                    <!-- <div class="system_error"></div><br /> -->
+                    <div class="tc-form">
+                        <a href="index.php?page=hadiahPage" target="_blank">Term & Condition</a>
+                    </div>
                     <!-- <label class="checkbox-inline pull-left"><a href="#myModalRegist" class="trigger-btn" data-toggle="modal">Register</a></label> -->
                     <input type="submit" class="btn btn-primary pull-right" value="Apply Now">
                 </div>

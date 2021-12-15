@@ -17,5 +17,5 @@ $response = _curlPost($url,$data, $method);
 // var_dump($response); exit;
 $result = json_encode($response);
 echo json_decode($result);
-header('location:../../index.php?page=thankyouPage');
+header('location:../../index.php?page=thankyouPage&idpr='. $_POST['product_id']);
 ?>

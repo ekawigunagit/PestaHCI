@@ -97,15 +97,15 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     <input type="hidden" name="brand_product">
                     <div class="form-group">
                         <label>Full Name</label>
-                        <input name="customer_name" type="text" class="form-control">
+                        <input name="name" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input name="email_address" type="email" class="form-control">
+                        <input name="email" type="email" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input name="customer_phone_number" type="text" class="form-control">
+                        <input name="phone" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>City</label>
@@ -128,8 +128,9 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                         <select name="area" id="promoarea_select" class="form-control"></select>
                     </div>
                     <div class="form-group">
-                        <label>Pilih Hadiah</label>
+                        <label>Pilih untuk kesempatan memenangkan hadiah</label>
                         <select name="hadiah" class="form-control">
+                            <option> --Choose One-- </option>
                             <option>Hadiah 1</option>
                             <option>Hadiah 2</option>
                             <option>Hadiah 3</option>
@@ -144,8 +145,11 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     </div> -->
                 </div>
                 <div class="modal-footer">
-                    <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img">
-                    <div class="system_error"></div><br />
+                    <!-- <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img"> -->
+                    <!-- <div class="system_error"></div><br /> -->
+                    <div class="tc-form">
+                        <a href="index.php?page=hadiahPage" target="_blank">Term & Condition</a>
+                    </div>
                     <!-- <label class="checkbox-inline pull-left"><a href="#myModalRegist" class="trigger-btn" data-toggle="modal">Register</a></label> -->
                     <input type="submit" class="btn btn-primary pull-right" value="Apply Now">
                 </div>

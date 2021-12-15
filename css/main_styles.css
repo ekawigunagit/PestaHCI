@@ -3210,3 +3210,13 @@ footer .site-map-all .site-map-buttom {
 .error {
 	color: #ea0129 !important;
 }
+
+/* T&C Form  */
+.tc-form {
+	padding-right: 20px;
+}
+
+.tc-form a {
+	color: #52020f !important;
+	font-weight: bolder;
+}

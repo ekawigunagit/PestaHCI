@@ -12,7 +12,7 @@
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/custom.js"></script>
-<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
 
 <!-- <script src="js/product.js"></script>
 <script src="js/categories.js"></script>
@@ -129,19 +129,31 @@
 
         const brandProduct = $(event.relatedTarget).data('brandproduct')
         $("input[name=brand_product]").val(brandProduct)
+
+        const idProduct = $(event.relatedTarget).data('idproduct')
+        $("input[name=product_id]").val(brandProduct)
     })
 
     $(document).ready(function() {
         $('#formProduct').validate({ // initialize the plugin
             rules: {
-                "customer_name": {
+                "name": {
                     required: true
                 },
-                "email_address": {
+                "email": {
                     required: true,
                     email: true
                 },
-                "customer_phone_number": {
+                "phone": {
+                    required: true
+                },
+                "city": {
+                    required: true
+                },
+                "area": {
+                    required: true
+                },
+                "hadiah": {
                     required: true
                 },
             }
@@ -151,14 +163,23 @@
     $(document).ready(function() {
         $('#formPromo').validate({ // initialize the plugin
             rules: {
-                "customer_name": {
+                "name": {
                     required: true
                 },
-                "email_address": {
+                "email": {
                     required: true,
                     email: true
                 },
-                "customer_phone_number": {
+                "phone": {
+                    required: true
+                },
+                "city": {
+                    required: true
+                },
+                "area": {
+                    required: true
+                },
+                "hadiah": {
                     required: true
                 },
             }
