@@ -298,13 +298,6 @@ $row = mysqli_fetch_row($query_promohci);
                             </div>
                         </span>
                     </div>
-                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal"
-                        data-productName="<?php echo $show_product['product_name']; ?>"
-                        data-brandProduct="<?php echo $show_product['brand_product']; ?>">
-                        <div class="card-footer">
-                            <p class="text-visit-katalog">Apply Now</p>
-                        </div>
-                    </span>
                 </div>
                 <?php
                 }
