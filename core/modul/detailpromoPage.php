@@ -87,7 +87,7 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
 <div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
-            <form action="core/code/addDataApply.php" method="post" class="submitForm" data-type="login">
+            <form id="formPromo" action="core/code/addDataApply.php" method="post" class="submitForm" data-type="login">
                 <div class="modal-header">
                     <h4 class="modal-title"></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>

@@ -6,6 +6,7 @@ $data['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
 $data['utm_source'] = "Pesta Online";
 $data['utm_campaign'] = $_POST['brand_product'];
 $data['utm_medium'] = $_POST['product_name'];
+$data['utm_content'] = $_POST['hadiah'];
 //print_r($data); exit;
 //echo $_POST['product_name'] . "<br />" . $_POST['brand_product']; exit;
 //$data['value_dump'] = '{"commodity":"'.$_POST['product_name'].'"}';

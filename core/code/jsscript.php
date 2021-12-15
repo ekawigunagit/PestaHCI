@@ -12,6 +12,7 @@
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/custom.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 
 <!-- <script src="js/product.js"></script>
 <script src="js/categories.js"></script>
@@ -54,15 +55,15 @@
     });
     $(".why-item").on("click", function() {
         $('.why-item').removeClass("active-item");
-            $(this).addClass("active-item");
+        $(this).addClass("active-item");
     })
 
     $(".item-brand-list").on("click", function() {
         $('.item-brand-list').removeClass("active-logo");
-            $(this).addClass("active-logo");
+        $(this).addClass("active-logo");
     })
 
-    window.addEventListener('load', function () {
+    window.addEventListener('load', function() {
         setTimeout(() => {
             $("#myModalLocation").show()
         }, 1000)
@@ -74,52 +75,49 @@
 
     $("#city_select").on("change", function() {
         const value = $(this).val();
-        if(value != '') {
-            $.get('core/code/get-districts.php?id='+value, function(results) {
+        if (value != '') {
+            $.get('core/code/get-districts.php?id=' + value, function(results) {
                 const values = JSON.parse(results)
                 let chtml;
                 $.each(values, (key, result) => {
-                    chtml += '<option value="'+result.district_name+'">'+result.district_name+'</option>'
+                    chtml += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
                 });
 
                 $("#area_select").html(chtml)
             });
-        }
-        else {
+        } else {
             $("#area_select").html('')
         }
     });
 
     $("#productcity_select").on("change", function() {
         const value = $(this).val();
-        if(value != '') {
-            $.get('core/code/get-districts.php?id='+value, function(results) {
+        if (value != '') {
+            $.get('core/code/get-districts.php?id=' + value, function(results) {
                 const values = JSON.parse(results)
                 let html;
                 $.each(values, (key, result) => {
-                    html += '<option value="'+result.district_name+'">'+result.district_name+'</option>'
+                    html += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
                 });
                 $("#productarea_select").html(html)
             });
-        }
-        else {
+        } else {
             $("#productarea_select").html('')
         }
     });
 
     $("#promocity_select").on("change", function() {
         const value = $(this).val();
-        if(value != '') {
-            $.get('core/code/get-districts.php?id='+value, function(results) {
+        if (value != '') {
+            $.get('core/code/get-districts.php?id=' + value, function(results) {
                 const values = JSON.parse(results)
                 let html;
                 $.each(values, (key, result) => {
-                    html += '<option value="'+result.district_name+'">'+result.district_name+'</option>'
+                    html += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
                 });
                 $("#promoarea_select").html(html)
             });
-        }
-        else {
+        } else {
             $("#promoarea_select").html('')
         }
     });
@@ -128,8 +126,42 @@
         const productName = $(event.relatedTarget).data('productname')
         $("#myModal .modal-title").text(productName)
         $("input[name=product_name]").val(productName)
-        
+
         const brandProduct = $(event.relatedTarget).data('brandproduct')
         $("input[name=brand_product]").val(brandProduct)
     })
+
+    $(document).ready(function() {
+        $('#formProduct').validate({ // initialize the plugin
+            rules: {
+                "customer_name": {
+                    required: true
+                },
+                "email_address": {
+                    required: true,
+                    email: true
+                },
+                "customer_phone_number": {
+                    required: true
+                },
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('#formPromo').validate({ // initialize the plugin
+            rules: {
+                "customer_name": {
+                    required: true
+                },
+                "email_address": {
+                    required: true,
+                    email: true
+                },
+                "customer_phone_number": {
+                    required: true
+                },
+            }
+        });
+    });
 </script>

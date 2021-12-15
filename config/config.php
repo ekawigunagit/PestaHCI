@@ -1,13 +1,13 @@
 <?php 
-// $databaseHost = 'localhost';
-// $databaseName = 'dbpesta_hci';
-// $databaseUsername = 'root';
-// $databasePassword = '';
-
 $databaseHost = 'localhost';
-$databaseName = 'pesta_hci';
-$databaseUsername = 'usr_prod';
-$databasePassword = 'db@hc!k3c3';
+$databaseName = 'dbpesta_hci';
+$databaseUsername = 'root';
+$databasePassword = '';
+
+// $databaseHost = 'localhost';
+// $databaseName = 'pesta_hci';
+// $databaseUsername = 'usr_prod';
+// $databasePassword = 'db@hc!k3c3';
 
 $koneksi = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
  

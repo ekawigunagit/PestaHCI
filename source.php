@@ -327,7 +327,7 @@ $row = mysqli_fetch_row($query_promohci);
 <div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
-            <form action="core/code/addDataApply.php" method="post" class="submitForm" data-type="login">
+            <form id="formProduct" action="core/code/addDataApply.php" method="post" class="submitForm" data-type="login">
                 <div class="modal-header">
                     <h4 class="modal-title"></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -357,7 +357,7 @@ $row = mysqli_fetch_row($query_promohci);
 
                             while ($show_provinces = mysqli_fetch_array($query_provinces)) {
                             ?>
-                                <option value="<?php echo $show_provinces['id']; ?>"><?php echo $show_provinces['province_name']; ?></option>
+                                <option value="<?php echo $show_provinces['province_name']; ?>"><?php echo $show_provinces['province_name']; ?></option>
                             <?php
                             }
                             ?>
@@ -415,7 +415,7 @@ $row = mysqli_fetch_row($query_promohci);
 
                                 while ($show_provinces = mysqli_fetch_array($query_provinces)) {
                                 ?>
-                                    <option value="<?php echo $show_provinces['id']; ?>"><?php echo $show_provinces['province_name']; ?></option>
+                                    <option value="<?php echo $show_provinces['province_name']; ?>"><?php echo $show_provinces['province_name']; ?></option>
                                 <?php
                                 }
                                 ?>
