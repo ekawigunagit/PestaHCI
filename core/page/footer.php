@@ -91,7 +91,7 @@
 
 <footer>
     <div class="container">
-        <div class="row" >
+        <div class="row">
             <div class="col-6">
                 <img src="./images/footer/black_homecredit.svg" class="logo-footer">
                 <p class="mt-3">PT Home Credit Indonesia Plaza Oleos Lantai 8 Jl. TB Simatupang No. 53A,
@@ -120,18 +120,18 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="site-map-buttom"> -->
-        <!-- <div class="copy-right-1">
-                        Sitemap
-                        |
-                        Syarat dan Ketentuan
-                        |
-                        Kebijakan Privasi
-                    </div> -->
-        <!-- <div class="copy-right-2">
-                        <p>Ⓒ2021 Home Credit Indonesia</p>
-                    </div> -->
-        <!-- </div> -->
-    </div>
+        <!-- <div class="site-map-buttom">
+            <div class="copy-right-1">
+                Sitemap
+                |
+                Syarat dan Ketentuan
+                |
+                Kebijakan Privasi
+            </div>
+            <div class="copy-right-2">
+                <p>Ⓒ2021 Home Credit Indonesia</p>
+            </div>
+            </div>
+        </div> -->
     </div>
 </footer>

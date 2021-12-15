@@ -20,9 +20,11 @@
 <script type="module">
     import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
 
-    const swiper = new Swiper('.swiper', {
+    var swiper1 = new Swiper('.swiper', {
         slidesPerView: 1,
         spaceBetween: 10,
+        allowSlideNext:true,
+        allowSlidePrev:true,
         speed: 100,
         pagination: {
             el: '.swiper-pagination',
@@ -49,9 +51,63 @@
                 slidesPerView: 2,
                 effect: 'fade',
                 spaceBetween: 20,
+
             },
         }
     });
+    var swiper2 = new Swiper('.swiper2', {
+        slidesPerView: 4,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        allowSlideNext:true,
+        allowSlidePrev:true,
+        // using "ratio" endpoints
+        breakpoints: {
+            '@0.75': {
+                slidesPerView: 4,
+                spaceBetween: 20,
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                height:30,
+        },
+            },
+            '@1.00': {
+                slidesPerView: 5,
+                spaceBetween: 20,
+            },
+            '@1.50': {
+                slidesPerView: 5,
+                spaceBetween: 0,
+            },
+        }
+    });
+
+    var swiper3 = new Swiper('.swiper3', {
+        slidesPerView: 4,
+        allowSlidePrev:true,
+        breakpoints: {
+            '@0.75': {
+                slidesPerView: 4,
+                effect: 'fade',
+                spaceBetween: 20,
+            },
+            '@1.00': {
+                slidesPerView: 5,
+                spaceBetween: 20,
+                effect: 'fade',
+            },
+            '@1.50': {
+                slidesPerView: 5,
+                effect: 'fade',
+                spaceBetween: 20,
+            },
+        }
+    });
+
+
     $(".why-item").on("click", function() {
         $('.why-item').removeClass("active-item");
             $(this).addClass("active-item");
