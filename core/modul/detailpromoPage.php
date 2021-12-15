@@ -1,5 +1,7 @@
 <?php
-$idpr = $_GET['idpr'];
+$idpr_en = $_GET['idpr'];
+$idpr = sekuriti($idpr_en, 'decrypt');
+//echo "ID :" . $idpr;
 $data_promos = "SELECT * FROM promos WHERE status=1 AND id='$idpr'";
 $query_data_promos = mysqli_query($koneksi, $data_promos);
 
@@ -64,9 +66,11 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                 $query_promohci = mysqli_query($koneksi, $data_promohci);
 
                 while ($show_promohci = mysqli_fetch_array($query_promohci)) {
+                    $ambilidpromo = $show_promohci['id'];
+                    $ambilidpromo_en = sekuriti($ambilidpromo, 'encrypt');
                 ?>
                     <div class="swiper-slide">
-                        <a href="index.php?page=detailpromoPage&idpr=<?php echo $show_promohci['id']; ?>">
+                        <a href="index.php?page=detailpromoPage&idpr=<?php echo $ambilidpromo_en; ?>">
                             <div class="card promo">
                                 <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" alt="..." class="card-img-top">
                             </div>

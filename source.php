@@ -63,9 +63,12 @@ $row = mysqli_fetch_row($query_promohci);
                     $query_promohci = mysqli_query($koneksi, $data_promohci);
 
                     while ($show_promohci = mysqli_fetch_array($query_promohci)) {
+                        $ambilidpromo = $show_promohci['id'];
+                        $ambilidpromo_en = sekuriti($ambilidpromo, 'encrypt');
+
                     ?>
                         <div class="swiper-slide">
-                            <a href="index.php?page=detailpromoPage&idpr=<?php echo $show_promohci['id']; ?>">
+                            <a href="index.php?page=detailpromoPage&idpr=<?php echo $ambilidpromo_en; ?>">
                                 <div class="card promo">
                                     <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" alt="..." class="card-img-top">
                                 </div>
@@ -85,27 +88,38 @@ $row = mysqli_fetch_row($query_promohci);
             <?php
             // cek status page
             if (isset($_GET['pagenow']) && $_GET['pagenow'] != "") {
-                $pagenow = $_GET['pagenow'];
+                $pagenow_en = $_GET['pagenow'];
+                // $pagenow = base64_decode("$pagenow_en");
+                $pagenow = sekuriti($pagenow_en, 'decrypt');
             } else {
                 $pagenow = 1;
             }
 
+            // sekuriti('6', 'encrypt');
 
             $batas = 16;
             $posisi = ($pagenow - 1) * $batas;
             $previous_page = $pagenow - 1;
+            // $previous_page_en = base64_encode("$previous_page");
+            $previous_page_en = sekuriti($previous_page, 'encrypt');
             $next_page = $pagenow + 1;
+            // $next_page_en = base64_encode("$next_page");
+            $next_page_en = sekuriti($next_page, 'encrypt');
             $adjacents = "2";
 
             $count_data_product = "SELECT * FROM products WHERE status=1";
             $query_count_product = mysqli_query($koneksi, $count_data_product);
             $total_data_product = mysqli_num_rows($query_count_product);
             $total_data_page = ceil($total_data_product / $batas);
+            // $total_data_page_en = base64_encode("$total_data_page");
+            $total_data_page_en = sekuriti($total_data_page, 'encrypt');
 
 
             $data_product = "SELECT * FROM products WHERE status=1 ORDER BY id DESC LIMIT $posisi,$batas";
             $query_product = mysqli_query($koneksi, $data_product);
             $second_last = $total_data_page - 1; // total page minus 1 untuk menentukan
+            // $second_last_en = base64_encode("$second_last");
+            $second_last_en = sekuriti($second_last, 'encrypt');
             // $second_last_en = base64_encode("$second_last"); 
             $linkaddress = "index.php";
             ?>
@@ -125,48 +139,60 @@ $row = mysqli_fetch_row($query_promohci);
                         } else if ($pagenow > 1) {
                             echo "
                                 <li class='page-item'>
-                                    <a class='page-link' href='$linkaddress?pagenow=$previous_page'>Previous</a>
+                                    <a class='page-link' href='$linkaddress?pagenow=$previous_page_en'>Previous</a>
                                 </li>
                                 ";
                         }
 
                         if ($pagenow <= 1) {
                             $pagenow1 = $pagenow + 1;
+                            // $pagenow1_en = base64_encode("$pagenow1");
+                            $pagenow1_en = sekuriti($pagenow1, 'encrypt');
                             $pagenow2 = $pagenow + 2;
+                            // $pagenow2_en = base64_encode("$pagenow2");
+                            $pagenow2_en = sekuriti($pagenow2, 'encrypt');
                             echo "
                                 <li class='page-item active'>
                                     <a class='page-link'>" . $pagenow . "</a>
                                 </li>
                                 <li class='page-item'>
-                                    <a class='page-link' href='$linkaddress?pagenow=$pagenow1'>" . $pagenow1 . "</a>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenow1_en'>" . $pagenow1 . "</a>
                                 </li>
                                 <li class='page-item'>
-                                    <a class='page-link' href='$linkaddress?pagenow=$pagenow2'>" . $pagenow2 . "</a>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenow2_en'>" . $pagenow2 . "</a>
                                 </li>
                                 ";
                         } else if (($pagenow > 1) && ($pagenow < $total_data_page)) {
                             $pagenowMin1 = $pagenow - 1;
+                            // $pagenowMin1_en = base64_encode("$pagenowMin1");
+                            $pagenowMin1_en = sekuriti($pagenowMin1, 'encrypt');
                             $pagenowPlus1 = $pagenow + 1;
+                            // $pagenowPlus1_en = base64_encode("$pagenowPlus1");
+                            $pagenowPlus1_en = sekuriti($pagenowPlus1, 'encrypt');
                             echo "
                                 <li class='page-item'>
-                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowMin1'>" . $pagenowMin1 . "</a>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowMin1_en'>" . $pagenowMin1 . "</a>
                                 </li>
                                 <li class='page-item active'>
                                     <a class='page-link'>" . $pagenow . "</a>
                                 </li>
                                 <li class='page-item'>
-                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowPlus1'>" . $pagenowPlus1 . "</a>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowPlus1_en'>" . $pagenowPlus1 . "</a>
                                 </li>
                                 ";
                         } else if ($pagenow >= $total_data_page) {
                             $pagenowMin1 = $total_data_page - 1;
+                            // $pagenowMin1_en = base64_encode("$pagenowMin1");
+                            $pagenowMin1_en = sekuriti($pagenowMin1, 'encrypt');
                             $pagenowMin2 = $total_data_page - 2;
+                            // $pagenowMin2_en = base64_encode("$pagenowMin2");
+                            $pagenowMin2_en = sekuriti($pagenowMin2, 'encrypt');
                             echo "
                                 <li class='page-item'>
-                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowMin2'>" . $pagenowMin2 . "</a>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowMin2_en'>" . $pagenowMin2 . "</a>
                                 </li>
                                 <li class='page-item'>
-                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowMin1'>" . $pagenowMin1 . "</a>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowMin1_en'>" . $pagenowMin1 . "</a>
                                 </li>
                                 <li class='page-item active'>
                                     <a class='page-link'>" . $pagenow . "</a>
@@ -193,7 +219,7 @@ $row = mysqli_fetch_row($query_promohci);
                         } else if ($pagenow < $total_data_page) {
                             echo "
                                 <li class='page-item'>
-                                    <a class='page-link' href='$linkaddress?pagenow=$next_page'>Next</a>
+                                    <a class='page-link' href='$linkaddress?pagenow=$next_page_en'>Next</a>
                                 </li>
                                 ";
                         }
@@ -227,98 +253,108 @@ $row = mysqli_fetch_row($query_promohci);
             </div>
         </div>
     </div>
-    <!-- Paging -->
-    <div class="container">
-        <div class="row custome_paging justify-content-center">
-            <nav aria-label="...">
-                <ul class="pagination">
-                    <?php
-                    // link awal
-                    if ($pagenow <= 1) { // bu   
-                        echo "
-                        <li class='page-item disabled'>
-                            <span class='page-link'>Previous</span>
-                        </li>
-                        ";
-                    } else if ($pagenow > 1) {
-                        echo "
-                        <li class='page-item'>
-                            <a class='page-link' href='$linkaddress?pagenow=$previous_page'>Previous</a>
-                        </li>
-                        ";
-                    }
+    <!-- Paging atas -->
+    <div class="row custome_paging justify-content-center">
+        <nav aria-label="...">
+            <ul class="pagination">
+                <?php
+                // link awal
+                if ($pagenow <= 1) { // bu   
+                    echo "
+                                <li class='page-item disabled'>
+                                    <span class='page-link'>Previous</span>
+                                </li>
+                                ";
+                } else if ($pagenow > 1) {
+                    echo "
+                                <li class='page-item'>
+                                    <a class='page-link' href='$linkaddress?pagenow=$previous_page_en'>Previous</a>
+                                </li>
+                                ";
+                }
 
-                    if ($pagenow <= 1) {
-                        $pagenow1 = $pagenow + 1;
-                        $pagenow2 = $pagenow + 2;
-                        echo "
-                        <li class='page-item active'>
-                            <a class='page-link'>" . $pagenow . "</a>
-                        </li>
-                        <li class='page-item'>
-                            <a class='page-link' href='$linkaddress?pagenow=$pagenow1'>" . $pagenow1 . "</a>
-                        </li>
-                        <li class='page-item'>
-                            <a class='page-link' href='$linkaddress?pagenow=$pagenow2'>" . $pagenow2 . "</a>
-                        </li>
-                        ";
-                    } else if (($pagenow > 1) && ($pagenow < $total_data_page)) {
-                        $pagenowMin1 = $pagenow - 1;
-                        $pagenowPlus1 = $pagenow + 1;
-                        echo "
-                        <li class='page-item'>
-                            <a class='page-link' href='$linkaddress?pagenow=$pagenowMin1'>" . $pagenowMin1 . "</a>
-                        </li>
-                        <li class='page-item active'>
-                            <a class='page-link'>" . $pagenow . "</a>
-                        </li>
-                        <li class='page-item'>
-                            <a class='page-link' href='$linkaddress?pagenow=$pagenowPlus1'>" . $pagenowPlus1 . "</a>
-                        </li>
-                        ";
-                    } else if ($pagenow >= $total_data_page) {
-                        $pagenowMin1 = $total_data_page - 1;
-                        $pagenowMin2 = $total_data_page - 2;
-                        echo "
-                        <li class='page-item'>
-                            <a class='page-link' href='$linkaddress?pagenow=$pagenowMin2'>" . $pagenowMin2 . "</a>
-                        </li>
-                        <li class='page-item'>
-                            <a class='page-link' href='$linkaddress?pagenow=$pagenowMin1'>" . $pagenowMin1 . "</a>
-                        </li>
-                        <li class='page-item active'>
-                            <a class='page-link'>" . $pagenow . "</a>
-                        </li>
-                        ";
-                    }
-                    ?>
+                if ($pagenow <= 1) {
+                    $pagenow1 = $pagenow + 1;
+                    // $pagenow1_en = base64_encode("$pagenow1");
+                    $pagenow1_en = sekuriti($pagenow1, 'encrypt');
+                    $pagenow2 = $pagenow + 2;
+                    // $pagenow2_en = base64_encode("$pagenow2");
+                    $pagenow2_en = sekuriti($pagenow2, 'encrypt');
+                    echo "
+                                <li class='page-item active'>
+                                    <a class='page-link'>" . $pagenow . "</a>
+                                </li>
+                                <li class='page-item'>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenow1_en'>" . $pagenow1 . "</a>
+                                </li>
+                                <li class='page-item'>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenow2_en'>" . $pagenow2 . "</a>
+                                </li>
+                                ";
+                } else if (($pagenow > 1) && ($pagenow < $total_data_page)) {
+                    $pagenowMin1 = $pagenow - 1;
+                    // $pagenowMin1_en = base64_encode("$pagenowMin1");
+                    $pagenowMin1_en = sekuriti($pagenowMin1, 'encrypt');
+                    $pagenowPlus1 = $pagenow + 1;
+                    // $pagenowPlus1_en = base64_encode("$pagenowPlus1");
+                    $pagenowPlus1_en = sekuriti($pagenowPlus1, 'encrypt');
+                    echo "
+                                <li class='page-item'>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowMin1_en'>" . $pagenowMin1 . "</a>
+                                </li>
+                                <li class='page-item active'>
+                                    <a class='page-link'>" . $pagenow . "</a>
+                                </li>
+                                <li class='page-item'>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowPlus1_en'>" . $pagenowPlus1 . "</a>
+                                </li>
+                                ";
+                } else if ($pagenow >= $total_data_page) {
+                    $pagenowMin1 = $total_data_page - 1;
+                    // $pagenowMin1_en = base64_encode("$pagenowMin1");
+                    $pagenowMin1_en = sekuriti($pagenowMin1, 'encrypt');
+                    $pagenowMin2 = $total_data_page - 2;
+                    // $pagenowMin2_en = base64_encode("$pagenowMin2");
+                    $pagenowMin2_en = sekuriti($pagenowMin2, 'encrypt');
+                    echo "
+                                <li class='page-item'>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowMin2_en'>" . $pagenowMin2 . "</a>
+                                </li>
+                                <li class='page-item'>
+                                    <a class='page-link' href='$linkaddress?pagenow=$pagenowMin1_en'>" . $pagenowMin1 . "</a>
+                                </li>
+                                <li class='page-item active'>
+                                    <a class='page-link'>" . $pagenow . "</a>
+                                </li>
+                                ";
+                }
+                ?>
 
-                    <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active">
-                    <span class="page-link">
-                        2
-                        <span class="sr-only">(current)</span>
-                    </span>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li> -->
-                    <?php
-                    if ($pagenow >= $total_data_page) {
-                        echo "
-                        <li class='page-item disabled'>
-                            <span class='page-link'>Next</span>
+                <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item active">
+                            <span class="page-link">
+                                2
+                                <span class="sr-only">(current)</span>
+                            </span>
                         </li>
-                        ";
-                    } else if ($pagenow < $total_data_page) {
-                        echo "
-                        <li class='page-item'>
-                            <a class='page-link' href='$linkaddress?pagenow=$next_page'>Next</a>
-                        </li>
-                        ";
-                    }
-                    ?>
-                </ul>
-            </nav>
-        </div>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li> -->
+                <?php
+                if ($pagenow >= $total_data_page) {
+                    echo "
+                                <li class='page-item disabled'>
+                                    <span class='page-link'>Next</span>
+                                </li>
+                                ";
+                } else if ($pagenow < $total_data_page) {
+                    echo "
+                                <li class='page-item'>
+                                    <a class='page-link' href='$linkaddress?pagenow=$next_page_en'>Next</a>
+                                </li>
+                                ";
+                }
+                ?>
+            </ul>
+        </nav>
     </div>
 </div>
 

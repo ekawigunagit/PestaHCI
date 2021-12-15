@@ -17,5 +17,11 @@ $response = _curlPost($url,$data, $method);
 // var_dump($response); exit;
 $result = json_encode($response);
 echo json_decode($result);
-header('location:../../index.php?page=thankyouPage&idpr='. $_POST['product_id']);
+
+if (isset($_POST['product_id']) && $_POST['product_id'] != "") {
+    $ambilproduct_en = sekuriti($_POST['product_id'], 'encrypt');
+    header('location:../../index.php?page=thankyouPage&idpr='. $ambilproduct_en);
+} else {
+    header('location:../../index.php?page=thankyouPage');
+}
 ?>
