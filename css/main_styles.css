@@ -2960,8 +2960,8 @@ label {
 	}
 	.detail-text-product ul li {
 		list-style: initial;
-	
-		margin: 10px 10px 0 25px;
+		
+		margin: 10px 10px 20PX 25px;
 	}
 	.home-product h2 {
 		font-size: 18px;
@@ -3288,5 +3288,4 @@ footer .sosmed img {
 .tc-form a {
 	color: #52020f !important;
 	font-weight: bolder;
-
 }
