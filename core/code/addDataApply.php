@@ -6,7 +6,9 @@ $data['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
 $data['utm_source'] = "Pesta Online";
 $data['utm_campaign'] = $_POST['brand_product'];
 $data['utm_medium'] = $_POST['product_name'];
-// echo $data['user_agent']; exit;
+$data['utm_content'] = $_POST['hadiah'];
+//print_r($data); exit;
+//echo $_POST['product_name'] . "<br />" . $_POST['brand_product']; exit;
 //$data['value_dump'] = '{"commodity":"'.$_POST['product_name'].'"}';
 // echo ($data['value_dump']); exit;
 $method = "POST";
@@ -15,5 +17,11 @@ $response = _curlPost($url,$data, $method);
 // var_dump($response); exit;
 $result = json_encode($response);
 echo json_decode($result);
-//header('location:../../index.php?page=thankyouPage');
+
+if (isset($_POST['product_id']) && $_POST['product_id'] != "") {
+    $ambilproduct_en = sekuriti($_POST['product_id'], 'encrypt');
+    header('location:../../index.php?page=thankyouPage&idpr='. $ambilproduct_en);
+} else {
+    header('location:../../index.php?page=thankyouPage');
+}
 ?>

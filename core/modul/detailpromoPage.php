@@ -1,5 +1,7 @@
 <?php
-$idpr = $_GET['idpr'];
+$idpr_en = $_GET['idpr'];
+$idpr = sekuriti($idpr_en, 'decrypt');
+//echo "ID :" . $idpr;
 $data_promos = "SELECT * FROM promos WHERE status=1 AND id='$idpr'";
 $query_data_promos = mysqli_query($koneksi, $data_promos);
 
@@ -64,9 +66,11 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                 $query_promohci = mysqli_query($koneksi, $data_promohci);
 
                 while ($show_promohci = mysqli_fetch_array($query_promohci)) {
+                    $ambilidpromo = $show_promohci['id'];
+                    $ambilidpromo_en = sekuriti($ambilidpromo, 'encrypt');
                 ?>
                     <div class="swiper-slide">
-                        <a href="index.php?page=detailpromoPage&idpr=<?php echo $show_promohci['id']; ?>">
+                        <a href="index.php?page=detailpromoPage&idpr=<?php echo $ambilidpromo_en; ?>">
                             <div class="card promo">
                                 <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" alt="..." class="card-img-top">
                             </div>
@@ -87,7 +91,7 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
 <div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
-            <form action="core/code/addDataApply.php" method="post" class="submitForm" data-type="login">
+            <form id="formPromo" action="core/code/addDataApply.php" method="post" class="submitForm" data-type="login">
                 <div class="modal-header">
                     <h4 class="modal-title"></h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -97,15 +101,15 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     <input type="hidden" name="brand_product">
                     <div class="form-group">
                         <label>Full Name</label>
-                        <input name="customer_name" type="text" class="form-control">
+                        <input name="name" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Email</label>
-                        <input name="email_address" type="email" class="form-control">
+                        <input name="email" type="email" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input name="customer_phone_number" type="text" class="form-control">
+                        <input name="phone" type="text" class="form-control">
                     </div>
                     <div class="form-group">
                         <label>City</label>
@@ -117,7 +121,7 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
 
                             while ($show_provinces = mysqli_fetch_array($query_provinces)) {
                             ?>
-                                <option value="<?php echo $show_provinces['id']; ?>"><?php echo $show_provinces['province_name']; ?></option>
+                                <option value="<?php echo $show_provinces['province_name']; ?>"><?php echo $show_provinces['province_name']; ?></option>
                             <?php
                             }
                             ?>
@@ -128,8 +132,9 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                         <select name="area" id="promoarea_select" class="form-control"></select>
                     </div>
                     <div class="form-group">
-                        <label>Pilih Hadiah</label>
-                        <select name="area" class="form-control">
+                        <label>Pilih untuk kesempatan memenangkan hadiah</label>
+                        <select name="hadiah" class="form-control">
+                            <option> --Choose One-- </option>
                             <option>Hadiah 1</option>
                             <option>Hadiah 2</option>
                             <option>Hadiah 3</option>
@@ -144,8 +149,11 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     </div> -->
                 </div>
                 <div class="modal-footer">
-                    <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img">
-                    <div class="system_error"></div><br />
+                    <!-- <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img"> -->
+                    <!-- <div class="system_error"></div><br /> -->
+                    <div class="tc-form">
+                        <a href="index.php?page=hadiahPage" target="_blank">Term & Condition</a>
+                    </div>
                     <!-- <label class="checkbox-inline pull-left"><a href="#myModalRegist" class="trigger-btn" data-toggle="modal">Register</a></label> -->
                     <input type="submit" class="btn btn-primary pull-right" value="Apply Now">
                 </div>

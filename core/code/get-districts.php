@@ -1,7 +1,7 @@
 <?php
 include "../../config/config.php";
 $province_id = $_GET['id'];
-$data_district = "SELECT * FROM districts WHERE status=1 AND province_id='$province_id'";
+$data_district = "SELECT * FROM districts LEFT JOIN provinces ON districts.province_id = provinces.id WHERE districts.status=1 AND provinces.province_name = '".$province_id."' ORDER BY districts.districts_name ASC";
 $query_district = mysqli_query($koneksi, $data_district);
 
 $results = [];
