@@ -79,7 +79,7 @@
                 const values = JSON.parse(results)
                 let chtml;
                 $.each(values, (key, result) => {
-                    chtml += '<option value="'+result.id+'">'+result.district_name+'</option>'
+                    chtml += '<option value="'+result.district_name+'">'+result.district_name+'</option>'
                 });
 
                 $("#area_select").html(chtml)
@@ -97,7 +97,7 @@
                 const values = JSON.parse(results)
                 let html;
                 $.each(values, (key, result) => {
-                    html += '<option value="'+result.id+'">'+result.district_name+'</option>'
+                    html += '<option value="'+result.district_name+'">'+result.district_name+'</option>'
                 });
                 $("#productarea_select").html(html)
             });
@@ -114,7 +114,7 @@
                 const values = JSON.parse(results)
                 let html;
                 $.each(values, (key, result) => {
-                    html += '<option value="'+result.id+'">'+result.district_name+'</option>'
+                    html += '<option value="'+result.district_name+'">'+result.district_name+'</option>'
                 });
                 $("#promoarea_select").html(html)
             });

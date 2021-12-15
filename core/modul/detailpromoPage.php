@@ -117,7 +117,7 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
 
                             while ($show_provinces = mysqli_fetch_array($query_provinces)) {
                             ?>
-                                <option value="<?php echo $show_provinces['id']; ?>"><?php echo $show_provinces['province_name']; ?></option>
+                                <option value="<?php echo $show_provinces['province_name']; ?>"><?php echo $show_provinces['province_name']; ?></option>
                             <?php
                             }
                             ?>
@@ -129,7 +129,7 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     </div>
                     <div class="form-group">
                         <label>Pilih Hadiah</label>
-                        <select name="area" class="form-control">
+                        <select name="hadiah" class="form-control">
                             <option>Hadiah 1</option>
                             <option>Hadiah 2</option>
                             <option>Hadiah 3</option>
