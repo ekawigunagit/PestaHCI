@@ -2902,6 +2902,7 @@ label {
 	.item-brand-list {
 		text-align: center;
 		padding: 30px 0;
+		cursor: pointer;
 	}
 
 	.product-lainnya h2 {
@@ -2968,9 +2969,11 @@ label {
 	.item-brand-list {
 		text-align: center;
 		padding: 30px 0;
+		cursor: pointer;
 	}
 	.item-brand-list img {
 		width: 110px;
+		cursor: pointer;
 	}
 
 	.promo-page {
@@ -3083,10 +3086,12 @@ label {
 
 	.item-brand-list {
 		padding: 10px 0;
+		cursor: pointer;
 	}
 
 	.item-brand-list img {
 		width: 110px;
+		cursor: pointer;
 	}
 
 	.active-logo {
@@ -3199,6 +3204,7 @@ label {
 }
 .item-brand-list img {
 	width: 95px;
+	cursor: pointer;
 }
 .why-item:hover {
 	background-color: rgba(63, 78, 100, 0.15);
