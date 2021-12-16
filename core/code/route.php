@@ -42,6 +42,10 @@
                 $halaman="core/modul/promoPage.php";
             break;
 
+            case "thankyouPagePromo":
+                $halaman="core/modul/thankyouPagePromo.php";
+            break;
+
         }
     }
 

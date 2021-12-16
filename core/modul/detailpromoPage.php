@@ -2,7 +2,7 @@
 $idpr_en = $_GET['idpr'];
 $idpr = sekuriti($idpr_en, 'decrypt');
 //echo "ID :" . $idpr;
-$data_promos = "SELECT * FROM promos WHERE status=1 AND id='$idpr'";
+$data_promos = "SELECT *, promos.id AS pmID FROM promos LEFT JOIN category_products ON promos.category_product_id = category_products.id WHERE promos.status=1 AND promos.id='$idpr'";
 $query_data_promos = mysqli_query($koneksi, $data_promos);
 
 while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
@@ -35,7 +35,7 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
 
                 <div class="detail-list">
                     <div class="bnt-ajukan">
-                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_data_promos['title_promo']; ?>" data-brandProduct="-"><button class="btn" type="submit">Ajukan Sekarang</button></span>
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_data_promos['title_promo']; ?>" data-brandProduct="-" data-categoryName="<?php echo $show_data_promos['category_name']; ?> " data-promoID="<?php echo $show_data_promos['pmID']; ?> "><button class="btn" type="submit">Ajukan Sekarang</button></span>
                     </div>
                 </div>
             </div>
@@ -91,6 +91,8 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                 <div class="modal-body">
                     <input type="hidden" name="product_name">
                     <input type="hidden" name="brand_product">
+                    <input type="hidden" name="category_name">
+                    <input type="hidden" name="promo_id">
                     <div class="form-group">
                         <label>Full Name</label>
                         <input name="name" type="text" class="form-control">

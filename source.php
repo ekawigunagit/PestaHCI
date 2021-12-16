@@ -23,7 +23,7 @@ $row = mysqli_fetch_row($query_promohci);
                     while ($show_data_category = mysqli_fetch_array($query_data_category)) {
 
                     ?>
-                        <div class="swiper-slide" onclick="pilihCategory('<?php echo sekuriti($show_data_category['ctID'], 'encrypt'); ?>')">
+                        <div class="swiper-slide chooseProduct" data-ct="<?php echo sekuriti($show_data_category['ctID'], 'encrypt'); ?>">
                             <div class="col why-item<?php echo isset($_GET['ctpr']) && sekuriti($_GET['ctpr'], 'decrypt') == $show_data_category['ctID'] ? ' active-item' : ''; ?>">
                                 <span><img src="./images/iconcategory/<?php echo $show_data_category['images_category']; ?>" alt=""></span>
                             </div>
@@ -56,7 +56,7 @@ $row = mysqli_fetch_row($query_promohci);
                             // echo "asdfafdsfadfassafsffadsdfsafdsafasdfasdfasdfasfsf"; 
                             while ($show_data_brand = mysqli_fetch_array($query_data_brand)) {
                         ?>
-                                <div class="swiper-slide" onclick="pilihBrand('<?php echo sekuriti($show_data_brand['brID'], 'encrypt'); ?>', '<?php echo $_GET['ctpr']; ?>')">
+                                <div class="swiper-slide chooseBrand" data-br="<?php echo sekuriti($show_data_brand['brID'], 'encrypt'); ?>" data-ct="<?php echo $_GET['ctpr']; ?>">
                                     <div class="item-brand-list<?php echo isset($_GET['ctbr']) && sekuriti($_GET['ctbr'], 'decrypt') == $show_data_brand['brID'] ? ' active-logo' : ''; ?>">
                                         <img src="./images/logobrand/<?php echo $show_data_brand['image_brand']; ?>" alt="">
                                     </div>
@@ -146,14 +146,14 @@ $row = mysqli_fetch_row($query_promohci);
             $total_data_page_en = sekuriti($total_data_page, 'encrypt');
 
 
-            $data_product = "SELECT * FROM products WHERE status=1";
+            $data_product = "SELECT *, products.id AS pdID FROM products LEFT JOIN category_products ON products.category_product_id = category_products.id WHERE products.status=1";
             if (isset($_GET['ctpr'])) {
                 $data_product .= " AND category_product_id =" . sekuriti($_GET['ctpr'], 'decrypt');
             }
             if ((isset($_GET['ctpr']) && (isset($_GET['ctbr'])))) {
                 $data_product .= " AND brand_id =" . sekuriti($_GET['ctbr'], 'decrypt');
             }
-            $data_product .= " ORDER BY id DESC LIMIT $posisi,$batas";
+            $data_product .= " ORDER BY products.id DESC LIMIT $posisi,$batas";
 
             // echo "Brand : " . $count_data_product . " <br />Product : " . $data_product ; exit;
 
@@ -244,7 +244,7 @@ $row = mysqli_fetch_row($query_promohci);
                             <div class="card-body">
                                 <p class="card-text"><?php echo $show_product['product_name']; ?></p>
                             </div>
-                            <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_product['product_name']; ?>" data-brandProduct="<?php echo $show_product['brand_product']; ?>" data-productID="<?php echo $show_product['id']; ?>">
+                            <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_product['product_name']; ?>" data-brandProduct="<?php echo $show_product['brand_product']; ?>" data-productID="<?php echo $show_product['pdID']; ?> " data-categoryName="<?php echo $show_product['category_name']; ?> ">
                                 <div class="card-footer">
                                     <p class="text-visit-katalog">Apply Now</p>
                                 </div>
@@ -335,6 +335,7 @@ $row = mysqli_fetch_row($query_promohci);
                         <input type="hidden" name="product_name">
                         <input type="hidden" name="brand_product">
                         <input type="hidden" name="product_id">
+                        <input type="hidden" name="category_name">
                         <div class="form-group">
                             <label>Full Name</label>
                             <input name="name" type="text" class="form-control">
@@ -405,6 +406,7 @@ $row = mysqli_fetch_row($query_promohci);
             <div class="modal-dialog modal-md">
                 <div class="modal-content">
                     <form action="core/code/addLocation.php" method="post" class="submitForm">
+                        <input type="hidden" name="_token" value="<?php echo $token; ?>" />
                         <div class="modal-header">
                             <h4 class="modal-title">Pilih Lokasi Anda</h4>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -445,12 +447,4 @@ $row = mysqli_fetch_row($query_promohci);
         </div>
     <?php endif; ?>
 
-    <script>
-        function pilihCategory(param) {
-            window.location.href = "?ctpr=" + param
-        }
-
-        function pilihBrand(param, ctId) {
-            window.location.href = "?ctpr=" + ctId + "&ctbr=" + param
-        }
-    </script>
+   
