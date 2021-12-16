@@ -236,6 +236,7 @@ $row = mysqli_fetch_row($query_promohci);
                 <?php
                 //Tampil data
                 while ($show_product = mysqli_fetch_array($query_product)) {
+                    // echo "ID :" . $show_product['id'];
                 ?>
                     <div class="col-6 col-md-6 col-lg-3 mt-4">
                         <div class="card katalog-item h-100">
@@ -243,7 +244,7 @@ $row = mysqli_fetch_row($query_promohci);
                             <div class="card-body">
                                 <p class="card-text"><?php echo $show_product['product_name']; ?></p>
                             </div>
-                            <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_product['product_name']; ?>" data-brandProduct="<?php echo $show_product['brand_product']; ?>" data-idProduct="<?php echo $show_product['id']; ?>">
+                            <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_product['product_name']; ?>" data-brandProduct="<?php echo $show_product['brand_product']; ?>" data-productID="<?php echo $show_product['id']; ?>">
                                 <div class="card-footer">
                                     <p class="text-visit-katalog">Apply Now</p>
                                 </div>

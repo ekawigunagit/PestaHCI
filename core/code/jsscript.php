@@ -186,8 +186,8 @@
         const brandProduct = $(event.relatedTarget).data('brandproduct')
         $("input[name=brand_product]").val(brandProduct)
 
-        const idProduct = $(event.relatedTarget).data('idproduct')
-        $("input[name=product_id]").val(brandProduct)
+        const productID = $(event.relatedTarget).data('productid')
+        $("input[name=product_id]").val(productID)
     })
 
     $(document).ready(function() {
