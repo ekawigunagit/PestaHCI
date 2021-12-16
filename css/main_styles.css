@@ -421,7 +421,9 @@ section {
 .main_nav ul li.active::after {
 	color: #1b1b1b;
 }
-
+.hassubs .Cities {
+	padding-bottom: 20px;
+}
 .hassubs ul {
 	position: absolute;
 	right: -15px;
@@ -434,6 +436,8 @@ section {
 	padding-bottom: 25px;
 	visibility: hidden;
 	opacity: 0;
+	max-height: 500px;
+	overflow-y: scroll;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -720,6 +724,7 @@ section {
 	color: #ea0129;
 	font-weight: 700;
 	line-height: 50px;
+
 	height: 50px;
 	font-size: 16px;
 	-webkit-transition: all 200ms ease;
@@ -2743,7 +2748,7 @@ label {
 }
 
 .home-product h2 {
-	font-size: 28px;
+	font-size: 24px;
 }
 
 .katalog-product {
@@ -2802,8 +2807,6 @@ label {
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
-
-/* btn */
 
 
 .detail-list .bnt-ajukan {
@@ -2891,12 +2894,13 @@ label {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
 	}
-
-	/* .item-brand-list img {
-		width: 300px;
-	} */
+	.home-product h2 {
+		font-size: 24px;
+	}
+	.item-brand-list img {
+		width: 100px;
+	}
 
 	.item-brand-list {
 		text-align: center;
@@ -2958,6 +2962,13 @@ label {
 	.why-item a img {
 		width: 60px;
 	}
+	.detail-text-product {
+		margin-top: 30px;
+	}
+	/* btn */
+	.detail-list ol {
+		margin: 20px 10px 0 3px;
+	}
 
 	/* .item-brand {
 		margin-bottom: 20px;
@@ -2966,8 +2977,9 @@ label {
 		text-align: center;
 		padding: 30px 0;
 	}
+
 	.item-brand-list img {
-		width: 110px;
+		width: 200px;
 	}
 
 	.promo-page {
@@ -3006,12 +3018,14 @@ label {
 	.product-lainnya h2 {
 		font-size: 24px;
 	}
+
 	.promo-wrapper {
 		padding: 0;
 		margin: 30px 0 50px 0;
 	}
+
 	.home-product h2 {
-		font-size: 18px;
+		font-size: 24px;
 	}
 
 	footer .ojk img {
@@ -3037,12 +3051,8 @@ label {
 		position: relative;
 		margin-top: 0rem;
 		padding: 20px 0;
-
 	}
 
-	/* .why-item-all{
-		margin: 10px 0;
-	} */
 	.why-item {
 		padding: 10px 0;
 		display: flex;
@@ -3076,16 +3086,16 @@ label {
 	}
 
 	.item-brand-list {
-		padding: 10px 0;
+		padding: 30px 0;
 	}
 
 	.item-brand-list img {
-		width: 110px;
+		width: 80px;
 	}
 
 	.active-logo {
 		cursor: pointer;
-		padding: 10px 0;
+		padding: 30px 0;
 		background-color: rgba(63, 63, 63, 0.377);
 	}
 
@@ -3098,7 +3108,17 @@ label {
 	}
 
 	.detail-promo h2 {
-		font-size: 24px;
+		font-size: 18px;
+	}
+	.detail-promo p {
+		color: black;
+	}
+	.detail-text-product {
+		margin-top: 30px;
+	}
+	/* btn */
+	.detail-list ol {
+		margin: 20px 10px 0 3px;
 	}
 
 	.detail-text-product p {
@@ -3107,7 +3127,8 @@ label {
 	}
 
 	.detail-text-product h5 {
-		font-size: large;
+		font-size: 18px;
+		font: bold	;
 		margin: 10px 20px;
 	}
 
@@ -3126,10 +3147,9 @@ label {
 		background-color: #1b1b1b;
 	}
 
-	.imgthankyou img {
+	.thankyou img {
 		margin-top: 0px;
-		height: 200px;
-		background-color: darksalmon;
+		width: 200px;
 	}
 
 	.promo-page {
@@ -3140,9 +3160,14 @@ label {
 		padding: 0;
 		margin: 30px 0;
 	}
-
+	.imgthankyou img {
+		width: 300px;
+	}
+    .QR_Scan img{
+     width: 250px;
+	}
 	footer {
-		font-size: 12px;
+		font-size: 10px;
 		padding: 50px 0;
 		color: white;
 		display: block;
@@ -3150,7 +3175,7 @@ label {
 	}
 
 	footer p {
-		font-size: 12px;
+		font-size: 10px;
 	}
 
 	footer .logo-footer {
@@ -3158,7 +3183,7 @@ label {
 	}
 
 	footer .ojk img {
-		width: 8rem;
+		width: 120px;
 	}
 
 	footer .app img {
@@ -3191,9 +3216,10 @@ label {
 		grid-template-rows: 25% 25% 25% 25%;
 	}
 }
-.item-brand-list img {
-	width: 95px;
-}
+
+/* .item-brand-list img {
+	width: 200px;
+} */
 .why-item:hover {
 	background-color: rgba(63, 78, 100, 0.15);
 }
@@ -3247,10 +3273,11 @@ footer {
 footer .sosmed {
 	margin-top: 10px;
 }
-footer .ojk img {
+
+/* footer .ojk img {
 	width: 200px;
 	margin-top: 10px;
-}
+} */
 
 footer .sosmed img {
 	margin-left: 4px;
@@ -3300,10 +3327,6 @@ footer .sosmed img {
 	margin: 0;
 }
 
-
-/* .item-brand-list img {
-	width: 80px;
-} */
 
 .active-logo {
 	cursor: pointer;

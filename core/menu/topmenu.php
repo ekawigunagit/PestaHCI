@@ -40,7 +40,7 @@
 
                                         while ($show_data_menucities = mysqli_fetch_array($query_data_menucities)) {
                                         ?>
-                                            <li><a href="index.php"><?php echo $show_data_menucities['province_name']; ?></a></li>
+                                            <li class="Cities"><a href="index.php"><?php echo $show_data_menucities['province_name']; ?></a></li>
                                         <?php
                                         }
                                         ?>

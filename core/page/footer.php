@@ -98,9 +98,12 @@
                     Jakarta Selatan 12520
                 </p>
                 <div class="sosmed">
-                    <img src="./images/footer/fb.svg" alt="">
-                    <img src="./images/footer/ig.svg" alt="">
-                    <img src="./images/footer/youtube.svg" alt="">
+                    <a href=""><img src="./images/footer/linkidin-footer.svg" alt=""></a>
+                    <a href=""><img src="./images/footer/fb.svg" alt=""></a>
+                    <a href=""><img src="./images/footer/ig.svg" alt=""></a>
+                    <a href=""><img src="./images/footer/twiter-footer.svg" alt=""></a>
+                    <a href=""><img src="./images/footer/youtube.svg" alt=""></a>
+                    <!-- <a href=""><img src="./images/footer/tiktok-footer.svg" alt=""></a> -->
                 </div>
             </div>
 
