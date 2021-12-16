@@ -2852,6 +2852,7 @@ label {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		cursor: pointer;
 	}
 
 	.promo-page {
@@ -2953,10 +2954,12 @@ label {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		cursor: pointer;
 	}
 
-	.why-item a img {
+	.why-item img {
 		width: 60px;
+		cursor: pointer;
 	}
 
 	/* .item-brand {
@@ -3048,10 +3051,13 @@ label {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		cursor: pointer;
+		
 	}
 
-	.why-item a img {
+	.why-item img {
 		width: 30px;
+		cursor: pointer;
 	}
 
 	.why-item:hover {
