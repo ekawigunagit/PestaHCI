@@ -1,11 +1,9 @@
 <?php
 $ip = $_SERVER['REMOTE_ADDR'];
-$operator = isset($_GET['ctpr']) ? "?ctpr=" . $_GET['ctpr'] . "" : "?";
+$operator = isset($_GET['ctpr']) ? "?ctpr=" . $_GET['ctpr'] . "&" : "?";
 if (isset($_GET['ctbr'])) {
-    $operator .= '&ctbr=' . $_GET['ctbr'] . '&';
-} else {
-    $operator .= "&";
-}
+    $operator .= 'ctbr=' . $_GET['ctbr'] . '&';
+} 
 // echo $operator; exit;
 $data_promohci = "SELECT * FROM temp_locations WHERE ip_visitor='" . $ip . "' ORDER BY id ASC";
 // echo $data_promohci; exit;
