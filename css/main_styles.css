@@ -2853,43 +2853,75 @@ label {
 		align-items: center;
 		justify-content: center;
 	}
+
 	.promo-page {
-		margin: 50px 0;
+		margin: 10px 0 0 0;
 	}
-	.detail-promo h2{
-		font-size: 24px;
+
+	.detail-promo h2 {
+		font-size: 12px;
 	}
-	
+
+	.detail-promo .sosmed {
+		margin: 15px 0 30px 0;
+	}
+
 	.detail-text-product p {
 		color: black;
 		margin: 0 15px;
 	}
-	
+
 	.detail-text-product h5 {
 		font-size: large;
-		margin: 10px 20px ;
-	}
-	.detail-text-product ol li {
-		font-size: 16px;
-		margin: 10px 0px 0 30px;
-	}
-	.detail-text-product ul li {
-		list-style: initial;
-	
-		margin: 10px 10px 0 25px;
+		margin: 10px 20px;
 	}
 
-	.item-brand-list img {
-		width: 100px;
+	.detail-text-product ol li {
+		font-size: 16px;
+		margin: 10px 20px 0 30px;
 	}
+
+	.detail-text-product ul li {
+		list-style: initial;
+		margin: 10px 50px 20px 50px;
+	}
+
+	.detail-list .bnt-ajukan {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	/* .item-brand-list img {
+		width: 300px;
+	} */
 
 	.item-brand-list {
 		text-align: center;
 		padding: 30px 0;
 	}
 
+	.product-lainnya h2 {
+		font-size: 18px;
+	}
+
+	.detail-list .bnt-ajukan {
+		margin: 30px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.promo-wrapper {
+		padding: 0;
+		margin: 0 0 50px 0;
+	}
+
 	footer .ojk img {
-		width: 300px;
+		width: 200px;
 		margin-top: 10px;
 	}
 
@@ -2930,42 +2962,58 @@ label {
 	/* .item-brand {
 		margin-bottom: 20px;
 	} */
-	.item-brand-list img {
-		width: 100px;
-	}
-
 	.item-brand-list {
 		text-align: center;
 		padding: 30px 0;
 	}
+	.item-brand-list img {
+		width: 110px;
+	}
+
 	.promo-page {
 		margin: 50px 0;
 	}
-	.detail-promo h2{
+
+	.detail-promo h2 {
 		font-size: 24px;
 	}
-	
+
+	.detail-promo .sosmed {
+		margin: 20px 0 40px 0;
+	}
+
 	.detail-text-product p {
 		color: black;
+		letter-spacing: 1px;
 		margin: 0 15px;
 	}
-	
+
 	.detail-text-product h5 {
 		font-size: large;
-		margin: 10px 20px ;
+		margin: 10px 20px;
 	}
+
 	.detail-text-product ol li {
 		font-size: 16px;
 		margin: 10px 0px 0 30px;
 	}
+
 	.detail-text-product ul li {
 		list-style: initial;
-		
-		margin: 10px 10px 20PX 25px;
+		margin: 10px 10px 20px 35px;
+	}
+
+	.product-lainnya h2 {
+		font-size: 24px;
+	}
+	.promo-wrapper {
+		padding: 0;
+		margin: 30px 0 50px 0;
 	}
 	.home-product h2 {
 		font-size: 18px;
 	}
+
 	footer .ojk img {
 		width: 300px;
 		margin-top: 10px;
@@ -3022,16 +3070,17 @@ label {
 		padding: 10px 0;
 		background-color: rgba(99, 22, 22, 0.377);
 	}
-	.item-brand{
+
+	.item-brand {
 		padding: 30px 0;
 	}
+
 	.item-brand-list {
 		padding: 10px 0;
 	}
 
-	.item-brand-list a img {
-		width: 50px;
-		padding: 0;
+	.item-brand-list img {
+		width: 110px;
 	}
 
 	.active-logo {
@@ -3047,23 +3096,26 @@ label {
 	.home-product h2 {
 		font-size: 14px;
 	}
-	.detail-promo h2{
+
+	.detail-promo h2 {
 		font-size: 24px;
 	}
-	
+
 	.detail-text-product p {
 		color: black;
 		margin: 0 15px;
 	}
-	
+
 	.detail-text-product h5 {
 		font-size: large;
-		margin: 10px 20px ;
+		margin: 10px 20px;
 	}
+
 	.detail-text-product ol li {
 		font-size: 12px;
 		margin: 10px 0px 0 20px;
 	}
+
 	.detail-text-product ul li {
 		list-style: initial;
 		margin: 10px 10px 0 25px;
@@ -3081,7 +3133,12 @@ label {
 	}
 
 	.promo-page {
-		padding: 20px 0 ;
+		padding: 20px 0 0 0;
+	}
+
+	.promo-card-wrapper {
+		padding: 0;
+		margin: 30px 0;
 	}
 
 	footer {
@@ -3134,7 +3191,9 @@ label {
 		grid-template-rows: 25% 25% 25% 25%;
 	}
 }
-
+.item-brand-list img {
+	width: 95px;
+}
 .why-item:hover {
 	background-color: rgba(63, 78, 100, 0.15);
 }
@@ -3155,10 +3214,6 @@ label {
 	padding: 0 20px;
 }
 
-.promo-card-wrapper {
-	padding: 50px 0;
-	margin: 30px 0 0 0;
-}
 
 .promo-card-wrapper .promo-card {
 	margin-top: 25px;
@@ -3190,6 +3245,10 @@ footer {
 }
 
 footer .sosmed {
+	margin-top: 10px;
+}
+footer .ojk img {
+	width: 200px;
 	margin-top: 10px;
 }
 
@@ -3242,9 +3301,9 @@ footer .sosmed img {
 }
 
 
-.item-brand-list img {
+/* .item-brand-list img {
 	width: 80px;
-}
+} */
 
 .active-logo {
 	cursor: pointer;

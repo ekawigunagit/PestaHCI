@@ -39,52 +39,52 @@ $row = mysqli_fetch_row($query_promohci);
             <div class="swiper3">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="col item-brand-list">
+                        <div class="item-brand-list">
                             <a href="#"> <img src="./images/logobrand/electronic-city.png" alt=""> </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="col item-brand-list">
+                        <div class="item-brand-list">
                             <a href="#"> <img src="./images/logobrand/erafone.png" alt=""> </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="col item-brand-list">
+                        <div class="item-brand-list">
                             <a href="#"> <img src="./images/logobrand/erajaya.png" alt=""> </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="col item-brand-list">
+                        <div class="item-brand-list">
                             <a href="#"> <img src="./images/logobrand/lulu.png" alt=""> </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="col item-brand-list">
+                        <div class="item-brand-list">
                             <a href="#"> <img src="./images/logobrand/optik-internasional.png" alt=""> </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="col item-brand-list">
+                        <div class="item-brand-list">
                             <a href="#"> <img src="./images/logobrand/optik-melawai.png" alt=""> </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="col item-brand-list">
+                        <div class="item-brand-list">
                             <a href="#"> <img src="./images/logobrand/paulfrank.png" alt=""> </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="col item-brand-list">
+                        <div class="item-brand-list">
                             <a href="#"> <img src="./images/logobrand/ramayana.png" alt=""> </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="col item-brand-list">
+                        <div class="item-brand-list">
                             <a href="#"> <img src="./images/logobrand/rodalink.png" alt=""> </a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="col item-brand-list">
+                        <div class="item-brand-list">
                             <a href="#"> <img src="./images/logobrand/selis.png" alt=""> </a>
                         </div>
                     </div>
