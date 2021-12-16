@@ -373,11 +373,16 @@ $row = mysqli_fetch_row($query_promohci);
                             <label>Pilih untuk kesempatan memenangkan hadiah</label>
                             <select name="hadiah" class="form-control">
                                 <option> --Choose One-- </option>
-                                <option>Hadiah 1</option>
-                                <option>Hadiah 2</option>
-                                <option>Hadiah 3</option>
-                                <option>Hadiah 4</option>
-                                <option>Hadiah 5</option>
+                                <option>Sharp Kirei III SJ-N162D</option>
+                                <option>Sepeda Gunung MTB 26 Inch CASSINI T-300</option>
+                                <option>Sepeda Lipat Folding Bike Atlantis 20 Inch 7 Speed</option>
+                                <option>Evercoss Etab Plus M80 RAM 2/16</option>
+                                <option>Xiaomi Redmi 9A 2/32</option>
+                                <option>Skechers F SH 3198 001 55</option>
+                                <option>Giordano F GD GA02098T 94 47</option>
+                                <option>Springbed Comforta SUPERFIT Super Silver 100x200</option>
+                                <option>JTR Oda Sofa Bed Minimalis</option>
+                                <option>Mesin Cuci Sharp 65MW</option>
                             </select>
                         </div>
                         <!-- <div class="form-group">
