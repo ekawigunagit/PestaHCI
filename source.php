@@ -153,7 +153,7 @@ $row = mysqli_fetch_row($query_promohci);
             if ((isset($_GET['ctpr']) && (isset($_GET['ctbr'])))) {
                 $data_product .= " AND brand_id =" . sekuriti($_GET['ctbr'], 'decrypt');
             }
-            $data_product .= " ORDER BY products.id DESC LIMIT $posisi,$batas";
+            $data_product .= " ORDER BY products.id ASC LIMIT $posisi,$batas";
 
             // echo "Brand : " . $count_data_product . " <br />Product : " . $data_product ; exit;
 

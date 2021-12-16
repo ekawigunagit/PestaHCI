@@ -2860,7 +2860,7 @@ label {
 	}
 
 	.detail-promo h2 {
-		font-size: 12px;
+		font-size: 24px;
 	}
 
 	.detail-promo .sosmed {
@@ -2868,6 +2868,7 @@ label {
 	}
 
 	.detail-text-product p {
+		font-size: 16px;
 		color: black;
 		margin: 0 15px;
 	}
@@ -2883,6 +2884,7 @@ label {
 	}
 
 	.detail-text-product ul li {
+		font-size: 16px;
 		list-style: initial;
 		margin: 10px 50px 20px 50px;
 	}
@@ -2989,6 +2991,7 @@ label {
 	}
 
 	.detail-text-product p {
+		font-size: 16px;
 		color: black;
 		letter-spacing: 1px;
 		margin: 0 15px;
@@ -3005,6 +3008,7 @@ label {
 	}
 
 	.detail-text-product ul li {
+		font-size: 16px;
 		list-style: initial;
 		margin: 10px 10px 20px 35px;
 	}
@@ -3128,6 +3132,7 @@ label {
 	}
 
 	.detail-text-product ul li {
+		font-size: 12px;
 		list-style: initial;
 		margin: 10px 10px 0 25px;
 	}
