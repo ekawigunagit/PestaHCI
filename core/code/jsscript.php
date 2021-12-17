@@ -120,11 +120,11 @@
         $(this).addClass("active-logo");
     })
 
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            $("#myModalLocation").show()
-        }, 1000)
-    })
+    // window.addEventListener('load', function() {
+    //     setTimeout(() => {
+    //         $("#myModalLocation").show()
+    //     }, 1000)
+    // })
 
     $("#myModalLocation .close").on("click", function() {
         $("#myModalLocation").hide()
