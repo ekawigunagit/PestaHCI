@@ -3,6 +3,7 @@ $databaseHost = 'localhost';
 $databaseName = 'dbpesta_hci';
 $databaseUsername = 'root';
 $databasePassword = '';
+$token = "eyJpdiI6Iisrd21vTXNHd2V3b09KVVFnNXVWQWc9PSIsInZhbHVlIjoiVS9zUWNsRFJjQ0NYTUtrYm00L3h3dz09IiwibWFjIjoiNDFmNmJmYWQzMTVlMzRiYjU5MzM2ODRmZTFlNmNiZjczNGMzZTRhMGZlODMyMGZkNzMxMjBiYmExNGY3NzJjOCIsInRhZyI6IiJ9";
 
 // $databaseHost = 'localhost';
 // $databaseName = 'pesta_hci';

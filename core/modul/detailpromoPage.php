@@ -2,7 +2,7 @@
 $idpr_en = $_GET['idpr'];
 $idpr = sekuriti($idpr_en, 'decrypt');
 //echo "ID :" . $idpr;
-$data_promos = "SELECT * FROM promos WHERE status=1 AND id='$idpr'";
+$data_promos = "SELECT *, promos.id AS pmID FROM promos LEFT JOIN category_products ON promos.category_product_id = category_products.id WHERE promos.status=1 AND promos.id='$idpr'";
 $query_data_promos = mysqli_query($koneksi, $data_promos);
 
 while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
@@ -35,7 +35,7 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
 
                 <div class="detail-list">
                     <div class="bnt-ajukan">
-                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_data_promos['title_promo']; ?>" data-brandProduct="-"><button class="btn" type="submit">Ajukan Sekarang</button></span>
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_data_promos['title_promo']; ?>" data-brandProduct="-" data-categoryName="<?php echo $show_data_promos['category_name']; ?> " data-promoID="<?php echo $show_data_promos['pmID']; ?> "><button class="btn" type="submit">Ajukan Sekarang</button></span>
                     </div>
                 </div>
             </div>
@@ -91,6 +91,8 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                 <div class="modal-body">
                     <input type="hidden" name="product_name">
                     <input type="hidden" name="brand_product">
+                    <input type="hidden" name="category_name">
+                    <input type="hidden" name="promo_id">
                     <div class="form-group">
                         <label>Full Name</label>
                         <input name="name" type="text" class="form-control">
@@ -127,11 +129,16 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                         <label>Pilih untuk kesempatan memenangkan hadiah</label>
                         <select name="hadiah" class="form-control">
                             <option> --Choose One-- </option>
-                            <option>Hadiah 1</option>
-                            <option>Hadiah 2</option>
-                            <option>Hadiah 3</option>
-                            <option>Hadiah 4</option>
-                            <option>Hadiah 5</option>
+                            <option>Sharp Kirei III SJ-N162D</option>
+                            <option>Sepeda Gunung MTB 26 Inch CASSINI T-300</option>
+                            <option>Sepeda Lipat Folding Bike Atlantis 20 Inch 7 Speed</option>
+                            <option>Evercoss Etab Plus M80 RAM 2/16</option>
+                            <option>Xiaomi Redmi 9A 2/32</option>
+                            <option>Skechers F SH 3198 001 55</option>
+                            <option>Giordano F GD GA02098T 94 47</option>
+                            <option>Springbed Comforta SUPERFIT Super Silver 100x200</option>
+                            <option>JTR Oda Sofa Bed Minimalis</option>
+                            <option>Mesin Cuci Sharp 65MW</option>
                         </select>
                     </div>
                     <!-- <div class="form-group">

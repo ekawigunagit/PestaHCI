@@ -20,12 +20,14 @@
                                     <a href="index.php?page=productList">Categories</a>
                                     <ul>
                                         <?php
-                                        $data_menucategory = "SELECT * FROM category_products WHERE status=1 ORDER BY category_name ASC";
-                                        $query_data_menucategory = mysqli_query($koneksi, $data_menucategory);
+                                        $data_category = "SELECT *, category_products.id AS ctID FROM category_products LEFT JOIN products ON category_products.id = products.category_product_id WHERE category_products.status=1 AND products.id IS NOT NULL 
+                                        GROUP BY category_products.id ORDER BY category_products.id ASC";
+                                        // echo $data_category; exit;
+                                        $query_data_category = mysqli_query($koneksi, $data_category);
+                                        while ($show_data_category = mysqli_fetch_array($query_data_category)) {
 
-                                        while ($show_data_menucategory = mysqli_fetch_array($query_data_menucategory)) {
                                         ?>
-                                            <li class="page_menu_item menu_mm"><a href="index.php"><?php echo $show_data_menucategory['category_name']; ?><i class="fa fa-angle-down"></i></a></li>
+                                            <li class="page_menu_item menu_mm"><a href="?ctpr=<?php echo sekuriti($show_data_category['ctID'], 'encrypt'); ?>"><?php echo $show_data_category['category_name']; ?><i class="fa fa-angle-down"></i></a></li>
                                         <?php
                                         }
                                         ?>

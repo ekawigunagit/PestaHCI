@@ -23,14 +23,11 @@ $row = mysqli_fetch_row($query_promohci);
                     while ($show_data_category = mysqli_fetch_array($query_data_category)) {
 
                     ?>
-                    <div class="swiper-slide"
-                        onclick="pilihCategory('<?php echo sekuriti($show_data_category['ctID'], 'encrypt'); ?>')">
-                        <div
-                            class="col why-item<?php echo isset($_GET['ctpr']) && sekuriti($_GET['ctpr'], 'decrypt') == $show_data_category['ctID'] ? ' active-item' : ''; ?>">
-                            <span><img src="./images/iconcategory/<?php echo $show_data_category['images_category']; ?>"
-                                    alt=""></span>
+                        <div class="swiper-slide chooseProduct" data-ct="<?php echo sekuriti($show_data_category['ctID'], 'encrypt'); ?>">
+                            <div class="col why-item<?php echo isset($_GET['ctpr']) && sekuriti($_GET['ctpr'], 'decrypt') == $show_data_category['ctID'] ? ' active-item' : ''; ?>">
+                                <span><img src="./images/iconcategory/<?php echo $show_data_category['images_category']; ?>" alt=""></span>
+                            </div>
                         </div>
-                    </div>
                     <?php
                     }
                     ?>
@@ -59,13 +56,11 @@ $row = mysqli_fetch_row($query_promohci);
                             // echo "asdfafdsfadfassafsffadsdfsafdsafasdfasdfasdfasfsf"; 
                             while ($show_data_brand = mysqli_fetch_array($query_data_brand)) {
                         ?>
-                        <div class="swiper-slide"
-                            onclick="pilihBrand('<?php echo sekuriti($show_data_brand['brID'], 'encrypt'); ?>', '<?php echo $_GET['ctpr']; ?>')">
-                            <div
-                                class="item-brand-list<?php echo isset($_GET['ctbr']) && sekuriti($_GET['ctbr'], 'decrypt') == $show_data_brand['brID'] ? ' active-logo' : ''; ?>">
-                                <img src="./images/logobrand/<?php echo $show_data_brand['image_brand']; ?>" alt="">
-                            </div>
-                        </div>
+                                <div class="swiper-slide chooseBrand" data-br="<?php echo sekuriti($show_data_brand['brID'], 'encrypt'); ?>" data-ct="<?php echo $_GET['ctpr']; ?>">
+                                    <div class="item-brand-list<?php echo isset($_GET['ctbr']) && sekuriti($_GET['ctbr'], 'decrypt') == $show_data_brand['brID'] ? ' active-logo' : ''; ?>">
+                                        <img src="./images/logobrand/<?php echo $show_data_brand['image_brand']; ?>" alt="">
+                                    </div>
+                                </div>
                         <?php
                             }
                         }
@@ -95,14 +90,13 @@ $row = mysqli_fetch_row($query_promohci);
                         $ambilidpromo_en = sekuriti($ambilidpromo, 'encrypt');
 
                     ?>
-                    <div class="swiper-slide">
-                        <a href="index.php?page=detailpromoPage&idpr=<?php echo $ambilidpromo_en; ?>">
-                            <div class="card promo">
-                                <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" alt="..."
-                                    class="card-img-top">
-                            </div>
-                        </a>
-                    </div>
+                        <div class="swiper-slide">
+                            <a href="index.php?page=detailpromoPage&idpr=<?php echo $ambilidpromo_en; ?>">
+                                <div class="card promo">
+                                    <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" alt="..." class="card-img-top">
+                                </div>
+                            </a>
+                        </div>
 
                     <?php
                     }
@@ -152,14 +146,14 @@ $row = mysqli_fetch_row($query_promohci);
             $total_data_page_en = sekuriti($total_data_page, 'encrypt');
 
 
-            $data_product = "SELECT * FROM products WHERE status=1";
+            $data_product = "SELECT *, products.id AS pdID FROM products LEFT JOIN category_products ON products.category_product_id = category_products.id WHERE products.status=1";
             if (isset($_GET['ctpr'])) {
                 $data_product .= " AND category_product_id =" . sekuriti($_GET['ctpr'], 'decrypt');
             }
             if ((isset($_GET['ctpr']) && (isset($_GET['ctbr'])))) {
                 $data_product .= " AND brand_id =" . sekuriti($_GET['ctbr'], 'decrypt');
             }
-            $data_product .= " ORDER BY id DESC LIMIT $posisi,$batas";
+            $data_product .= " ORDER BY products.id ASC LIMIT $posisi,$batas";
 
             // echo "Brand : " . $count_data_product . " <br />Product : " . $data_product ; exit;
 
@@ -238,107 +232,102 @@ $row = mysqli_fetch_row($query_promohci);
                 </nav>
             </div>
             <h2>Katalog Produk</h2>
-            <div class="row">
-                <?php
-                //Tampil data
-                while ($show_product = mysqli_fetch_array($query_product)) {
-                ?>
-                <div class="col-6 col-md-6 col-lg-3 mt-4">
-                    <div class="card katalog-item h-100">
-                        <img src="./images/product/<?php echo $show_product['image_product']; ?>" class="card-img-top"
-                            alt="...">
-                        <div class="card-body">
-                            <p class="card-text"><?php echo $show_product['product_name']; ?></p>
-                        </div>
-                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal"
-                            data-productName="<?php echo $show_product['product_name']; ?>"
-                            data-brandProduct="<?php echo $show_product['brand_product']; ?>"
-                            data-idProduct="<?php echo $show_product['id']; ?>">
-                            <div class="card-footer">
-                                <p class="text-visit-katalog">Apply Now</p>
+                <div class="row">
+                    <?php
+                    //Tampil data
+                    while ($show_product = mysqli_fetch_array($query_product)) {
+                        // echo "ID :" . $show_product['id'];
+                    ?>
+                        <div class="col-6 col-md-6 col-lg-3 mt-4">
+                            <div class="card katalog-item h-100">
+                                <img src="./images/product/<?php echo $show_product['image_product']; ?>" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text"><?php echo $show_product['product_name']; ?></p>
+                                </div>
+                                <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_product['product_name']; ?>" data-brandProduct="<?php echo $show_product['brand_product']; ?>" data-productID="<?php echo $show_product['pdID']; ?> " data-categoryName="<?php echo $show_product['category_name']; ?> ">
+                                    <div class="card-footer">
+                                        <p class="text-visit-katalog">Apply Now</p>
+                                    </div>
+                                </span>
                             </div>
-                        </span>
-                    </div>
+                        </div>
+                    <?php
+                    }
+                    ?>
                 </div>
-                <?php
-                }
-                ?>
+             <!-- Paging Bawah -->
+            <div class="row custome_paging justify-content-center mt-5">
+                <nav aria-label="...">
+                    <ul class="pagination">
+                        <?php
+                        // link awal
+                        if ($pagenow <= 1) { // bu   
+                            echo "
+                                        <li class='page-item disabled'>
+                                            <span class='page-link'>Previous</span>
+                                        </li>
+                                        ";
+                        } else if ($pagenow > 1) {
+                            echo "
+                                        <li class='page-item'>
+                                            <a class='page-link' href='" . $linkaddress . $operator . "pagenow=$previous_page_en'>Previous</a>
+                                        </li>
+                                        ";
+                        }
+
+                        for ($i = 1; $i <= $total_data_page; $i++) {
+                            if ($i == $pagenow) {
+                                echo "
+                                        <li class='page-item active'>
+                                            <a class='page-link'>" . $pagenow . "</a>
+                                        </li>
+                                        ";
+                            } else if ($i > $pagenow) {
+                                $pagenow_en = sekuriti($i, 'encrypt');
+                                // echo $pagenow_en; exit;
+                                echo "
+                                        <li class='page-item'>
+                                            <a class='page-link' href='" . $linkaddress . $operator . "pagenow=$pagenow_en'>" . $i . "</a>
+                                        </li>
+                                        ";
+                            } else if ($i < $pagenow) {
+                                $pagenow_en = sekuriti($i, 'encrypt');
+                                // echo $pagenow_en; exit;
+                                echo "
+                                        <li class='page-item'>
+                                            <a class='page-link' href='" . $linkaddress . $operator . "pagenow=$pagenow_en'>" . $i . "</a>
+                                        </li>
+                                        ";
+                            }
+                        }
+                        ?>
+                        <?php
+                        if ($pagenow >= $total_data_page) {
+                            echo "
+                                        <li class='page-item disabled'>
+                                            <span class='page-link'>Next</span>
+                                        </li>
+                                        ";
+                        } else if ($pagenow < $total_data_page) {
+                            echo "
+                                        <li class='page-item'>
+                                            <a class='page-link' href='$linkaddress?pagenow=$next_page_en'>Next</a>
+                                        </li>
+                                        ";
+                        }
+                        ?>
+                    </ul>
+                </nav>
             </div>
         </div>
-
-        <!-- Paging Bawah -->
-        <div class="row custome_paging justify-content-center">
-            <nav aria-label="...">
-                <ul class="pagination">
-                    <?php
-                // link awal
-                if ($pagenow <= 1) { // bu   
-                    echo "
-                                <li class='page-item disabled'>
-                                    <span class='page-link'>Previous</span>
-                                </li>
-                                ";
-                } else if ($pagenow > 1) {
-                    echo "
-                                <li class='page-item'>
-                                    <a class='page-link' href='" . $linkaddress . $operator . "pagenow=$previous_page_en'>Previous</a>
-                                </li>
-                                ";
-                }
-
-                for ($i = 1; $i <= $total_data_page; $i++) {
-                    if ($i == $pagenow) {
-                        echo "
-                                <li class='page-item active'>
-                                    <a class='page-link'>" . $pagenow . "</a>
-                                </li>
-                                ";
-                    } else if ($i > $pagenow) {
-                        $pagenow_en = sekuriti($i, 'encrypt');
-                        // echo $pagenow_en; exit;
-                        echo "
-                                <li class='page-item'>
-                                    <a class='page-link' href='" . $linkaddress . $operator . "pagenow=$pagenow_en'>" . $i . "</a>
-                                </li>
-                                ";
-                    } else if ($i < $pagenow) {
-                        $pagenow_en = sekuriti($i, 'encrypt');
-                        // echo $pagenow_en; exit;
-                        echo "
-                                <li class='page-item'>
-                                    <a class='page-link' href='" . $linkaddress . $operator . "pagenow=$pagenow_en'>" . $i . "</a>
-                                </li>
-                                ";
-                    }
-                }
-                ?>
-                    <?php
-                if ($pagenow >= $total_data_page) {
-                    echo "
-                                <li class='page-item disabled'>
-                                    <span class='page-link'>Next</span>
-                                </li>
-                                ";
-                } else if ($pagenow < $total_data_page) {
-                    echo "
-                                <li class='page-item'>
-                                    <a class='page-link' href='$linkaddress?pagenow=$next_page_en'>Next</a>
-                                </li>
-                                ";
-                }
-                ?>
-                </ul>
-            </nav>
-        </div>
     </div>
+</div>
 
     <!-- Modal HTML PRODUCT -->
-    <div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-        data-keyboard="false" data-backdrop="static">
+    <div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog modal-md">
             <div class="modal-content">
-                <form id="formProduct" action="core/code/addDataApply.php" method="post" class="submitForm"
-                    data-type="login">
+                <form id="formProduct" action="core/code/addDataApply.php" method="post" class="submitForm" data-type="login">
                     <div class="modal-header">
                         <h4 class="modal-title"></h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -347,6 +336,7 @@ $row = mysqli_fetch_row($query_promohci);
                         <input type="hidden" name="product_name">
                         <input type="hidden" name="brand_product">
                         <input type="hidden" name="product_id">
+                        <input type="hidden" name="category_name">
                         <div class="form-group">
                             <label>Full Name</label>
                             <input name="name" type="text" class="form-control">
@@ -369,8 +359,8 @@ $row = mysqli_fetch_row($query_promohci);
 
                                 while ($show_provinces = mysqli_fetch_array($query_provinces)) {
                                 ?>
-                                <option value="<?php echo $show_provinces['province_name']; ?>">
-                                    <?php echo $show_provinces['province_name']; ?></option>
+                                    <option value="<?php echo $show_provinces['province_name']; ?>">
+                                        <?php echo $show_provinces['province_name']; ?></option>
                                 <?php
                                 }
                                 ?>
@@ -384,11 +374,16 @@ $row = mysqli_fetch_row($query_promohci);
                             <label>Pilih untuk kesempatan memenangkan hadiah</label>
                             <select name="hadiah" class="form-control">
                                 <option> --Choose One-- </option>
-                                <option>Hadiah 1</option>
-                                <option>Hadiah 2</option>
-                                <option>Hadiah 3</option>
-                                <option>Hadiah 4</option>
-                                <option>Hadiah 5</option>
+                                <option>Sharp Kirei III SJ-N162D</option>
+                                <option>Sepeda Gunung MTB 26 Inch CASSINI T-300</option>
+                                <option>Sepeda Lipat Folding Bike Atlantis 20 Inch 7 Speed</option>
+                                <option>Evercoss Etab Plus M80 RAM 2/16</option>
+                                <option>Xiaomi Redmi 9A 2/32</option>
+                                <option>Skechers F SH 3198 001 55</option>
+                                <option>Giordano F GD GA02098T 94 47</option>
+                                <option>Springbed Comforta SUPERFIT Super Silver 100x200</option>
+                                <option>JTR Oda Sofa Bed Minimalis</option>
+                                <option>Mesin Cuci Sharp 65MW</option>
                             </select>
                         </div>
                         <!-- <div class="form-group">
@@ -413,57 +408,47 @@ $row = mysqli_fetch_row($query_promohci);
 
     <!-- Modal HTML LOCATION -->
     <?php if (!$row) : ?>
-    <div id="myModalLocation" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-        data-keyboard="false" data-backdrop="static">
-        <div class="modal-dialog modal-md">
-            <div class="modal-content">
-                <form action="core/code/addLocation.php" method="post" class="submitForm">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Pilih Lokasi Anda</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label>City</label>
-                            <select name="location_city" id="city_select" class="form-control">
-                                <option> --Choose One-- </option>
-                                <?php
+        <div id="myModalLocation" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <form action="core/code/addLocation.php" method="post" class="submitForm">
+                        <input type="hidden" name="_token" value="<?php echo $token; ?>" />
+                        <div class="modal-header">
+                            <h4 class="modal-title">Pilih Lokasi Anda</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>City</label>
+                                <select name="location_city" id="city_select" class="form-control">
+                                    <option> --Choose One-- </option>
+                                    <?php
                                     $data_provinces = "SELECT * FROM provinces WHERE status=1 ORDER BY id ASC";
                                     $query_provinces = mysqli_query($koneksi, $data_provinces);
 
                                     while ($show_provinces = mysqli_fetch_array($query_provinces)) {
                                     ?>
 
-                                <option value="<?php echo $show_provinces['province_name']; ?>">
-                                    <?php echo $show_provinces['province_name']; ?></option>
-                                <?php
+                                        <option value="<?php echo $show_provinces['province_name']; ?>">
+                                            <?php echo $show_provinces['province_name']; ?></option>
+                                    <?php
                                     }
                                     ?>
-                            </select>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Area</label>
+                                <select name="location_area" class="form-control" id="area_select"></select>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label>Area</label>
-                            <select name="location_area" class="form-control" id="area_select"></select>
+                        <div class="modal-footer">
+                            <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img">
+                            <div class="system_error"></div><br />
+                            <!-- <label class="checkbox-inline pull-left"><a href="#myModalRegist" class="trigger-btn" data-toggle="modal">Register</a></label> -->
+                            <input type="submit" class="btn btn-primary pull-right" value="Apply Now">
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <img src="images/items/ellipsis.gif" width="20%" id="loading-img" alt="loading-img">
-                        <div class="system_error"></div><br />
-                        <!-- <label class="checkbox-inline pull-left"><a href="#myModalRegist" class="trigger-btn" data-toggle="modal">Register</a></label> -->
-                        <input type="submit" class="btn btn-primary pull-right" value="Apply Now">
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
     <?php endif; ?>
-
-    <script>
-        function pilihCategory(param) {
-            window.location.href = "?ctpr=" + param
-        }
-
-        function pilihBrand(param, ctId) {
-            window.location.href = "?ctpr=" + ctId + "&ctbr=" + param
-        }
-    </script>

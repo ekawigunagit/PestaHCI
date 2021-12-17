@@ -1,3 +1,4 @@
+<?php include "../../config/config.php"; ?>
 <script src="js/jquery-3.2.1.min.js"></script>
 <script src="css/bootstrap4/popper.js"></script>
 <script src="css/bootstrap4/bootstrap.min.js"></script>
@@ -132,15 +133,30 @@
     $("#city_select").on("change", function() {
         const value = $(this).val();
         if (value != '') {
-            $.get('core/code/get-districts.php?id=' + value, function(results) {
-                const values = JSON.parse(results)
-                let chtml;
-                $.each(values, (key, result) => {
-                    chtml += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
-                });
+            // $.get('core/code/get-districts.php?id=' + value, function(results) {
+            //     const values = JSON.parse(results)
+            //     let chtml;
+            //     $.each(values, (key, result) => {
+            //         chtml += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
+            //     });
 
-                $("#area_select").html(chtml)
-            });
+            //     $("#area_select").html(chtml)
+            // });
+            $.ajax({
+                url: 'core/code/get-districts.php?id='+value,
+                headers: {
+                    'TOKEN': '<?php echo $token; ?>'
+                },
+                success: function(results) {
+                    const values = JSON.parse(results)
+                    let chtml;
+                    $.each(values, (key, result) => {
+                        chtml += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
+                    });
+
+                    $("#area_select").html(chtml)
+                }
+            })
         } else {
             $("#area_select").html('')
         }
@@ -149,14 +165,29 @@
     $("#productcity_select").on("change", function() {
         const value = $(this).val();
         if (value != '') {
-            $.get('core/code/get-districts.php?id=' + value, function(results) {
-                const values = JSON.parse(results)
-                let html;
-                $.each(values, (key, result) => {
-                    html += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
-                });
-                $("#productarea_select").html(html)
-            });
+            // $.get('core/code/get-districts.php?id=' + value, function(results) {
+            //     const values = JSON.parse(results)
+            //     let html;
+            //     $.each(values, (key, result) => {
+            //         html += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
+            //     });
+            //     $("#productarea_select").html(html)
+            // });
+
+            $.ajax({
+                url: 'core/code/get-districts.php?id='+value,
+                headers: {
+                    'TOKEN': '<?php echo $token; ?>'
+                },
+                success: function(results) {
+                    const values = JSON.parse(results)
+                    let html;
+                    $.each(values, (key, result) => {
+                        html += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
+                    });
+                    $("#productarea_select").html(html)
+                }
+            })
         } else {
             $("#productarea_select").html('')
         }
@@ -165,14 +196,28 @@
     $("#promocity_select").on("change", function() {
         const value = $(this).val();
         if (value != '') {
-            $.get('core/code/get-districts.php?id=' + value, function(results) {
-                const values = JSON.parse(results)
-                let html;
-                $.each(values, (key, result) => {
-                    html += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
-                });
-                $("#promoarea_select").html(html)
-            });
+            // $.get('core/code/get-districts.php?id=' + value, function(results) {
+            //     const values = JSON.parse(results)
+            //     let html;
+            //     $.each(values, (key, result) => {
+            //         html += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
+            //     });
+            //     $("#promoarea_select").html(html)
+            // });
+            $.ajax({
+                url: 'core/code/get-districts.php?id='+value,
+                headers: {
+                    'TOKEN': '<?php echo $token; ?>'
+                },
+                success: function(results) {
+                    const values = JSON.parse(results)
+                    let html;
+                    $.each(values, (key, result) => {
+                        html += '<option value="' + result.district_name + '">' + result.district_name + '</option>'
+                    });
+                    $("#promoarea_select").html(html)
+                }
+            })
         } else {
             $("#promoarea_select").html('')
         }
@@ -186,8 +231,16 @@
         const brandProduct = $(event.relatedTarget).data('brandproduct')
         $("input[name=brand_product]").val(brandProduct)
 
-        const idProduct = $(event.relatedTarget).data('idproduct')
-        $("input[name=product_id]").val(brandProduct)
+        const productID = $(event.relatedTarget).data('productid')
+        $("input[name=product_id]").val(productID)
+
+        const categoryName = $(event.relatedTarget).data('categoryname')
+        $("input[name=category_name]").val(categoryName)
+
+        const promoID = $(event.relatedTarget).data('promoid')
+        $("input[name=promo_id]").val(promoID)
+
+        
     })
 
     $(document).ready(function() {
@@ -214,9 +267,7 @@
                 },
             }
         });
-    });
 
-    $(document).ready(function() {
         $('#formPromo').validate({ // initialize the plugin
             rules: {
                 "name": {
@@ -240,6 +291,18 @@
                 },
             }
         });
+
+        $(".chooseProduct").on('click', function() {
+            const id = $(this).attr('data-ct')
+            window.location.href = "?ctpr=" + id
+        })
+
+        $(".chooseBrand").on('click', function() {
+            const br = $(this).attr('data-br')
+            const ct = $(this).attr('data-ct')
+
+            window.location.href = "?ctpr=" + ct + "&ctbr=" + br
+        })
     });
 
 </script>
