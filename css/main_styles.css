@@ -42,7 +42,19 @@
 	-webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 	text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
-
+::-webkit-scrollbar{
+	width: 1em;
+}
+::-webkit-scrollbar-track{
+	opacity: 0.5;
+}
+::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-color: #e1d7d744;
+}
+::-webkit-scrollbar-thumb:hover{
+	background-color: #a59e9e6b;
+}
 body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
@@ -714,6 +726,11 @@ section {
 	position: relative;
 	vertical-align: middle;
 }
+.page_menu_item ul {
+	overflow-y: scroll;
+	height: auto;
+	max-height: 200px;
+}
 
 .page_menu_nav>li {
 	border-bottom: solid 1px rgba(250, 1, 1, 0.2);
@@ -724,7 +741,6 @@ section {
 	color: #ea0129;
 	font-weight: 700;
 	line-height: 50px;
-
 	height: 50px;
 	font-size: 16px;
 	-webkit-transition: all 200ms ease;
@@ -2973,7 +2989,6 @@ label {
 	.detail-list ol {
 		margin: 20px 10px 0 3px;
 	}
-
 	/* .item-brand {
 		margin-bottom: 20px;
 	} */
