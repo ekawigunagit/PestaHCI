@@ -35,7 +35,7 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
 
                 <div class="detail-list">
                     <div class="bnt-ajukan">
-                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_data_promos['title_promo']; ?>" data-brandProduct="-" data-categoryName="<?php echo $show_data_promos['category_name']; ?> " data-promoID="<?php echo $show_data_promos['pmID']; ?> "><button class="btn" type="submit">Ajukan Sekarang</button></span>
+                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_data_promos['title_promo']; ?>" data-brandProduct="Promo" data-categoryName="<?php echo $show_data_promos['category_name']; ?> " data-promoID="<?php echo $show_data_promos['pmID']; ?> "><button class="btn" type="submit">Ajukan Sekarang</button></span>
                     </div>
                 </div>
             </div>
