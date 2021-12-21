@@ -43,6 +43,25 @@
 	text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
+::-webkit-scrollbar {
+	width: 1em;
+	border: 1px solid black;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #e8e4e4;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #e1d7d744;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: #a59e9e6b;
+	cursor: pointer;
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
@@ -116,9 +135,6 @@ p a:hover::after {
 	opacity: 0.2;
 }
 
-::selection {}
-
-p::selection {}
 
 h1 {
 	font-size: 48px;
@@ -152,12 +168,6 @@ h6 {
 	text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
 }
 
-h1::selection,
-h2::selection,
-h3::selection,
-h4::selection,
-h5::selection,
-h6::selection {}
 
 .form-control {
 	color: #db5246;
@@ -231,10 +241,6 @@ section {
 	height: 100%;
 }
 
-.super_container {
-	/* width: 100%; */
-	/* overflow: hidden; */
-}
 
 .prlx_parent {
 	overflow: hidden;
@@ -364,111 +370,6 @@ section {
 	transition: all 200ms ease;
 }
 
-@media (max-width: 585px) {
-	/* itembrand */
-	.item-brand-list {
-		text-align: center;
-		padding: 10px 0;
-	}
-
-	.item-brand-list a img {
-		width: 50px;
-	}
-
-	.promo-product .detail-promo h2 {
-		font-size: 24px;
-		font-weight: bold;
-	}
-	.promo-product {
-		padding: 0;
-	}
-	.detail-promo {
-		padding: 0;
-		margin: 20px 0 30px 0;
-	}
-	.detail-list{
-		margin: 0;
-		padding: 0;
-	}
-	.detail-list ol li {
-		text-align: left;
-		margin: 10px 20px 0 50px;
-	}
-	.detail-text-product ul li{
-		list-style: initial;
-		/* font-weight: bold; */
-		margin: 10px 20px 0 50px;
-	}
-	.QR_Scan img{
-		width: 200px;
-	}
-
-	.home {
-		margin-bottom: 37px;
-	}
-
-	.imgthankyou {
-		margin: 0;
-	}
-
-	.imgthankyou img {
-		height: 150px;
-	}
-
-	.home-product h2 {
-		font-size: 22px;
-	}
-
-	/* Logo saat ukuran layar kecil kurang sama dengan */
-	.logo img {
-		width: 70%;
-		-webkit-transition: all 200ms ease;
-		-moz-transition: all 200ms ease;
-		-ms-transition: all 200ms ease;
-		-o-transition: all 200ms ease;
-		transition: all 200ms ease;
-	}
-
-	.why-wrapper {
-		background-color: rgb(247, 56, 65);
-		margin: 0 0 0;
-		padding: 10px 0;
-	}
-
-	.why-item-all {
-		margin: 0;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.why-item {
-		padding: 0;
-		margin: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.why-item a img {
-		text-align: center;
-		margin: 0;
-		padding: 0;
-		height: 40px;
-	}
-
-	.ojk img {
-		text-align: right;
-		margin-top: 30px;
-		width: 150px;
-	}
-
-	footer .logo-footer {
-		width: 200px;
-	}
-
-}
-
 .header.scrolled .logo img {
 	width: 70%;
 	-webkit-transition: all 200ms ease;
@@ -527,6 +428,10 @@ section {
 	color: #1b1b1b;
 }
 
+.hassubs .Cities {
+	padding-bottom: 20px;
+}
+
 .hassubs ul {
 	position: absolute;
 	right: -15px;
@@ -539,6 +444,8 @@ section {
 	padding-bottom: 25px;
 	visibility: hidden;
 	opacity: 0;
+	height: 500px;
+	overflow-y: scroll;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -548,6 +455,7 @@ section {
 
 .hassubs:hover ul {
 	visibility: visible;
+	width: 300px;
 	opacity: 1;
 	top: calc(100% + 0px);
 }
@@ -571,7 +479,6 @@ section {
 	color: #1b1b1b;
 }
 
-.header_extra {}
 
 .shopping_cart {
 	display: inline-block;
@@ -798,7 +705,6 @@ section {
 	margin-bottom: 30px;
 }
 
-.page_menu_nav {}
 
 .page_menu_search_input {
 	width: 100%;
@@ -812,7 +718,12 @@ section {
 .page_menu_item {
 	display: block;
 	position: relative;
-	vertical-align: middle;
+}
+
+.page_menu_item .page_menu_selection {
+	overflow-y: scroll;
+	height: auto;
+	max-height: 200px;
 }
 
 .page_menu_nav>li {
@@ -824,7 +735,7 @@ section {
 	color: #ea0129;
 	font-weight: 700;
 	line-height: 50px;
-	height: 50px;
+	/* height: 50px; */
 	font-size: 16px;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -929,14 +840,6 @@ section {
 5. Home
 *********************************/
 
-.home {
-	width: 100%;
-	/* Tinggi Home Slider */
-	padding: 100px 0 0 0;
-	background: #FFFFFF;
-	z-index: 2;
-}
-
 .home_slider_container {
 	width: 100%;
 	height: 100%;
@@ -1006,7 +909,6 @@ section {
 	bottom: 56px;
 }
 
-.home_slider_custom_dots {}
 
 .home_slider_custom_dot {
 	display: inline-block;
@@ -1380,8 +1282,6 @@ section {
 	z-index: 2;
 }
 
-.icon_box_row {}
-
 .icon_box {
 	width: 100%;
 	text-align: center;
@@ -1698,8 +1598,6 @@ footer .site-map-all .site-map-buttom {
 	bottom: 56px;
 }
 
-.ads_slider_custom_dots {}
-
 .ads_slider_custom_dot {
 	display: inline-block;
 	position: relative;
@@ -1863,7 +1761,6 @@ footer .site-map-all .site-map-buttom {
 	margin-top: 95px;
 }
 
-.details_image {}
 
 .details_image_large {
 	width: 100%;
@@ -2288,7 +2185,6 @@ footer .site-map-all .site-map-buttom {
 	color: #1b1b1b;
 }
 
-.product_quantity_container {}
 
 .product_quantity {
 	display: inline-block;
@@ -2590,8 +2486,6 @@ label {
 	padding-top: 44px;
 }
 
-.billing {}
-
 .section_title {
 	font-size: 24px;
 	font-weight: 600;
@@ -2842,30 +2736,8 @@ label {
 /*********************************
 18. Home Page HCI
 *********************************/
-@media (min-width : 480px) {
-	.why-item {
-		padding: 0;
-	}
 
-	.item-brand-list {
-		padding: 0;
-	}
 
-	.thankyou-card {
-		display: block;
-		background-color: #1b1b1b;
-	}
-
-	.imgthankyou img {
-		margin-top: 0px;
-		height: 200px;
-		background-color: darksalmon;
-	}
-
-	.promo-page {
-		padding: 50px 0;
-	}
-}
 
 .promo {
 	margin: 10px 0 30px 0;
@@ -2877,7 +2749,7 @@ label {
 }
 
 .home-product h2 {
-	font-size: 28px;
+	font-size: 24px;
 }
 
 .katalog-product {
@@ -2937,23 +2809,6 @@ label {
 	border-bottom-right-radius: 15px;
 }
 
-/* btn */
-.detail-text-product p {
-	color: black;
-}
-
-.detail-text-product h5 {
-	font-size: large;
-	margin: 10px 0;
-}
-.detail-text-product ol li{
-	margin: 10px 50px 0 15px;
-}
-.detail-text-product ul li {
-	list-style: initial;
-	/* font-weight: bold; */
-	margin: 10px 20px 0 50px;
-}
 
 .detail-list .bnt-ajukan {
 	margin: 30px 0;
@@ -2975,88 +2830,483 @@ label {
 /* why-wrapper */
 .why-wrapper {
 	background-color: rgb(247, 56, 65);
+	margin: 0;
+	padding: 0;
 }
 
-@media(min-width:460px) {
-	.QR_Scan .QR_Scan img {
-		height: 80%;
-		margin: 0;
+@media(max-width:1024px) {
+	::-webkit-scrollbar-track {
+		background-color: #dcdcdcfc;
 	}
 
-	.home-product h2 {
-		font-size: 20px;
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: #aca9a987;
+	}
+
+	.hom .home-container {
+		display: flex;
+		align-items: center;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		margin: 20% 0 0 0;
+	}
+
+	.why-wrapper {
+		position: relative;
+		margin-top: 0;
+		padding: 0;
 	}
 
 	.why-item {
-		padding: 0;
+		padding: 1rem;
+		margin-top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	}
+	.why-item img {
+		width: 90px;
+	}
+
+	.promo-page {
+		margin: 10px 0 0 0;
+	}
+
+	.detail-promo h2 {
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.detail-promo .sosmed {
+		margin: 15px 0 30px 0;
+	}
+
+	.detail-text-product p {
+		font-size: 14px;
+		color: black;
+		text-align: justify;
+		margin: 0 15px;
+	}
+
+	.detail-text-product h5 {
+		font-size: large;
+		margin: 10px 20px;
+	}
+
+	.detail-text-product ol li {
+		font-size: 14px;
+		text-align: justify;
+		margin: 10px 20px 0 30px;
+	}
+
+	.detail-text-product ul li {
+		font-size: 14px;
+		text-align: justify;
+		list-style: initial;
+		margin: 10px 50px 20px 50px;
+	}
+
+	.detail-list .bnt-ajukan {
+		margin: 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 	}
 
-	.why-item img {
-		padding: 0;
-		height: 60px;
+	.home-product h2 {
+		font-size: 24px;
 	}
 
-	.ojk img {
-		text-align: right;
-		margin-top: 30px;
+	.item-brand-list img {
+		width: 150px;
+	}
+
+	.item-brand-list {
+		text-align: center;
+		padding: 30px 0;
+		cursor: pointer;
+	}
+
+	.product-lainnya h2 {
+		font-size: 18px;
+	}
+
+	.detail-list .bnt-ajukan {
+		margin: 30px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.promo-wrapper {
+		padding: 0;
+		margin: 0 0 50px 0;
+	}
+
+	footer .ojk img {
+		width: 200px;
+		margin-top: 10px;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		width: 5px;
+	}
+}
+
+@media(min-width:1024px) {
+	.home-container {
+		display: flex;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		align-items: center;
+		margin: 5% 0 0 0;
+	}
+
+	.why-wrapper {
+		position: relative;
+		margin-top: 0;
+		/* padding: 0.8rem 0; */
+	}
+
+	.why-item {
+		padding: 2rem;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	}
+
+	.why-item img {
+		width: 60px;
+		cursor: pointer;
+	}
+
+	.detail-text-product {
+		margin-top: 20px;
+	}
+
+	/* btn */
+	.detail-list ol {
+		margin: 20px 10px 0 3px;
+	}
+
+	/* .item-brand {
+		margin-bottom: 20px;
+	} */
+	.item-brand-list {
+		text-align: center;
+		padding: 30px 0;
+		cursor: pointer;
+	}
+
+	.item-brand-list img {
+		width: 200px;
+		cursor: pointer;
+	}
+
+	.promo-page {
+		margin: 50px 0;
+	}
+
+	.detail-promo h2 {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.detail-promo .sosmed {
+		margin: 20px 0 40px 0;
+	}
+
+	.detail-text-product {
+		margin: 0;
+	}
+
+	.detail-text-product p {
+		font-size: 15px;
+		color: black;
+		text-align: justify;
+		margin: 0 15px;
+	}
+
+	.detail-text-product h5 {
+		font-size: large;
+		margin: 5px 20px;
+	}
+
+	.detail-text-product ol li {
+		font-size: 15px;
+		text-align: justify;
+		margin: 20px 0px 0 30px;
+	}
+
+	.detail-text-product ul li {
+		font-size: 15px;
+		text-align: justify;
+		list-style: initial;
+		margin: 20px 10px 20px 35px;
+	}
+
+	.product-lainnya h2 {
+		font-size: 24px;
+	}
+
+	.promo-wrapper {
+		padding: 0;
+		margin: 30px 0 50px 0;
+	}
+
+	.home-product h2 {
+		font-size: 24px;
+	}
+
+	footer .ojk img {
+		width: 300px;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width : 578px) {
+	::-webkit-scrollbar-track {
+		background-color: #dcdcdcfc;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: #aca9a987;
+	}
+
+	.home-container {
+		display: flex;
+		align-items: center;
+		min-height: 110px;
+		margin: 5rem 0 0 0;
+	}
+
+	.why-item-all {
+		margin: 0;
+		padding: 0;
+	}
+
+	.why-wrapper {
+		position: relative;
+		margin-top: 0rem;
+		padding: 20px 0;
+	}
+
+	.why-item {
+		padding: 10px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+
+	}
+
+	.why-item img {
+		width: 50px;
+		cursor: pointer;
+	}
+
+	.why-item:hover {
+		padding: 10px 0;
+		background-color: rgba(63, 78, 100, 0.15);
+	}
+
+	.swiper2 .swiper-slide {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.swiper2 .swiper-slide .active-item {
+		border-radius: 5px;
+		padding: 10px 0;
+		background-color: rgba(99, 22, 22, 0.377);
+	}
+
+	.item-brand {
+		padding: 30px 0;
+	}
+
+	.item-brand-list {
+		padding: 30px 0;
+	}
+
+	.item-brand-list img {
+		width: 150px;
+		padding: 10px 0;
+		padding: 10px 0;
+		cursor: pointer;
+	}
+
+	/* .item-brand-list img {
+		width: 110px;
+		cursor: pointer;
+	} */
+
+	/* .item-brand-list img {
+		width: 110px;
+		cursor: pointer;
+	} */
+
+	.active-logo {
+		cursor: pointer;
+		padding: 30px 0;
+		background-color: rgba(63, 63, 63, 0.377);
+	}
+
+	.home-product p {
+		font-size: 12px;
+	}
+
+	.home-product h2 {
+		font-size: 14px;
+	}
+
+	.detail-promo h2 {
+		font-size: 14px;
+	}
+
+	.detail-promo p {
+		color: black;
+	}
+
+	.detail-text-product {
+		font-size: 12px;
+	}
+
+	/* btn */
+	.detail-list ol {
+		margin: 20px 10px 0 3px;
+	}
+
+	.detail-text-product p {
+		color: black;
+		text-align: justify;
+		margin: 0 15px;
+		font-size: 12px;
+	}
+
+	.detail-text-product h5 {
+		font-size: 14px;
+		font: bold;
+		margin: 0 20px;
+	}
+
+	.detail-text-product ol li {
+		font-size: 12px;
+		text-align: justify;
+		margin: 10px 0px 0 20px;
+	}
+
+	.detail-text-product ul li {
+		font-size: 12px;
+		text-align: justify;
+		list-style: initial;
+		margin: 10px 10px 0 25px;
+	}
+
+	.thankyou-card {
+		display: block;
+		background-color: #1b1b1b;
+	}
+
+	.thankyou img {
+		margin-top: 0px;
 		width: 200px;
 	}
 
-	footer .logo-footer {
-		width: 180px;
-	}
-}
-
-@media(min-width:1024px){
-	/* promo-product */
-	.promo-product {
-		margin: 0 0 50px 0;
-	}
-	.imgthankyou img {
-		margin: 0;
-		height: 400px;
+	.promo-page {
+		padding: 20px 0 0 0;
 	}
 
-	.home-product h2 {
-		font-size: 28px;
-	}
-
-	.card-img-top-1 {
-		height: 230px;
-		object-fit: cover;
-	}
-
-	.why-item {
-		padding: 50px 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.why-item img {
+	.promo-card-wrapper {
 		padding: 0;
+		margin: 30px 0;
 	}
 
-	.ojk img {
-		text-align: right;
-		margin-top: 30px;
+	.imgthankyou img {
 		width: 300px;
+	}
+
+	.QR_Scan img {
+		width: 250px;
+	}
+
+	footer {
+		font-size: 10px;
+		padding: 50px 0;
+		color: white;
+		display: block;
+		background-color: black;
+	}
+
+	footer p {
+		font-size: 10px;
 	}
 
 	footer .logo-footer {
-		width: 300px;
+		width: 8rem;
+	}
+
+	footer .ojk img {
+		width: 120px;
+	}
+
+	footer .app img {
+		width: 4rem;
+		margin-top: 50px;
+	}
+
+	footer .sosmed {
+		display: flex;
+		margin-top: 10px;
+		width: 50px;
+	}
+
+	footer .sosmed img {
+		margin-left: 4px;
+		width: 20px;
+	}
+
+	.copy-right-2 {
+		text-align: right;
+	}
+
+	.site-map-2 {
+		font-size: 12px;
+		text-align: right;
+	}
+
+	.contact {
+		display: grid;
+		grid-template-rows: 25% 25% 25% 25%;
 	}
 }
+/* 
+.item-brand-list img {
+	width: 95px;
+	cursor: pointer;
+} */
 
 .why-item:hover {
 	background-color: rgba(63, 78, 100, 0.15);
 }
 
+.swiper2 .swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .active-item {
-	padding: 0;
 	border-radius: 5px;
 	background-color: rgba(99, 22, 22, 0.377);
 }
@@ -3066,10 +3316,6 @@ label {
 	padding: 0 20px;
 }
 
-.promo-card-wrapper {
-	padding: 50px 0;
-	margin: 30px 0 0 0;
-}
 
 .promo-card-wrapper .promo-card {
 	margin-top: 25px;
@@ -3104,29 +3350,14 @@ footer .sosmed {
 	margin-top: 10px;
 }
 
+/* footer .ojk img {
+	width: 200px;
+	margin-top: 10px;
+} */
+
 footer .sosmed img {
 	margin-left: 4px;
 }
-
-/* footer .footer-base {
-	width: 100%;
-	padding: 0;
-	margin: 0;
-}
-footer .site-map-all .site-map-2{
-	text-align: right;
-} */
-/* }
-footer .site-map-all .site-map-top {
-	display: grid;
-	grid-template-columns: 50% 50%;
-}
-
-footer .site-map-all .site-map-buttom {
-	margin-top: 30px;
-	display: grid;
-	grid-template-columns: 50% 50%;
-} */
 
 .copy-right-2 {
 	text-align: right;
@@ -3145,7 +3376,6 @@ footer .site-map-all .site-map-buttom {
 /************
 10. Modal Apply
 ************/
-
 
 .modal {
 	background-color: rgba(0, 0, 0, .7);
@@ -3170,21 +3400,17 @@ footer .site-map-all .site-map-buttom {
 
 .item-brand {
 	padding: 0;
-	border-bottom: 1px solid rgba(139, 134, 134, 0.205);
+	margin: 0;
 }
 
-.item-brand-list {
-	text-align: center;
-	padding: 30px 0;
-}
-
-.item-brand-list img {
-	width: 80px;
-}
 
 .active-logo {
 	cursor: pointer;
 	background-color: rgba(63, 63, 63, 0.377);
+}
+
+.hadiah {
+	margin: 20px 0;
 }
 
 .hadiah-item {
@@ -3210,5 +3436,18 @@ footer .site-map-all .site-map-buttom {
 
 .page-item .page-link {
 	color: #ea0129 !important;
-	
+}
+
+.error {
+	color: #ea0129 !important;
+}
+
+/* T&C Form  */
+.tc-form {
+	padding-right: 20px;
+}
+
+.tc-form a {
+	color: #52020f !important;
+	font-weight: bolder;
 }

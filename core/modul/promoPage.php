@@ -2,38 +2,32 @@
     <div class="container">
         <div class="row promo-card-wrapper">
             <?php
-            $data_promohci = "SELECT * FROM promos WHERE status=1 ORDER BY id DESC";
+            $data_promohci = "SELECT * FROM promos WHERE status=1 ORDER BY id ASC";
             $query_promohci = mysqli_query($koneksi, $data_promohci);
 
             while ($show_promohci = mysqli_fetch_array($query_promohci)) {
+                $ambilidpromo = $show_promohci['id'];
+                $ambilidpromo_en = sekuriti($ambilidpromo, 'encrypt');
                 //start date
-                $ambil_startdate=$show_promohci['start'];
-                $startdate_tgl=substr($ambil_startdate, 8, 2);
-                $startdate_bln=substr($ambil_startdate, 5, 2);
-                $startdate_bln=$nama_bln[$startdate_bln];
-                $startdate_thn=substr($ambil_startdate, 0, 4);
-                $show_startdate=$startdate_tgl . " " . $startdate_bln . " " . $startdate_thn; 
+                $ambil_startdate = $show_promohci['start'];
+                $show_startdate = cleanTgl($ambil_startdate);
 
                 //start date
-                $ambil_enddate=$show_promohci['end'];
-                $enddate_tgl=substr($ambil_enddate, 8, 2);
-                $enddate_bln=substr($ambil_enddate, 5, 2);
-                $enddate_bln=$nama_bln[$enddate_bln];
-                $enddate_thn=substr($ambil_enddate, 0, 4);
-                $show_enddate=$enddate_tgl . " " . $enddate_bln . " " . $enddate_thn;
+                $ambil_enddate = $show_promohci['end'];
+                $show_enddate = cleanTgl($ambil_enddate);
             ?>
-            <div class="col-12 col-md-6 col-lg-6 promo-card">
-                <div class="card h-100 ">
-                    <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" class="card-img-top-1" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $show_promohci['title_promo']; ?></h5>
-                        <p class="card-text">Periode <?php echo $show_startdate; ?> - <?php echo $show_enddate; ?></p>
-                    </div>
-                    <div class="card-footer-promo">
-                        <a href="index.php?page=detailpromoPage?idpr=<?php echo $show_promohci['id']; ?>"><button class="btn">Lihat</button></a>
+                <div class="col-12 col-md-6 col-lg-6 promo-card">
+                    <div class="card h-100 ">
+                        <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" class="card-img-top-1" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $show_promohci['title_promo']; ?></h5>
+                            <p class="card-text">Periode <?php echo $show_startdate; ?> - <?php echo $show_enddate; ?></p>
+                        </div>
+                        <div class="card-footer-promo">
+                            <a href="index.php?page=detailpromoPage&idpr=<?php echo $ambilidpromo_en; ?>"><button class="btn">Lihat</button></a>
+                        </div>
                     </div>
                 </div>
-            </div>
             <?php
             }
             ?>
