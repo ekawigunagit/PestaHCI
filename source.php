@@ -1,4 +1,8 @@
 <?php
+if ((cekstring($_GET['ctpr']))||(cekstring($_GET['ctbr']))||(cekstring($_GET['pagenow']))) {
+    echo "Akses Error";
+    exit;
+}
 $ip = $_SERVER['REMOTE_ADDR'];
 $operator = isset($_GET['ctpr']) ? "?ctpr=" . $_GET['ctpr'] . "&" : "?";
 if (isset($_GET['ctbr'])) {
@@ -139,6 +143,7 @@ $row = mysqli_fetch_row($query_promohci);
             if ((isset($_GET['ctpr']) && (isset($_GET['ctbr'])))) {
                 $count_data_product .= " AND brand_id =" . sekuriti($_GET['ctbr'], 'decrypt');
             }
+            // echo "CTPR :" . $_GET['ctpr'] . "ctbr : " . $_GET['ctbr']; exit;
             $query_count_product = mysqli_query($koneksi, $count_data_product);
             $total_data_product = mysqli_num_rows($query_count_product);
             $total_data_page = ceil($total_data_product / $batas);
