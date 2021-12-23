@@ -26,8 +26,8 @@
     var swiper1 = new Swiper('.swiper', {
         slidesPerView: 1,
         spaceBetween: 10,
-        allowSlideNext:true,
-        allowSlidePrev:true,
+        allowSlideNext: true,
+        allowSlidePrev: true,
         speed: 100,
         pagination: {
             el: '.swiper-pagination',
@@ -64,18 +64,18 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-        allowSlideNext:true,
-        allowSlidePrev:true,
+        allowSlideNext: true,
+        allowSlidePrev: true,
         // using "ratio" endpoints
         breakpoints: {
             '@0.75': {
                 slidesPerView: 4,
                 spaceBetween: 20,
                 navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-                height:30,
-        },
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                    height: 30,
+                },
             },
             '@1.00': {
                 slidesPerView: 5,
@@ -90,7 +90,7 @@
 
     var swiper3 = new Swiper('.swiper3', {
         slidesPerView: 4,
-        allowSlidePrev:true,
+        allowSlidePrev: true,
         breakpoints: {
             '@0.75': {
                 slidesPerView: 4,
@@ -144,7 +144,7 @@
             //     $("#area_select").html(chtml)
             // });
             $.ajax({
-                url: 'core/code/get-districts.php?id='+value,
+                url: 'core/code/get-districts.php?id=' + value,
                 headers: {
                     'TOKEN': '<?php echo $token; ?>'
                 },
@@ -176,7 +176,7 @@
             // });
 
             $.ajax({
-                url: 'core/code/get-districts.php?id='+value,
+                url: 'core/code/get-districts.php?id=' + value,
                 headers: {
                     'TOKEN': '<?php echo $token; ?>'
                 },
@@ -206,7 +206,7 @@
             //     $("#promoarea_select").html(html)
             // });
             $.ajax({
-                url: 'core/code/get-districts.php?id='+value,
+                url: 'core/code/get-districts.php?id=' + value,
                 headers: {
                     'TOKEN': '<?php echo $token; ?>'
                 },
@@ -241,8 +241,17 @@
         const promoID = $(event.relatedTarget).data('promoid')
         $("input[name=promo_id]").val(promoID)
 
-        
+
     })
+
+    // $.validator.addMethod(
+    //     "regex",
+    //     function(value, element, regexp) {
+    //         var re = new RegExp(regexp);
+    //         return this.optional(element) || re.test(value);
+    //     },
+    //     "Please check your input."
+    // );
 
     $(document).ready(function() {
         $('#formProduct').validate({ // initialize the plugin
@@ -256,7 +265,10 @@
                 },
                 "phone": {
                     required: true,
-                    number: true
+                    number: true,
+                    maxlength: 13
+                    // maxlength: 13,
+                    // regex: "^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$"
                 },
                 "city": {
                     required: true
@@ -281,7 +293,8 @@
                 },
                 "phone": {
                     required: true,
-                    number: true
+                    number: true,
+                    maxlength: 13
                 },
                 "city": {
                     required: true
@@ -307,5 +320,4 @@
             window.location.href = "?ctpr=" + ct + "&ctbr=" + br
         })
     });
-
 </script>
