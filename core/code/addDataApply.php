@@ -2,7 +2,10 @@
 include "../../config/config.php";
 $data = $_POST;
 if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($_POST['city'])) || (cekstring($_POST['area'])) || (cekstring($_POST['name'])) || (cekstring($_POST['product_id'])) || (cekstring($_POST['brand_product'])) || (cekstring($_POST['category_name'])) || (cekstring($_POST['product_name'])) || (cekstring($_POST['hadiah']))) {
-    echo "Akses Error";
+    echo ("<script LANGUAGE='JavaScript'>
+    window.alert('Akses Error');
+    window.location.href='../../index.php';
+    </script>");
 } else {
     //echo $_POST['product_name'] . "<br />" . $_POST['brand_product']; exit;
     $data['user_agent'] = $_SERVER['HTTP_USER_AGENT'];

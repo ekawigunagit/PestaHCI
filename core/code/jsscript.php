@@ -1,5 +1,6 @@
 <?php include "../../config.php";  ?>
-<script src="js/jquery-3.2.1.min.js"></script>
+<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
+<script src="js/jquery-3.6.0.slim.min.js"></script>
 <script src="css/bootstrap4/popper.js"></script>
 <script src="css/bootstrap4/bootstrap.min.js"></script>
 <script src="css/bootstrap4/bootstrap.bundle.min.js"></script>
@@ -254,7 +255,8 @@
                     email: true
                 },
                 "phone": {
-                    required: true
+                    required: true,
+                    number: true
                 },
                 "city": {
                     required: true
@@ -278,7 +280,8 @@
                     email: true
                 },
                 "phone": {
-                    required: true
+                    required: true,
+                    number: true
                 },
                 "city": {
                     required: true

@@ -99,7 +99,7 @@ function sekuriti($string, $action = 'encrypt')
 
 function cekstring($ambilstring)
 {
-	if (preg_match('/[\'"^£$%&*}{#~?><>,|=_+¬]/', $ambilstring)) {
+	if (preg_match('/[\'"^£$%&*}{#~?><>,|=_+¬:]/', $ambilstring)) {
 		return true;
 	}
 
