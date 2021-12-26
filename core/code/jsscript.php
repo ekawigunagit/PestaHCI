@@ -1,6 +1,7 @@
 <?php include "../../config.php";  ?>
-<!-- <script src="js/jquery-3.2.1.min.js"></script> -->
-<script src="js/jquery-3.6.0.slim.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery.js"></script>
+<!-- <script src="js/jquery-3.6.0.slim.min.js"></script> -->
 <script src="css/bootstrap4/popper.js"></script>
 <script src="css/bootstrap4/bootstrap.min.js"></script>
 <script src="css/bootstrap4/bootstrap.bundle.min.js"></script>
