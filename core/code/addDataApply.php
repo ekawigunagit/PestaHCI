@@ -48,9 +48,25 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
 
     //Message
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Here is the subject';
-    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->Subject = 'Pembayaran Berhasil  ';
+    $mail->Body    = 'Hai ' . $nama_penerima .', ' .
+
+                    'Terima kasih, kamu baru saja berhasil melakukan transaksi '. $nama_penerima .','. 'di Pesta Home Credit Indonesia. Sales Agen kami akan segera menghubungi anda.
+                    
+                    Email ini bersifat informasi dan tidak dapat di-reply, bila ada hal lain yang ingin ditanyakan dapat menghubungi kami melalui :
+                    
+                    Contact Center 	:	xxx
+                    Twitter   	:	xxx
+                    Facebook   	:	xxx
+                    Instagram   	:	xxx
+                    Email		:	xxx
+                    
+                    
+                    Customer Care
+                    Home Credit Indonesia';
+
+
+    $mail->AltBody = 'Terima kasih, kamu baru saja berhasil melakukan transaksi'. $nama_penerima .',';
 
     $emal = $mail->send();
     if ($mail){
