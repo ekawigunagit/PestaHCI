@@ -34,11 +34,11 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
     $mail = new PHPMailer;
     $mail->SMTPDebug = SMTP::DEBUG_SERVER; 
     $mail->isSMTP();
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = $email_pengirim;                     //SMTP username
-    $mail->Password   = $password;                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+    $mail->Host       = 'smtp.gmail.com';//Set the SMTP server to send through
+    $mail->SMTPAuth   = true; //Enable SMTP authentication
+    $mail->Username   = $email_pengirim;//SMTP username
+    $mail->Password   = $password;//SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;//Enable implicit TLS encryption
     $mail->Port       = 465;   
     
     //Recipients
@@ -46,7 +46,7 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
     $mail->addAddress($email_tujuan, $nama_penerima);     //Add a recipient             //Name is optional
     $mail->addReplyTo('info@example.com', 'Information');
 
-    //Content
+    //Message
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = 'Here is the subject';
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
