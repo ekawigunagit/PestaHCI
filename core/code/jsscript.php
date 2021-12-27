@@ -1,6 +1,6 @@
 <?php include "../../config.php";  ?>
 <!-- <script src="js/jquery-3.2.1.min.js"></script> -->
-<script src="js/jquery-3.6.0.slim.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
 <script src="css/bootstrap4/popper.js"></script>
 <script src="css/bootstrap4/bootstrap.min.js"></script>
 <script src="css/bootstrap4/bootstrap.bundle.min.js"></script>
@@ -253,6 +253,14 @@
     //     "Please check your input."
     // );
 
+    $.validator.addMethod(
+    "regex",
+    function(value, element, regexp) {
+        return this.optional(element) || regexp.test(value);
+    },
+    "Please check your input."
+);
+
     $(document).ready(function() {
         $('#formProduct').validate({ // initialize the plugin
             rules: {
@@ -266,9 +274,10 @@
                 "phone": {
                     required: true,
                     number: true,
-                    maxlength: 13
-                    // maxlength: 13,
-                    // regex: "^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$"
+                    maxlength: 13,
+                    regex: /^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$/
+                    // /^[+-]{1}[0-9]{1,3}\-[0-9]{10}$/
+                    // "^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$"
                 },
                 "city": {
                     required: true
