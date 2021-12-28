@@ -2856,7 +2856,7 @@ label {
 	.why-wrapper {
 		position: relative;
 		margin-top: 0;
-		padding: 20px 0 ;
+		padding: 0 ;
 	}
 
 	.why-item {
@@ -3097,7 +3097,7 @@ label {
 	.why-wrapper {
 		position: relative;
 		margin-top: 0rem;
-		padding: 20px 0;
+		padding: 0;
 	}
 
 	.why-item {
@@ -3110,7 +3110,7 @@ label {
 	}
 
 	.why-item img {
-		width: 50px;
+		width: 40px;
 		cursor: pointer;
 	}
 
