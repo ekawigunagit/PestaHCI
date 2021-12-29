@@ -2856,7 +2856,7 @@ label {
 	.why-wrapper {
 		position: relative;
 		margin-top: 0;
-		padding: 0;
+		padding: 0 ;
 	}
 
 	.why-item {
@@ -2868,7 +2868,7 @@ label {
 		cursor: pointer;
 	}
 	.why-item img {
-		width: 90px;
+		width: 70px;
 	}
 
 	.promo-page {
@@ -2921,7 +2921,7 @@ label {
 	}
 
 	.item-brand-list img {
-		width: 150px;
+		width: 110px;
 	}
 
 	.item-brand-list {
@@ -3097,7 +3097,7 @@ label {
 	.why-wrapper {
 		position: relative;
 		margin-top: 0rem;
-		padding: 20px 0;
+		padding: 0;
 	}
 
 	.why-item {
@@ -3110,7 +3110,7 @@ label {
 	}
 
 	.why-item img {
-		width: 50px;
+		width: 40px;
 		cursor: pointer;
 	}
 
@@ -3137,12 +3137,12 @@ label {
 
 	.item-brand-list {
 		padding: 30px 0;
+	
 	}
 
 	.item-brand-list img {
-		width: 150px;
-		padding: 10px 0;
-		padding: 10px 0;
+		width: 95px;
+		padding: 10px 5px;
 		cursor: pointer;
 	}
 
