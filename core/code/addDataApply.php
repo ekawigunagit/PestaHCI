@@ -28,7 +28,7 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
     $data['utm_content'] = $_POST['product_name']; // Product Name
     $data['gclid'] = $_POST['hadiah'];
 
-    include "../../admin/sendnotif.php";
+    include "sendnotif.php";
 
     // $testing = isiBody($nama_penerima, $productName);
     // echo $testing; exit;
@@ -41,12 +41,12 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
         $email_penerima = $_POST['email'];
         $productName = $_POST['product_name'];
     
-        $email_pengirim = 'halloflandy@gmail.com';
-        $password = 'mamunah12';
+        $email_pengirim = 'no-reply@pestahomecredit.com';
+        $password = 'noreply@p3st4';
         $mail = new PHPMailer;
         $mail->SMTPDebug = SMTP::DEBUG_SERVER; 
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';//Set the SMTP server to send through
+        $mail->Host       = 'srv115.niagahoster.com';//Set the SMTP server to send through smtp.gmail.com
         $mail->SMTPAuth   = true; //Enable SMTP authentication
         $mail->Username   = $email_pengirim;//SMTP username
         $mail->Password   = $password;//SMTP password
@@ -74,9 +74,9 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
     //Data passing 
 
     print_r($data); exit;
-    echo $_POST['product_name'] . "<br />" . $_POST['brand_product']; exit;
-    $data['value_dump'] = '{"commodity":"'.$_POST['product_name'].'"}';
-    echo ($data['value_dump']); exit;
+    // echo $_POST['product_name'] . "<br />" . $_POST['brand_product']; exit;
+    // $data['value_dump'] = '{"commodity":"'.$_POST['product_name'].'"}';
+    // echo ($data['value_dump']); exit;
 
     // $method = "POST";
     // // $url = "https://apixweb-dev.homecredit.co.id/api/v1/form/pesta-online";
