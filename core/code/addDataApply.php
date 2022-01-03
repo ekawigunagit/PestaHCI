@@ -10,7 +10,6 @@ require '../../PHPMailer/src/PHPMailer.php';
 
 $data = $_POST;
 
-
 if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($_POST['city'])) || (cekstring($_POST['area'])) || (cekstring($_POST['name'])) || (cekstring($_POST['product_id'])) || (cekstring($_POST['brand_product'])) || (cekstring($_POST['category_name'])) || (cekstring($_POST['product_name'])) || (cekstring($_POST['hadiah']))) {
     echo ("<script LANGUAGE='JavaScript'>
     window.alert('Akses Error');
@@ -52,26 +51,27 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
         $mail->Password   = $password;//SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;//Enable implicit TLS encryption
         $mail->Port       = 465;   
-        
+    
         //Recipients
-        $mail->setFrom($email_pengirim, 'Info Pesta Home Credit');
-        $mail->addAddress($email_penerima, $nama_penerima);     //Add a recipient             //Name is optional
-        // $mail->addReplyTo('info@example.com', 'Information');
+        $mail->setFrom($email_pengirim,'Pesta Homecredit');
+        $mail->addAddress($email_penerima, $nama_penerima);     
+        //Add a recipient             
+        //Name is optional
+        $mail->addReplyTo($email_pengirim,'Pesta Homecredit');
     
         //Message
-        $mail->isHTML(true);                                  //Set email format to HTML
-        $mail->Subject = "Konfirmasi Pengajuan - PESTA Home Credit";
+        $mail->isHTML(true);
+        //Set email format to HTML
+        $mail->Subject = 'Konfirmasi Pengajuan - PESTA Home Credit';
         $mail->Body    = isiBody($nama_penerima, $productName);
     
-        $mail->AltBody = "Terima kasih, kamu baru saja berhasil melakukan transaksi". $nama_penerima .",";
+        $mail->AltBody = 'Terima kasih, kamu baru saja berhasil melakukan transaksi'. $nama_penerima .',';
     
         $email = $mail->send();
         return $email;
     }   
-
     //Send Email Notification
     sendEmail();
-    //Data passing 
 
     print_r($data); exit;
     // echo $_POST['product_name'] . "<br />" . $_POST['brand_product']; exit;
