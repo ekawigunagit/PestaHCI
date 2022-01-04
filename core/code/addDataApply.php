@@ -9,13 +9,19 @@ require '../../PHPMailer/src/SMTP.php';
 require '../../PHPMailer/src/PHPMailer.php';
 
 $data = $_POST;
-
-if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($_POST['city'])) || (cekstring($_POST['area'])) || (cekstring($_POST['name'])) || (cekstring($_POST['product_id'])) || (cekstring($_POST['brand_product'])) || (cekstring($_POST['category_name'])) || (cekstring($_POST['product_name'])) || (cekstring($_POST['hadiah']))) {
-    echo ("<script LANGUAGE='JavaScript'>
-    window.alert('Akses Error');
-    window.location.href='../../index.php';
-    </script>");
-} else {
+// var_dump(cekstring($_POST['name'])); exit;
+//var_dump($data); exit;
+foreach($data as $key => $value) {
+    if(cekstring($data[$key])) {
+        echo $data[$key];
+        // echo "Test";
+        // echo ("<script LANGUAGE='JavaScript'>
+        // window.alert('Akses Error');
+        // window.location.href='../../index.php';
+        // </script>");
+        exit;
+    }
+}
     $nama_penerima = $_POST['name'];
     $email_penerima = $_POST['email'];
     $productName = $_POST['product_name'];
@@ -26,6 +32,8 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
     $data['utm_medium'] = $_POST['category_name']; // Category Product
     $data['utm_content'] = $_POST['product_name']; // Product Name
     $data['gclid'] = $_POST['hadiah'];
+
+    // var_dump($data); exit;
 
     include "sendnotif.php";
 
@@ -39,6 +47,8 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
         $nama_penerima = $_POST['name'];
         $email_penerima = $_POST['email'];
         $productName = $_POST['product_name'];
+
+        $deskripsi = isset($_POST['product_id']) ? " Produk " : " Promo ";
     
         $email_pengirim = 'no-reply@pestahomecredit.com';
         $password = 'noreply@p3st4';
@@ -63,7 +73,7 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
         $mail->isHTML(true);
         //Set email format to HTML
         $mail->Subject = 'Konfirmasi Pengajuan - PESTA Home Credit';
-        $mail->Body    = isiBody($nama_penerima, $productName);
+        $mail->Body    = isiBody($nama_penerima, $productName, $deskripsi);
     
         $mail->AltBody = 'Terima kasih, kamu baru saja berhasil melakukan transaksi'. $nama_penerima .',';
     
@@ -93,4 +103,4 @@ if ((cekstring($_POST['email'])) || (cekstring($_POST['phone'])) || (cekstring($
     //     $ambilpromo_en = sekuriti($_POST['promo_id'], 'encrypt');
     //     header('location:../../index.php?page=thankyouPagePromo&idpr=' . $ambilpromo_en);
     // }
-}
+?>
