@@ -1,8 +1,9 @@
 <?php
 
-function isiBody($namaAnda, $productAnda) {
+function isiBody($namaAnda, $productAnda, $deskripsiAnda) {
 $name=$namaAnda;
 $produk=$productAnda;
+$deskripsi=$deskripsiAnda;
 $isiemail = "
             <!DOCTYPE html>
             <html lang='id' xmlns='http://www.w3.org/1999/xhtml' xmlns:v='urn:schemas-microsoft-com:vml'
@@ -173,7 +174,7 @@ $isiemail = "
                     <div
                         style='display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;'>
                         Terima kasih, kamu telah berhasil melakukan pengajuan untuk <span
-                            style='color: #e11931; font-weight: bold;'> '. $produk . '</span> di PESTA Online Home Credit Indonesia.
+                            style='color: #e11931; font-weight: bold;'> ". $produk . "</span> di PESTA Online Home Credit Indonesia.
                         <br>---------------------------------<br>
                     </div>
                     <div
@@ -216,9 +217,9 @@ $isiemail = "
                                             <tr>
                                                 <td style='text-align: justify; font: 16px ' Roboto', sans-serif; line-height: 25px;
                                                     color: #555555;'>
-                                                    <p style='margin: 0 0 25px;'>Hai, " . $name . "</p>
+                                                    <p style='margin: 0 0 25px;'>Hai" . $name . ", </p>
                                                     <p style='margin: 0 0 25px;'>Terima kasih, kamu telah berhasil melakukan
-                                                        pengajuan untuk <span style='color: #e11931; font-weight: bold;'>" . $produk
+                                                        pengajuan untuk". $deskripsi . "<span style='color: #e11931; font-weight: bold;'>" . $produk
                                                         . "</span> di PESTA Online Home Credit Indonesia. Sales Agen kami akan
                                                         segera menghubungi anda.</p>
                                                         <p style='margin: 0 0 25px;'>Email ini bersifat informasi dan tidak dapat di-reply, bila ada yang ingin ditanyakan kami siap membantu lebih lanjut.</p>
