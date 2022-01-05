@@ -107,12 +107,12 @@ $data['gclid'] = $_POST['hadiah'];
 // print_r($data);
 // exit;
 
-// $method = "POST";
-// // $url = "https://apixweb-dev.homecredit.co.id/api/v1/form/pesta-online";
-// $url = "https://apixweb.homecredit.co.id/api/v1/form/pesta-online";
-// $response = _curlPost($url, $data, $method);
-// $result = json_encode($response);
-// echo json_decode($result);
+$method = "POST";
+// $url = "https://apixweb-dev.homecredit.co.id/api/v1/form/pesta-online";
+$url = "https://apixweb.homecredit.co.id/api/v1/form/pesta-online";
+$response = _curlPost($url, $data, $method);
+$result = json_encode($response);
+echo json_decode($result);
 
 
 
