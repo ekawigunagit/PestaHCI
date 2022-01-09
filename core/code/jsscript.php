@@ -259,12 +259,12 @@
     // );
 
     $.validator.addMethod(
-    "regex",
-    function(value, element, regexp) {
-        return this.optional(element) || regexp.test(value);
-    },
-    "Please check your input."
-);
+        "regex",
+        function(value, element, regexp) {
+            return this.optional(element) || regexp.test(value);
+        },
+        "Please check your input."
+    );
 
     $(document).ready(function() {
         $('#formProduct').validate({ // initialize the plugin
@@ -308,7 +308,8 @@
                 "phone": {
                     required: true,
                     number: true,
-                    maxlength: 13
+                    maxlength: 13,
+                    regex: /^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$/
                 },
                 "city": {
                     required: true

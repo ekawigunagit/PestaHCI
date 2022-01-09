@@ -102,7 +102,8 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <input type="hidden" name="product_name">
+                    <input type="hidden" name="tipe" value="dariPromo">
+                    <!-- <input type="hidden" name="product_name"> -->
                     <input type="hidden" name="brand_product">
                     <input type="hidden" name="category_name">
                     <input type="hidden" name="promo_id">

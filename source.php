@@ -338,7 +338,8 @@ $row = mysqli_fetch_row($query_promohci);
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <input type="hidden" name="product_name">
+                        <input type="hidden" name="tipe" value="dariProduk">
+                        <!-- <input type="hidden" name="product_name"> -->
                         <input type="hidden" name="brand_product">
                         <input type="hidden" name="product_id">
                         <input type="hidden" name="category_name">
