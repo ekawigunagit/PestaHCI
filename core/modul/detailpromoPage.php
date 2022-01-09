@@ -14,33 +14,44 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
     $ambil_enddate = $show_data_promos['end'];
     $show_enddate = cleanTgl($ambil_enddate);
 ?>
-    <div class="promo-page">
-        <div class="container">
-            <div class="promo-product">
-                <div class="detail-promo">
-                    <h2><?php echo $show_data_promos['title_promo']; ?></h2>
-                    <p>Periode <?php echo $show_startdate; ?> - <?php echo $show_enddate; ?></p>
-                    <div class="sosmed">
+<div class="promo-page">
+    <div class="container">
+        <div class="promo-product">
+            <div class="detail-promo">
+                <h2><?php echo $show_data_promos['title_promo']; ?></h2>
+                <p>Periode <?php echo $show_startdate; ?> - <?php echo $show_enddate; ?></p>
+                <div class="sosmed">
+                    <a href="https://www.linkedin.com/company/homecreditindonesia/" target="_blank"
+                        rel="noopener noreferrer">
                         <img src="./images/footer/linkidin.png">
-                        <img src="./images/footer/fb2.png">
-                        <img src="./images/footer/twiter.png">
+                    </a>
+                    <a href="https://www.facebook.com/homecreditid/" target="_blank" rel="noopener noreferrer"><img
+                            src="./images/footer/fb2.png"></a>
+                    <a href="https://twitter.com/homecreditid" target="_blank"> <img
+                            src="./images/footer/twiter.png"></a>
+                    <a href="https://wa.me/628117799600" target="_blank">
                         <img src="./images/footer/whatsapp.png">
-                        <img src="./images/footer/line.png">
-                        <img src="./images/footer/link_copy.png">
-                    </div>
+                    </a>
+                    <img src="./images/footer/line.png">
+                    <img src="./images/footer/link_copy.png">
                 </div>
             </div>
-            <div class="detail-text-product">
-                <?php echo $show_data_promos['detail_promo']; ?>
+        </div>
+        <div class="detail-text-product">
+            <?php echo $show_data_promos['detail_promo']; ?>
 
-                <div class="detail-list">
-                    <div class="bnt-ajukan">
-                        <span class="link trigger-btn" data-toggle="modal" data-target="#myModal" data-productName="<?php echo $show_data_promos['title_promo']; ?>" data-brandProduct="Promo" data-categoryName="<?php echo $show_data_promos['category_name']; ?> " data-promoID="<?php echo $show_data_promos['pmID']; ?> "><button class="btn" type="submit">Ajukan Sekarang</button></span>
-                    </div>
+            <div class="detail-list">
+                <div class="bnt-ajukan">
+                    <span class="link trigger-btn" data-toggle="modal" data-target="#myModal"
+                        data-productName="<?php echo $show_data_promos['title_promo']; ?>" data-brandProduct="Promo"
+                        data-categoryName="<?php echo $show_data_promos['category_name']; ?> "
+                        data-promoID="<?php echo $show_data_promos['pmID']; ?> "><button class="btn"
+                            type="submit">Ajukan Sekarang</button></span>
                 </div>
             </div>
         </div>
     </div>
+</div>
 <?php
 }
 ?>
@@ -61,13 +72,14 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     $ambilidpromo = $show_promohci['id'];
                     $ambilidpromo_en = sekuriti($ambilidpromo, 'encrypt');
                 ?>
-                    <div class="swiper-slide">
-                        <a href="index.php?page=detailpromoPage&idpr=<?php echo $ambilidpromo_en; ?>">
-                            <div class="card promo">
-                                <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" alt="..." class="card-img-top">
-                            </div>
-                        </a>
-                    </div>
+                <div class="swiper-slide">
+                    <a href="index.php?page=detailpromoPage&idpr=<?php echo $ambilidpromo_en; ?>">
+                        <div class="card promo">
+                            <img src="./images/promo/<?php echo $show_promohci['image_promo']; ?>" alt="..."
+                                class="card-img-top">
+                        </div>
+                    </a>
+                </div>
                 <?php
                 }
                 ?>
@@ -80,7 +92,8 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
 </div>
 
 <!-- Modal HTML PRODUCT -->
-<div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+<div id="myModal" class="modal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false"
+    data-backdrop="static">
     <div class="modal-dialog modal-md">
         <div class="modal-content">
             <form id="formPromo" action="core/code/addDataApply.php" method="post" class="submitForm" data-type="login">
@@ -115,7 +128,8 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
 
                             while ($show_provinces = mysqli_fetch_array($query_provinces)) {
                             ?>
-                                <option value="<?php echo $show_provinces['province_name']; ?>"><?php echo $show_provinces['province_name']; ?></option>
+                            <option value="<?php echo $show_provinces['province_name']; ?>">
+                                <?php echo $show_provinces['province_name']; ?></option>
                             <?php
                             }
                             ?>

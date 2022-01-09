@@ -97,26 +97,43 @@
                 <p class="mt-3">PT Home Credit Indonesia Plaza Oleos Lantai 8 Jl. TB Simatupang No. 53A,
                     Jakarta Selatan 12520
                 </p>
+
                 <div class="sosmed">
-                    <a href=""><img src="./images/footer/linkidin-footer.svg" alt=""></a>
-                    <a href=""><img src="./images/footer/fb.svg" alt=""></a>
-                    <a href=""><img src="./images/footer/ig.svg" alt=""></a>
-                    <a href=""><img src="./images/footer/twiter-footer.svg" alt=""></a>
-                    <a href=""><img src="./images/footer/youtube.svg" alt=""></a>
-                    <!-- <a href=""><img src="./images/footer/tiktok-footer.svg" alt=""></a> -->
+                    <a target="_blank" href="https://www.linkedin.com/company/homecreditindonesia/"
+                        class="jsx-1516727515"><img src="./images/footer/linkidin-footer.svg" alt="socmed-icons"
+                            class="jsx-1516727515 icons"></a><a target="_blank"
+                        href="https://www.facebook.com/homecreditid/" class="jsx-1516727515"><img
+                            src="./images/footer/fb.svg" alt="socmed-icons" class="jsx-1516727515 icons"></a><a
+                        target="_blank" href="https://www.instagram.com/homecreditid/" class="jsx-1516727515"><img
+                            src="./images/footer/ig.svg" alt="socmed-icons" class="jsx-1516727515 icons"></a><a
+                        target="_blank" href="https://twitter.com/homecreditid" class="jsx-1516727515"><img
+                            src="./images/footer/twiter-footer.svg" alt="socmed-icons"
+                            class="jsx-1516727515 icons"></a><a target="_blank"
+                        href="https://www.youtube.com/channel/UCbFe7opCDSZ3sKLV42MtCfA" class="jsx-1516727515">
+                        <img src="./images/footer/youtube.svg" alt="socmed-icons" class="jsx-1516727515 icons"></a>
                 </div>
             </div>
 
             <div class="col-6" style="text-align: right;">
                 <p>Hubungi Kami</p>
-                <p><img src="./images/footer/email.svg" class="mr-2">@homecredit.co.id</p>
-                <p><img src="./images/footer/telpn.svg" class="mr-2">021 2953 9600</p>
-                <p><img src="./images/footer/wa.svg" class="mr-2">021 2953 9600</p>
+                <a href="mailto:care@homecredit.co.id" target="_blank">
+                    <p><img src="./images/footer/email.svg" class="mr-2">care@homecredit.co.id</p>
+                </a>
+                <a href="tel:+622129539600" target="_blank">
+                    <p><img src="./images/footer/telpn.svg" class="mr-2">021 2953 9600</p>
+                </a>
+                <a href=" target="_blank">
+                    <p><img src="./images/footer/wa.svg" class="mr-2">021 2953 9600</p>
+                </a>
                 <p>Unduh My Home Credit App</p>
 
                 <div class="app">
-                    <img src="./images/footer/app1.svg" class="mt-2">
-                    <img src="./images/footer/app2.svg" class="mt-2">
+                    <a target="_blank"
+                        href="https://apps.apple.com/id/app/my-home-credit-indonesia/id1313113736?c=mobile&amp;pid=insider">
+                        <img src="./images/footer/app1.svg" class="mt-2">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=id.co.myhomecredit&hl=in"
+                        target="_blank"><img src="./images/footer/app2.svg" class="mt-2"></a>
                 </div>
                 <div class="ojk">
                     <img src="./images/footer/ojk1.png">
