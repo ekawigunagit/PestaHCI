@@ -59,50 +59,50 @@ $data['gclid'] = $_POST['hadiah'];
 
 
 // Include Body
-// include "sendnotif.php";
+include "sendnotif.php";
 
 // Function Send Email
-// function sendEmail($productName)
-// {
-//     $nama_penerima = $_POST['name'];
-//     $email_penerima = $_POST['email'];
+function sendEmail($productName)
+{
+    $nama_penerima = $_POST['name'];
+    $email_penerima = $_POST['email'];
 
-//     $deskripsi = isset($_POST['product_id']) ? " Produk " : " Promo ";
+    $deskripsi = isset($_POST['product_id']) ? " Produk " : " Promo ";
 
-//     $email_pengirim = 'no-reply@pestahomecredit.com';
-//     $password = 'noreply@p3st4';
-//     $mail = new PHPMailer;
-//     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
-//     $mail->isSMTP();
-//     $mail->Host       = 'srv115.niagahoster.com'; //Set the SMTP server to send through smtp.gmail.com
-//     $mail->SMTPAuth   = true; //Enable SMTP authentication
-//     $mail->Username   = $email_pengirim; //SMTP username
-//     $mail->Password   = $password; //SMTP password
-//     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //Enable implicit TLS encryption
-//     $mail->Port       = 465;
+    $email_pengirim = 'no-reply@pestahomecredit.com';
+    $password = 'noreply@p3st4';
+    $mail = new PHPMailer;
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    $mail->isSMTP();
+    $mail->Host       = 'srv115.niagahoster.com'; //Set the SMTP server to send through smtp.gmail.com
+    $mail->SMTPAuth   = true; //Enable SMTP authentication
+    $mail->Username   = $email_pengirim; //SMTP username
+    $mail->Password   = $password; //SMTP password
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //Enable implicit TLS encryption
+    $mail->Port       = 465;
 
-//     //Recipients
-//     $mail->setFrom($email_pengirim, 'Pesta Homecredit');
-//     $mail->addAddress($email_penerima, $nama_penerima);
-//     //Add a recipient             
-//     //Name is optional
-//     $mail->addReplyTo($email_pengirim, 'Pesta Homecredit');
+    //Recipients
+    $mail->setFrom($email_pengirim, 'Pesta Homecredit');
+    $mail->addAddress($email_penerima, $nama_penerima);
+    //Add a recipient             
+    //Name is optional
+    $mail->addReplyTo($email_pengirim, 'Pesta Homecredit');
 
-//     //Message
-//     $mail->isHTML(true);
-//     //Set email format to HTML
-//     $mail->Subject = 'Konfirmasi Pengajuan - PESTA Home Credit';
-//     $mail->Body    = isiBody($nama_penerima, $productName, $deskripsi);
+    //Message
+    $mail->isHTML(true);
+    //Set email format to HTML
+    $mail->Subject = 'Konfirmasi Pengajuan - PESTA Home Credit';
+    $mail->Body    = isiBody($nama_penerima, $productName, $deskripsi);
 
-//     $mail->AltBody = 'Terima kasih, kamu baru saja berhasil melakukan transaksi' . $nama_penerima . ',';
+    $mail->AltBody = 'Terima kasih, kamu baru saja berhasil melakukan transaksi' . $nama_penerima . ',';
 
-//     $email = $mail->send();
-//     return $email;
-// }
+    $email = $mail->send();
+    return $email;
+}
 
 
 //Send Email Notification
-// sendEmail($productName);
+sendEmail($productName);
 
 // print_r($data);
 // exit;
@@ -127,11 +127,3 @@ if (isset($_POST['tipe'])) {
         header('location:../../index.php?page=thankyouPage&idpr=' . $ambilproduct_en);
     }
 }
-// // echo "ID : " . $_POST['product_id']; exit;
-// if (isset($_POST['product_id']) && $_POST['product_id'] != "") {
-//     $ambilproduct_en = sekuriti($_POST['product_id'], 'encrypt');
-//     header('location:../../index.php?page=thankyouPage&idpr=' . $ambilproduct_en);
-// } else if (isset($_POST['promo_id']) && $_POST['promo_id'] != "") {
-//     $ambilpromo_en = sekuriti($_POST['promo_id'], 'encrypt');
-//     header('location:../../index.php?page=thankyouPagePromo&idpr=' . $ambilpromo_en);
-// }
