@@ -379,7 +379,6 @@ $row = mysqli_fetch_row($query_promohci);
                         <div class="form-group">
                             <label>Pilih untuk kesempatan memenangkan hadiah</label>
                             <select name="hadiah" class="form-control">
-                                <option> --Choose One-- </option>
                                 <option>Sharp Kirei III SJ-N162D</option>
                                 <option>Sepeda Gunung MTB 26 Inch CASSINI T-300</option>
                                 <option>Sepeda Lipat Folding Bike Atlantis 20 Inch 7 Speed</option>

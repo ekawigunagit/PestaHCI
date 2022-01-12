@@ -32,8 +32,8 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     <a href="https://wa.me/628117799600" target="_blank">
                         <img src="./images/footer/whatsapp.png">
                     </a>
-                    <img src="./images/footer/line.png">
-                    <img src="./images/footer/link_copy.png">
+                    <!-- <img src="./images/footer/line.png"> -->
+                    <!-- <img src="./images/footer/link_copy.png"> -->
                 </div>
             </div>
         </div>
@@ -143,7 +143,6 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     <div class="form-group">
                         <label>Pilih untuk kesempatan memenangkan hadiah</label>
                         <select name="hadiah" class="form-control">
-                            <option> --Choose One-- </option>
                             <option>Sharp Kirei III SJ-N162D</option>
                             <option>Sepeda Gunung MTB 26 Inch CASSINI T-300</option>
                             <option>Sepeda Lipat Folding Bike Atlantis 20 Inch 7 Speed</option>

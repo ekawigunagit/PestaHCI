@@ -122,8 +122,8 @@
                 <a href="tel:+622129539600" target="_blank">
                     <p><img src="./images/footer/telpn.svg" class="mr-2">021 2953 9600</p>
                 </a>
-                <a href=" target="_blank">
-                    <p><img src="./images/footer/wa.svg" class="mr-2">021 2953 9600</p>
+                <a href="https://wa.me/628117799600" target="_blank">
+                    <p><img src="./images/footer/wa.svg" class="mr-2">08117799600</p>
                 </a>
                 <p>Unduh My Home Credit App</p>
 

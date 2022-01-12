@@ -24,14 +24,15 @@ foreach ($data as $key => $value) {
     }
 }
 
+$productName = '';
 if (isset($_POST['tipe'])) {
-    if ($_POST['tipe'] == 'dariPromo') {
+    if (strtolower(trim($_POST['tipe'])) == 'dariPromo') {
         $ambildata = "SELECT * FROM promos WHERE id='$_POST[promo_id]'";
         $queryambildata = mysqli_query($koneksi, $ambildata);
         while ($showambildata = mysqli_fetch_array($queryambildata)) {
             $productName = $showambildata['title_promo'];
         }
-    } else if ($_POST['tipe'] == 'dariProduk') {
+    } else if (strtolower(trim($_POST['tipe'])) == 'dariProduk') {
         $ambildata = "SELECT * FROM products WHERE id='$_POST[product_id]'";
         $queryambildata = mysqli_query($koneksi, $ambildata);
         while ($showambildata = mysqli_fetch_array($queryambildata)) {
@@ -112,18 +113,26 @@ $method = "POST";
 $url = "https://apixweb.homecredit.co.id/api/v1/form/pesta-online";
 $response = _curlPost($url, $data, $method);
 $result = json_encode($response);
-echo json_decode($result);
+// echo json_decode($result);
 
 
 
 if (isset($_POST['tipe'])) {
-    if ($_POST['tipe'] == 'dariPromo') {
+    // echo strtolower(trim($_POST['tipe'])); exit;
+    if (strtolower(trim($_POST['tipe'])) == 'daripromo') {
         $ambilpromo_en = sekuriti($_POST['promo_id'], 'encrypt');
         // echo "<br />Dari Promo : " . $ambilpromo_en;
-        header('location:../../index.php?page=thankyouPagePromo&idpr=' . $ambilpromo_en);
-    } else if ($_POST['tipe'] == 'dariProduk') {
+        // header('location:../../index.php?page=thankyouPagePromo&idpr=' . $ambilpromo_en);
+        echo ("<script LANGUAGE='JavaScript'>
+        window.location.href='../../index.php?page=thankyouPagePromo&idpr=".$ambilpromo_en."';
+        </script>");
+    } else if (strtolower(trim($_POST['tipe'])) == 'dariproduk') {
         $ambilproduct_en = sekuriti($_POST['product_id'], 'encrypt');
         // echo "<br />Dari Product : " . $ambilproduct_en;
-        header('location:../../index.php?page=thankyouPage&idpr=' . $ambilproduct_en);
+        // echo $ambilproduct_en;exit;
+        // header('location:../../index.php?page=thankyouPage&idpr=' . $ambilproduct_en);
+        echo ("<script LANGUAGE='JavaScript'>
+        window.location.href='../../index.php?page=thankyouPage&idpr=".$ambilproduct_en."';
+        </script>");
     }
 }
