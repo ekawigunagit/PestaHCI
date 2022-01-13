@@ -249,15 +249,6 @@
 
     })
 
-    // $.validator.addMethod(
-    //     "regex",
-    //     function(value, element, regexp) {
-    //         var re = new RegExp(regexp);
-    //         return this.optional(element) || re.test(value);
-    //     },
-    //     "Please check your input."
-    // );
-
     $.validator.addMethod(
         "regex",
         function(value, element, regexp) {
@@ -266,63 +257,55 @@
         "Please check your input."
     );
 
+    function storeData(event) {
+        event.preventDefault()
+        event.stopPropagation()
+        const { target } = event
+        const formData = new FormData(target)
+        $(".error").remove()
+
+        const url = target.action
+        const method = target.method
+        $.ajax({
+            url: url,
+            type: method,
+            data: formData,
+            statusCode: {
+                422: function(error) {
+                    const errors = JSON.parse(error.responseText)
+                    const errorCode = errors.data.errors
+                    Object.keys(errorCode).map((value, key) => {
+                        errorCode[value].map((errorValue, errorKey) => {
+                            $("input[name="+value+"]").after('<label class="error">'+errorValue+'</label>')
+                            $("select[name="+value+"]").after('<label class="error">'+errorValue+'</label>')
+                        })
+                    })
+                    $("input[type=submit]").show();
+                }
+            },
+            success: function(response) {
+                const result = JSON.parse(response)
+                if(result.success) {
+                    window.location.href = result.redirect_uri
+                }
+                $("input[type=submit]").show();
+            },
+            processData: false,
+            contentType: false
+        })
+    }
+
     $(document).ready(function() {
-        $('#formProduct').validate({ // initialize the plugin
-            rules: {
-                "name": {
-                    required: true
-                },
-                "email": {
-                    required: true,
-                    email: true
-                },
-                "phone": {
-                    required: true,
-                    number: true,
-                    maxlength: 13,
-                    regex: /^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$/
-                    // /^[+-]{1}[0-9]{1,3}\-[0-9]{10}$/
-                    // "^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$"
-                },
-                "city": {
-                    required: true
-                },
-                "area": {
-                    required: true
-                },
-                "hadiah": {
-                    required: true
-                },
-            }
-        });
+        $('#formProduct').on('submit', function(event){
+            $("input[type=submit]").hide();
+            storeData(event)
+        })
 
-        $('#formPromo').validate({ // initialize the plugin
-            rules: {
-                "name": {
-                    required: true
-                },
-                "email": {
-                    required: true,
-                    email: true
-                },
-                "phone": {
-                    required: true,
-                    number: true,
-                    maxlength: 13,
-                    regex: /^(^\+62|62|^08)(\d{3,4}-?){2}\d{3,4}$/
-                },
-                "city": {
-                    required: true
-                },
-                "area": {
-                    required: true
-                },
-                "hadiah": {
-                    required: true
-                },
-            }
-        });
-
+        $('#formPromo').on('submit', function(event){
+            $("input[type=submit]").hide();
+            storeData(event)
+        })
+        
         $(".chooseProduct").on('click', function() {
             const id = $(this).attr('data-ct')
             window.location.href = "?ctpr=" + id

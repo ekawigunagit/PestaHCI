@@ -349,7 +349,7 @@ $row = mysqli_fetch_row($query_promohci);
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input name="email" type="email" class="form-control">
+                            <input name="email" type="text" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Phone Number</label>
@@ -358,7 +358,7 @@ $row = mysqli_fetch_row($query_promohci);
                         <div class="form-group">
                             <label>City</label>
                             <select name="city" id="productcity_select" class="form-control">
-                                <option> --Choose One-- </option>
+                                <option value=""> --Choose One-- </option>
                                 <?php
                                 $data_provinces = "SELECT * FROM provinces WHERE status=1 ORDER BY id ASC";
                                 $query_provinces = mysqli_query($koneksi, $data_provinces);
@@ -374,21 +374,23 @@ $row = mysqli_fetch_row($query_promohci);
                         </div>
                         <div class="form-group">
                             <label>Area</label>
-                            <select name="area" class="form-control" id="productarea_select"></select>
+                            <select name="area" class="form-control" id="productarea_select">
+                                <option value="">-- Choose one --</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Pilih untuk kesempatan memenangkan hadiah</label>
                             <select name="hadiah" class="form-control">
-                                <option>Sharp Kirei III SJ-N162D</option>
-                                <option>Sepeda Gunung MTB 26 Inch CASSINI T-300</option>
-                                <option>Sepeda Lipat Folding Bike Atlantis 20 Inch 7 Speed</option>
-                                <option>Evercoss Etab Plus M80 RAM 2/16</option>
-                                <option>Xiaomi Redmi 9A 2/32</option>
-                                <option>Skechers F SH 3198 001 55</option>
-                                <option>Giordano F GD GA02098T 94 47</option>
-                                <option>Springbed Comforta SUPERFIT Super Silver 100x200</option>
-                                <option>JTR Oda Sofa Bed Minimalis</option>
-                                <option>Mesin Cuci Sharp 65MW</option>
+                                <option value="Sharp Kirei III SJ-N162D">Sharp Kirei III SJ-N162D</option>
+                                <option value="Sepeda Gunung MTB 26 Inch CASSINI T-300">Sepeda Gunung MTB 26 Inch CASSINI T-300</option>
+                                <option value="Sepeda Lipat Folding Bike Atlantis 20 Inch 7 Speed">Sepeda Lipat Folding Bike Atlantis 20 Inch 7 Speed</option>
+                                <option value="Evercoss Etab Plus M80 RAM 2/16">Evercoss Etab Plus M80 RAM 2/16</option>
+                                <option value="Xiaomi Redmi 9A 2/32">Xiaomi Redmi 9A 2/32</option>
+                                <option value="Skechers F SH 3198 001 55<">Skechers F SH 3198 001 55</option>
+                                <option value="Giordano F GD GA02098T 94 47">Giordano F GD GA02098T 94 47</option>
+                                <option value="Springbed Comforta SUPERFIT Super Silver 100x200">Springbed Comforta SUPERFIT Super Silver 100x200</option>
+                                <option value="JTR Oda Sofa Bed Minimalis">JTR Oda Sofa Bed Minimalis</option>
+                                <option value="Mesin Cuci Sharp 65MW">Mesin Cuci Sharp 65MW</option>
                             </select>
                         </div>
                         <!-- <div class="form-group">

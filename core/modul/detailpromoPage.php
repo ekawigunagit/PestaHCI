@@ -122,7 +122,7 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     <div class="form-group">
                         <label>City</label>
                         <select name="city" id="promocity_select" class="form-control">
-                            <option> --Choose One-- </option>
+                            <option value=""> --Choose One-- </option>
                             <?php
                             $data_provinces = "SELECT * FROM provinces WHERE status=1 ORDER BY id ASC";
                             $query_provinces = mysqli_query($koneksi, $data_provinces);
@@ -138,7 +138,9 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
                     </div>
                     <div class="form-group">
                         <label>Area</label>
-                        <select name="area" id="promoarea_select" class="form-control"></select>
+                        <select name="area" id="promoarea_select" class="form-control">
+                            <option value=""> --Choose One-- </option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label>Pilih untuk kesempatan memenangkan hadiah</label>
