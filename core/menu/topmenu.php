@@ -50,6 +50,7 @@
                                 </li>
                                 <li><a href="index.php?page=promoPage">Our Promo</a></li>
                                 <li><a href="index.php?page=hadiahPage">Hadiah Pesta</a></li>
+                                <li><a href="?page=gimmick">Game Pesta</a></li>
                             </ul>
                         </nav>
                         <div class="header_extra ml-auto">
@@ -166,6 +167,7 @@
                 </li>
                 <li class="page_menu_item menu_mm"><a href="index.php?page=promoPage">Our Promo<i class="fa fa-angle-down"></i></a></li>
                 <li class="page_menu_item menu_mm"><a href="index.php?page=hadiahPage">Hadiah Pesta<i class="fa fa-angle-down"></i></a></li>
+                <li class="page_menu_item menu_mm"><a href="?page=gimmick">Game Pesta<i class="fa fa-angle-down"></i></a></li>
             </ul>
         </div>
     </div>
