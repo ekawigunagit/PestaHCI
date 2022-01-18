@@ -1,3 +1,9 @@
+<br /><br /><br /><br /><br />
 <div class="container">
-<iframe id="game" src="http://localhost/hciproject/pestaHCI/GameHSJ/" width="1000" height="600"></iframe>
+    <div class="row justify-content-center mt-5">
+        <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" id="game" src="http://localhost/hciproject/pestaHCI/GameHSJ/"></iframe>
+        </div>
+    </div>
+</div>
 </div>
