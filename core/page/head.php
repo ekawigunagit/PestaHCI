@@ -2,7 +2,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Pesta Home Credit">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"> <!-- Game -->
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 <link href="images/favicon.ico" type="image/x-icon" rel="shortcut icon">
 <link href="images/favicon.ico" type="image/x-icon" rel="icon">
 <link rel="stylesheet" type="text/css" href="css/bootstrap4/bootstrap.min.css">
