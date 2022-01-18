@@ -14,6 +14,18 @@ while ($show_data_promos = mysqli_fetch_array($query_data_promos)) {
     $ambil_enddate = $show_data_promos['end'];
     $show_enddate = cleanTgl($ambil_enddate);
 ?>
+<div class="home-container ">
+    <div class="container-fluid">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/promo/<?php echo $show_data_promos['image_promo']; ?>" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="promo-page">
     <div class="container">
         <div class="promo-product">

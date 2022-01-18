@@ -11,10 +11,9 @@
 	<link rel="apple-touch-icon" sizes="180x170" href="icons/icon-16.png">
 	<link rel="icon" type="image/png" href="icons/icon-16.png">
 
-<link rel="stylesheet" href="style.css">
-
 </head>
 <body>
+
 <div id="fb-root"></div>
 
 	<noscript>
@@ -23,9 +22,9 @@
 			<p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
 		</div>
 	</noscript>
-	<script src="scripts/supportcheck.js"></script>
-	<script src="scripts/offlineclient.js" type="module"></script>
-	<script src="scripts/main.js" type="module"></script>
-	<script src="scripts/register-sw.js" type="module"></script>
+	<script src="scripts/supportcheck.js?t=<?php echo date("S") ;?>"></script>
+	<script src="scripts/offlineclient.js?t=<?php echo date("S") ;?>" type="module"></script>
+	<script src="scripts/main.js?t=<?php echo date("S") ;?>" type="module"></script>
+	<script src="scripts/register-sw.js?t=<?php echo date("S") ;?>" type="module"></script>
 </body>
 </html>

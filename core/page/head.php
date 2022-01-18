@@ -18,7 +18,7 @@
 <link rel="stylesheet" type="text/css" href="css/checkout_responsive.css">
 <link rel="stylesheet" type="text/css" href="css/cart_responsive.css">
 <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
-
+<link rel="stylesheet" href="../../GameHSJ/style.css?t=<?php echo date("S") ;?>">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

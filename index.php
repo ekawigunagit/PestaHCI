@@ -27,7 +27,8 @@
 		<?php include 'core/menu/topmenu.php'; ?>
 		
 		<!-- Home Page -->
-		<?php include 'core/menu/homeslider.php'; ?>
+
+		<?php if(!isset($_GET['page'])): include 'core/menu/homeslider.php'; endif; ?>
 
 		<!-- Home Page -->
 		<?php include 'core/code/route.php'; ?>
