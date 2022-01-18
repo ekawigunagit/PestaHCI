@@ -2833,8 +2833,16 @@ label {
 	margin: 0;
 	padding: 0;
 }
-
+/* .gimmick{
+	margin-top: 200px;
+} */
+.gimmick{
+		padding: 80px 0 5px 0;
+	}
 @media(max-width:1024px) {
+	.gimmick{
+		padding: 80px 0 5px 0;
+	}
 	::-webkit-scrollbar-track {
 		background-color: #dcdcdcfc;
 	}
@@ -2959,6 +2967,9 @@ label {
 }
 
 @media(min-width:1024px) {
+	.gimmick{
+		padding: 80px 0 5px 0;
+	}
 	.home-container {
 		display: flex;
 		position: relative;
@@ -3073,6 +3084,9 @@ label {
 }
 
 @media (max-width : 578px) {
+	.gimmick{
+		padding: 80px 0 5px 0;
+	}
 	::-webkit-scrollbar-track {
 		background-color: #dcdcdcfc;
 	}
