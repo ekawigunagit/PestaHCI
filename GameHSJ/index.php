@@ -10,6 +10,18 @@
 	<link rel="manifest" href="appmanifest.json">
 	<link rel="apple-touch-icon" sizes="180x170" href="icons/icon-16.png">
 	<link rel="icon" type="image/png" href="icons/icon-16.png">
+	<style>
+		@media(max-width:576px){
+			canvas {
+			overflow: none !important;
+			width: 100% !important; 
+			height:100% !important;
+			padding:0 !important;
+			margin: 0 !important;
+		}
+		}
+	</style>
+
 
 </head>
 <body>

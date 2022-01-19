@@ -2880,7 +2880,7 @@ label {
 	}
 
 	.promo-page {
-		margin: 10px 0 0 0;
+		margin: 160px 0 0 0;
 	}
 
 	.detail-promo h2 {
@@ -2951,8 +2951,7 @@ label {
 	}
 
 	.promo-wrapper {
-		padding: 0;
-		margin: 0 0 50px 0;
+		margin:  120px 0 50px 0;
 	}
 
 	footer .ojk img {
@@ -2967,6 +2966,7 @@ label {
 }
 
 @media(min-width:1024px) {
+
 	.gimmick{
 		padding: 80px 0 5px 0;
 	}
@@ -3011,6 +3011,7 @@ label {
 	/* .item-brand {
 		margin-bottom: 20px;
 	} */
+	
 	.item-brand-list {
 		text-align: center;
 		padding: 30px 0;
@@ -3023,7 +3024,7 @@ label {
 	}
 
 	.promo-page {
-		margin: 50px 0;
+		margin: 150px 0 0 0;
 	}
 
 	.detail-promo h2 {
@@ -3069,8 +3070,7 @@ label {
 	}
 
 	.promo-wrapper {
-		padding: 0;
-		margin: 30px 0 50px 0;
+		margin-top: 10%;
 	}
 
 	.home-product h2 {
@@ -3084,8 +3084,15 @@ label {
 }
 
 @media (max-width : 578px) {
+	.promo-wrapper{
+		margin:90px 0 50px 0;
+	}
 	.gimmick{
+		height:900px;
 		padding: 80px 0 5px 0;
+	}
+	.iframe{
+		height:900px;
 	}
 	::-webkit-scrollbar-track {
 		background-color: #dcdcdcfc;
@@ -3238,12 +3245,12 @@ label {
 	}
 
 	.promo-page {
-		padding: 20px 0 0 0;
+		margin: 110px 0 0 0;
 	}
-
+	
 	.promo-card-wrapper {
-		padding: 0;
-		margin: 30px 0;
+
+		margin: 80px 0 40px 0;
 	}
 
 	.imgthankyou img {
@@ -3310,6 +3317,7 @@ label {
 	cursor: pointer;
 } */
 
+
 .why-item:hover {
 	background-color: rgba(63, 78, 100, 0.15);
 }
@@ -3324,12 +3332,6 @@ label {
 	border-radius: 5px;
 	background-color: rgba(99, 22, 22, 0.377);
 }
-
-/* promo */
-.promo-wrapper .container {
-	padding: 0 20px;
-}
-
 
 .promo-card-wrapper .promo-card {
 	margin-top: 25px;
@@ -3466,7 +3468,7 @@ footer .sosmed img {
 	font-weight: bolder;
 }
 /* game */
-
-.game{
-	margin: 0;
+canvas{
+	width=600px;
+	height=700px;
 }
