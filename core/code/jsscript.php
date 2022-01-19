@@ -26,7 +26,7 @@
 <script src="js/cart.js"></script> -->
 
 <script type="module">
-    import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+    import Swiper from './js/swiper.js';
 
     var swiper1 = new Swiper('.swiper', {
         slidesPerView: 1,
