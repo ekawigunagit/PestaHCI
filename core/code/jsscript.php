@@ -28,6 +28,10 @@
 <script type="module">
     import Swiper from './js/swiper.js';
 
+    setTimeout(() => {
+        $("iframe").contents().find('head').append('<style type="text/css">body { background-color: #FFF!important; }</style>')
+    }, 2000)
+
     var swiper1 = new Swiper('.swiper', {
         slidesPerView: 1,
         spaceBetween: 10,

@@ -1,7 +1,7 @@
 {
 	"name": "Hurry Space Jam",
 	"short_name": "Hurry Space Jam",
-	"description": "",
+	"description": "Hurry Space Jam Game supported by The Flavare",
 	"start_url": "index.html",
 	"display": "fullscreen",
 	"orientation": "portrait",
