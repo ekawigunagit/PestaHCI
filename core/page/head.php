@@ -11,14 +11,13 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
-<link rel="stylesheet" type="text/css" href="css/main_styles.css">
+<link rel="stylesheet" type="text/css" href="css/main_styles.css?t=<?php echo time();  ?>">
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
 <link rel="stylesheet" type="text/css" href="css/categories_responsive.css">
 <link rel="stylesheet" type="text/css" href="css/product_responsive.css">
 <link rel="stylesheet" type="text/css" href="css/checkout_responsive.css">
 <link rel="stylesheet" type="text/css" href="css/cart_responsive.css">
 <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
-<link rel="stylesheet" href="../../GameHSJ/style.css?t=<?php echo date("S") ;?>">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

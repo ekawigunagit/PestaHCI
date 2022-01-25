@@ -2,25 +2,34 @@
 
 // Change this to your connection info.
 $DATABASE_HOST = 'localhost';
-$DATABASE_USER = 'root';
-$DATABASE_PASS = '';
-$DATABASE_NAME = 'dbgame_hci';
+$DATABASE_USER = 'game';
+$DATABASE_PASS = 'Hc!@games';
+$DATABASE_NAME = 'hci_game';
+
+// Change this to your connection info.
+// $DATABASE_HOST = 'localhost';
+// $DATABASE_USER = 'root';
+// $DATABASE_PASS = '';
+// $DATABASE_NAME = 'dbgame_hci';
 
 // Api config
 $RESET_KEY = 'YX17SkJSOCUUfFUmVXBrNF5xSEldQmokOmJXblleb3Y4RyRkPnM0fHx9UCgrJT5D';
 
 // Cross-Origin Resource Sharing Header (disabled if you want to skip this)
 $allowedOrigins = [
-    "https://static-sg.theflavare.com/",
-    "https://theflavare.com/"
+    "https://pestahomecredit.com",
+    "https://www.pestahomecredit.com",
+    "https://pesta.homecredit.co.id",
+    "https://www.pestahomecredit.com/sandbox"
 ];
 
+
 // if (in_array($_SERVER["HTTP_ORIGIN"], $allowedOrigins)) {
-    header("Access-Control-Allow-Origin: " . $_SERVER["HTTP_ORIGIN"]);
+    // header("Access-Control-Allow-Origin: " . $_SERVER["HTTP_ORIGIN"]);
 // }
 
-header('Access-Control-Allow-Methods: GET, POST');
-header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept');
+// header('Access-Control-Allow-Methods: GET, POST');
+// header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept');
 
 // Try and connect using the info above.
 $conn = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);

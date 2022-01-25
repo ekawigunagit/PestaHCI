@@ -3232,6 +3232,10 @@ label {
 	}
 }
 
+iframe html body {
+	background-color: #FFF!important;
+}
+
 @media (max-width : 578px) {
 	.promo-wrapper{
 		margin:90px 0 50px 0;
