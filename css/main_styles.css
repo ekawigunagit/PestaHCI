@@ -37,7 +37,6 @@
 
 * {
 	margin: 0;
-	font-size: 10px !important;
 	padding: 0;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
@@ -3104,6 +3103,7 @@ label {
 }
 
 @media(min-width:1024px) {
+	
 	.main_nav>ul>li>a{
 		font-size: 14px;
 	}
