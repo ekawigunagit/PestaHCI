@@ -1,13 +1,13 @@
 <!-- <img src="./images/promo/promo_img.jpg" class="img-fluid w-100"> -->
-<div class="promo-page">
+<div class="hadiah-page">
     <div class="container">
-        <div class="promo-product">
-            <div class="detail-promo">
+        <div class="hadiah-product">
+            <div class="hadiah-promo">
                 <h2>PESTA Online </h2>
                 <p>Ajukan Pembiayaan dan Ikuti Kompetisi dengan Hadiah Barang Impian Rp99 Ribu!</p>
             </div>
         </div>
-        <div class="detail-text-product">
+        <div class="detail-text-hadiah">
             <br /><br />
             <p>Siap-siap untuk anda yang ingin mendapatkan banyak hadiah senilai jutaan rupiah!</p>
             <p>Melalui program Pesta Online, kamu bisa dapatkan hadiah menarik seperti Sepeda, Furniture, Gadget, dan sebagainya.</p>

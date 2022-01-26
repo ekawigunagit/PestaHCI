@@ -2833,150 +2833,23 @@ label {
 	margin: 0;
 	padding: 0;
 }
+
 /* .gimmick{
 	margin-top: 200px;
 } */
-.gimmick{
-		padding: 80px 0 5px 0;
-	}
-@media(max-width:1100px) {
-		.main_nav>ul>li>a{
-			font-size: 11px !important;
-		}
-		.gimmick{
-			padding: 80px 0 5px 0;
-		}
-		::-webkit-scrollbar-track {
-			background-color: #dcdcdcfc;
-		}
-	
-		::-webkit-scrollbar-thumb {
-			border-radius: 10px;
-			background-color: #aca9a987;
-		}
-	
-		.home-container {
-			display: flex;
-			align-items: center;
-			position: relative;
-			width: 100%;
-			overflow: hidden;
-		}
-	
-		.why-wrapper {
-			position: relative;
-			margin-top: 0;
-			padding: 0 ;
-		}
-	
-		.why-item {
-			padding: 1rem;
-			margin-top: 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			cursor: pointer;
-		}
-		.why-item img {
-			width: 70px;
-		}
-	
-		.promo-page {
-			margin: 160px 0 0 0;
-		}
-	
-		.detail-promo h2 {
-			font-weight: bold;
-			font-size: 16px;
-		}
-	
-		.detail-promo .sosmed {
-			margin: 15px 0 30px 0;
-		}
-	
-		.detail-text-product p {
-			font-size: 14px;
-			color: black;
-			text-align: justify;
-			margin: 0 15px;
-		}
-	
-		.detail-text-product h5 {
-			font-size: large;
-			margin: 10px 20px;
-		}
-	
-		.detail-text-product ol li {
-			font-size: 14px;
-			text-align: justify;
-			margin: 10px 20px 0 30px;
-		}
-	
-		.detail-text-product ul li {
-			font-size: 14px;
-			text-align: justify;
-			list-style: initial;
-			margin: 10px 50px 20px 50px;
-		}
-	
-		.detail-list .bnt-ajukan {
-			margin: 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-	
-		.home-product h2 {
-			font-size: 24px;
-		}
-	
-		.item-brand-list img {
-			width: 110px;
-		}
-	
-		.item-brand-list {
-			text-align: center;
-			padding: 30px 0;
-			cursor: pointer;
-		}
-	
-		.product-lainnya h2 {
-			font-size: 18px;
-		}
-	
-		.detail-list .bnt-ajukan {
-			margin: 30px 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-	
-		}
-	
-		.promo-wrapper {
-			margin:  120px 0 50px 0;
-		}
-	
-		footer .ojk img {
-			width: 200px;
-			margin-top: 10px;
-		}
-	
-		.swiper-button-next,
-		.swiper-button-prev {
-			width: 5px;
-		}
-		.main_nav ul li a {
-			font-size: 10px;
-		}
+.gimmick {
+	padding: 80px 0 5px 0;
 }
-	
-@media(max-width:1024px) {
-	.main_nav>ul>li>a{
-		font-size: 10px !important;
+
+@media(max-width:1100px) {
+	.main_nav>ul>li>a {
+		font-size: 11px !important;
 	}
-	.gimmick{
+
+	.gimmick {
 		padding: 80px 0 5px 0;
 	}
+
 	::-webkit-scrollbar-track {
 		background-color: #dcdcdcfc;
 	}
@@ -2992,13 +2865,12 @@ label {
 		position: relative;
 		width: 100%;
 		overflow: hidden;
-		margin: 130px 0 0 0 !important;
 	}
 
 	.why-wrapper {
 		position: relative;
 		margin-top: 0;
-		padding: 0 ;
+		padding: 0;
 	}
 
 	.why-item {
@@ -3009,12 +2881,13 @@ label {
 		justify-content: center;
 		cursor: pointer;
 	}
+
 	.why-item img {
 		width: 70px;
 	}
 
 	.promo-page {
-		margin: 20px 0 0 0;
+		margin: 160px 0 0 0;
 	}
 
 	.detail-promo h2 {
@@ -3085,7 +2958,7 @@ label {
 	}
 
 	.promo-wrapper {
-		margin:  120px 0 50px 0;
+		margin: 120px 0 50px 0;
 	}
 
 	footer .ojk img {
@@ -3097,17 +2970,215 @@ label {
 	.swiper-button-prev {
 		width: 5px;
 	}
+
+	.main_nav ul li a {
+		font-size: 10px;
+	}
+}
+
+@media(max-width:1024px) {
+	.main_nav>ul>li>a {
+		font-size: 10px !important;
+	}
+
+	.gimmick {
+		padding: 80px 0 5px 0;
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: #dcdcdcfc;
+	}
+
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background-color: #aca9a987;
+	}
+
+	.home-container {
+		display: flex;
+		align-items: center;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+		margin: 130px 0 0 0 !important;
+	}
+
+	.why-wrapper {
+		position: relative;
+		margin-top: 0;
+		padding: 0;
+	}
+
+	.why-item {
+		padding: 1rem;
+		margin-top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	}
+
+	.why-item img {
+		width: 70px;
+	}
+
+	.promo-page {
+		margin: 20px 0 0 0;
+	}
+
+	.detail-promo h2 {
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.detail-promo .sosmed {
+		margin: 15px 0 30px 0;
+	}
+
+	.detail-text-product p {
+		font-size: 14px;
+		color: black;
+		text-align: justify;
+		margin: 0 15px;
+	}
+
+	.detail-text-product h5 {
+		font-size: large;
+		margin: 10px 20px;
+	}
+
+	.detail-text-product ol li {
+		font-size: 14px;
+		text-align: justify;
+		margin: 10px 20px 0 30px;
+	}
+
+	.detail-text-product ul li {
+		font-size: 14px;
+		text-align: justify;
+		list-style: initial;
+		margin: 10px 50px 20px 50px;
+	}
+
+	.detail-list .bnt-ajukan {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.hadiah-page {
+		color: black;
+		font-size: 14px;
+		padding: 0 20px;
+	}
+	.hadiah-game {
+		margin-top: 0;
+		text-align: center;
+	}
+	.hadiah-game h2 {
+		font-size: 16px;
+		font-weight: bold;
+	}
+	.hadiah-promo {
+		margin-top: 140px;
+
+		text-align: center;
+	}
+
+	.hadiah-promo h2 {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.detail-text-hadiah {
+		margin: 0;
+		text-align: justify;
+		padding: 0 0 10px 0;
+	}
+
+	.hadiah-page .detail-text-hadiah p {
+		padding: 0;
+		margin: 0;
+		color: black;
+	}
+
+	.hadiah-page .hadiah-promo p {
+		color: black;
+	}
+
+	.detail-text-hadiah .detail-list {
+		margin: 0 10px;
+	}
+
+	.detail-text-hadiah .detail-list ol {
+		margin: 0;
+	}
+
+	.detail-text-hadiah .detail-list ol li {
+		text-align: justify;
+		margin-top: 20px;
+	}
+
+	.detail-text-hadiah .detail-list ul li {
+		list-style: disc;
+		text-align: left;
+		margin: 10px 30px;
+		padding: 5px 0px;
+	}
+
+	.home-product h2 {
+		font-size: 24px;
+	}
+
+	.item-brand-list img {
+		width: 110px;
+	}
+
+	.item-brand-list {
+		text-align: center;
+		padding: 30px 0;
+		cursor: pointer;
+	}
+
+	.product-lainnya h2 {
+		font-size: 18px;
+	}
+
+	.detail-list .bnt-ajukan {
+		margin: 30px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+	}
+
+	.promo-wrapper {
+		margin: 120px 0 50px 0;
+	}
+
+	footer .ojk img {
+		width: 200px;
+		margin-top: 10px;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		width: 5px;
+	}
+
 	.main_nav ul li a {
 		font-size: 10px;
 	}
 }
 
 @media(min-width:1024px) {
-	
-	.main_nav>ul>li>a{
+
+	.main_nav>ul>li>a {
 		font-size: 14px;
 	}
-	.gimmick{
+
+	.gimmick {
 		padding: 80px 0 5px 0;
 	}
 
@@ -3160,7 +3231,7 @@ label {
 	/* .item-brand {
 		margin-bottom: 20px;
 	} */
-	
+
 	.item-brand-list {
 		text-align: center;
 		padding: 30px 0;
@@ -3225,6 +3296,67 @@ label {
 	.home-product h2 {
 		font-size: 24px;
 	}
+	
+	.hadiah-page {
+		color: black;
+		font-size: 16px;
+		padding: 0 50px;
+	}
+
+	.hadiah-promo {
+		margin-top: 160px;
+		text-align: center;
+	}
+	.hadiah-game {
+		margin-top: 0;
+		text-align: center;
+	}
+	.hadiah-game h2 {
+		font-size: 20px;
+		font-weight: bold;
+	}	
+	.hadiah-promo h2 {
+		font-size: 20px;
+		font-weight: bold;
+	}	
+	.detail-text-hadiah h5 {
+		font-size: 18px;
+	}
+	.detail-text-hadiah {
+		margin: 0;
+		text-align: justify;
+		padding: 0 0 50px 0;
+	}
+
+	.hadiah-page .detail-text-hadiah p {
+		padding: 0;
+		margin: 0;
+		color: black;
+	}
+
+	.hadiah-page .hadiah-promo p {
+		color: black;
+	}
+
+	.detail-text-hadiah .detail-list {
+		margin: 0 15px;
+	}
+
+	.detail-text-hadiah .detail-list ol {
+		margin: 0 ;
+	}
+
+	.detail-text-hadiah .detail-list ol li {
+		text-align: justify;
+		margin-top: 20px;
+	}
+
+	.detail-text-hadiah .detail-list ul li {
+		list-style: disc;
+		text-align: left;
+		margin: 10px 20px;
+		padding: 5px 0px;
+	}
 
 	footer .ojk img {
 		width: 300px;
@@ -3233,22 +3365,25 @@ label {
 }
 
 iframe html body {
-	background-color: #FFF!important;
+	background-color: #FFF !important;
 }
 
 @media (max-width : 578px) {
-	.promo-wrapper{
-		margin:90px 0 50px 0;
+	.promo-wrapper {
+		margin: 90px 0 50px 0;
 	}
-	.gimmick{
-	
+
+	.gimmick {
+
 		padding: 80px 0 5px 0;
 	}
-	.gimmick iframe{
+
+	.gimmick iframe {
 		width: 100%;
-		height:500px;
-	    border:none;
+		height: 500px;
+		border: none;
 	}
+
 	::-webkit-scrollbar-track {
 		background-color: #dcdcdcfc;
 	}
@@ -3262,7 +3397,7 @@ iframe html body {
 		display: flex;
 		align-items: center;
 		min-height: 110px;
-		margin: 80px 0 0 0!important;
+		margin: 80px 0 0 0 !important;
 	}
 
 	.why-item-all {
@@ -3313,7 +3448,7 @@ iframe html body {
 
 	.item-brand-list {
 		padding: 30px 0;
-	
+
 	}
 
 	.item-brand-list img {
@@ -3321,6 +3456,7 @@ iframe html body {
 		padding: 10px 5px;
 		cursor: pointer;
 	}
+
 	.active-logo {
 		cursor: pointer;
 		padding: 30px 0;
@@ -3391,7 +3527,7 @@ iframe html body {
 	.promo-page {
 		margin: 20px 0 0 0;
 	}
-	
+
 	.promo-card-wrapper {
 
 		margin: 80px 0 40px 0;
@@ -3403,6 +3539,70 @@ iframe html body {
 
 	.QR_Scan img {
 		width: 250px;
+	}
+
+	.hadiah-page {
+		color: black;
+		font-size: 13px;
+		padding: 0 20px;
+	}
+
+	.hadiah-game {
+		margin-top: 0;
+		text-align: center;
+	}
+	.hadiah-game h2 {
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	.hadiah-promo {
+		margin-top: 120px;
+		text-align: center;
+	}
+
+	.hadiah-promo h2 {
+		font-size: 14px;
+		font-weight: bold;
+	}
+
+	.detail-text-hadiah {
+		margin: 0;
+		padding-top: 0;
+	}
+
+	.hadiah-page .detail-text-hadiah p {
+		padding: 0;
+		margin: 0;
+		color: black;
+	}
+
+	.hadiah-page .hadiah-promo p {
+		color: black;
+	}
+
+	.detail-text-hadiah {
+		text-align: justify;
+	}
+
+	.detail-text-hadiah .detail-list {
+		margin: 0 10px;
+	}
+
+	.detail-text-hadiah .detail-list ol {
+		margin: 0;
+	}
+
+	.detail-text-hadiah .detail-list ol li {
+		text-align: justify;
+		margin-top: 20px;
+	}
+
+	.detail-text-hadiah .detail-list ul li {
+		list-style: disc;
+		text-align: left;
+		margin: 10px 25px;
+		padding: 5 0px;
 	}
 
 	footer {
@@ -3455,6 +3655,7 @@ iframe html body {
 		grid-template-rows: 25% 25% 25% 25%;
 	}
 }
+
 /* 
 .item-brand-list img {
 	width: 95px;
@@ -3624,7 +3825,7 @@ footer .sosmed img {
 }
 
 @media (max-width : 375px) {
-	.gimmick{
+	.gimmick {
 		width: 100%;
 		height: 540px;
 		padding: 5px 0 10px 0;
@@ -3632,7 +3833,7 @@ footer .sosmed img {
 }
 
 @media (max-width : 320px) {
-	.gimmick{
+	.gimmick {
 		width: 100%;
 		height: 540px;
 		padding: 20px 0 0 0;
