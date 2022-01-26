@@ -36,7 +36,7 @@
                              
                             </ul>
                         </li>
-                        <li>Peserta wajib mengunduh aplikasi <strong>My Home Credit</strong> (tersedia di <a href="https://play.google.com/store/apps/details?id=id.co.myhomecredit&hl=en&gl=US" class="text-danger">Playstore</a> ataupun <a href="https://apps.apple.com/id/app/my-home-credit-indonesia/id1313113736?c=mobile&pid=insider" class="text-succes"> App Store</a>) dan aktivasikan <strong>Home Credit Pay</strong></li>
+                        <li>Peserta wajib mengunduh aplikasi <strong>My Home Credit</strong> (tersedia di <a href="https://play.google.com/store/apps/details?id=id.co.myhomecredit&hl=en&gl=US" class="text-danger">Playstore</a> ataupun <a href="https://apps.apple.com/id/app/my-home-credit-indonesia/id1313113736?c=mobile&pid=insider" class="text-danger"> App Store</a>) dan aktivasikan <strong>Home Credit Pay</strong></li>
                         <li>Pemenang akan ditentukan dari nilai tertinggi di peringkat permainan setiap akhir bulan selama periode berlangsung, yaitu pada tanggal <strong>31 Januari 2022 & 28 Februari 2022</strong> </li>
                         <li>Pemenang akan diumumkan 3 hari kemudian, yaitu pada tanggal <strong>3 Februari 2022 & 3 Maret 2022</strong> melalui Instagram Story Home Credit Indonesia @homecreditid</li>
                         <li>Pemenang akan dihubungi oleh tim Home Credit Indonesia melalui DM Instagram</li>
