@@ -7,17 +7,17 @@
                 <div class="col">
                     <div class="header_content d-flex flex-row align-items-center justify-content-start">
                         <div class="logo">
-                            <a href="index.php">
+                            <a href="<?php echo $baseURL; ?>">
                                 <img src="images/logoPesta.png">
                             </a>
                         </div>
                         <nav class="main_nav">
                             <ul>
-                                <li class="active"><a href="index.php">Home</a>
+                                <li class="active"><a href="<?php echo $baseURL; ?>">Home</a>
 
                                 </li>
                                 <li class="hassubs">
-                                    <a href="index.php?page=productList">Categories</a>
+                                    <a href="">Categories</a>
                                     <ul>
                                         <?php
                                         $data_category = "SELECT *, category_products.id AS ctID FROM category_products LEFT JOIN products ON category_products.id = products.category_product_id WHERE category_products.status=1 AND products.id IS NOT NULL 
@@ -34,7 +34,7 @@
                                     </ul>
                                 </li>
                                 <li class="hassubs">
-                                    <a href="index.php?page=productList">Cities</a>
+                                    <a href="">Cities</a>
                                     <ul>
                                         <?php
                                         $data_menucities = "SELECT * FROM provinces WHERE status=1 ORDER BY province_name ASC";
@@ -42,14 +42,14 @@
 
                                         while ($show_data_menucities = mysqli_fetch_array($query_data_menucities)) {
                                         ?>
-                                            <li class="Cities"><a href="index.php"><?php echo $show_data_menucities['province_name']; ?></a></li>
+                                            <li class="Cities"><a href="<?php echo $baseURL; ?>"><?php echo $show_data_menucities['province_name']; ?></a></li>
                                         <?php
                                         }
                                         ?>
                                     </ul>
                                 </li>
-                                <li><a href="index.php?page=promoPage">Our Promo</a></li>
-                                <li><a href="index.php?page=hadiahPage">Hadiah Pesta</a></li>
+                                <li><a href="?page=promoPage">Our Promo</a></li>
+                                <li><a href="?page=hadiahPage">Hadiah Pesta</a></li>
                                 <li><a href="?page=gimmick">Game Pesta</a></li>
                             </ul>
                         </nav>
@@ -133,7 +133,7 @@
             </div>
             <ul class="page_menu_nav menu_mm">
                 <li class="page_menu_item menu_mm">
-                    <a href="index.php">Home<i class="fa fa-angle-down"></i></a>
+                    <a href="<?php echo $baseURL; ?>">Home<i class="fa fa-angle-down"></i></a>
                 </li>
                 <li class="page_menu_item has-children menu_mm">
                     <a href="#">Categories<i class="fa fa-angle-down"></i></a>
@@ -144,7 +144,7 @@
 
                         while ($show_data_menucategory = mysqli_fetch_array($query_data_menucategory)) {
                         ?>
-                            <li class="page_menu_item menu_mm"><a href="index.php"><?php echo $show_data_menucategory['category_name']; ?><i class="fa fa-angle-down"></i></a></li>
+                            <li class="page_menu_item menu_mm"><a href="<?php echo $baseURL; ?>"><?php echo $show_data_menucategory['category_name']; ?><i class="fa fa-angle-down"></i></a></li>
                         <?php
                         }
                         ?>
@@ -159,14 +159,14 @@
 
                         while ($show_data_menucities = mysqli_fetch_array($query_data_menucities)) {
                         ?>
-                            <li class="page_menu_item menu_mm"><a href="index.php"><?php echo $show_data_menucities['province_name']; ?><i class="fa fa-angle-down"></i></a></li>
+                            <li class="page_menu_item menu_mm"><a href="<?php echo $baseURL; ?>"><?php echo $show_data_menucities['province_name']; ?><i class="fa fa-angle-down"></i></a></li>
                         <?php
                         }
                         ?>
                     </ul>
                 </li>
-                <li class="page_menu_item menu_mm"><a href="index.php?page=promoPage">Our Promo<i class="fa fa-angle-down"></i></a></li>
-                <li class="page_menu_item menu_mm"><a href="index.php?page=hadiahPage">Hadiah Pesta<i class="fa fa-angle-down"></i></a></li>
+                <li class="page_menu_item menu_mm"><a href="?page=promoPage">Our Promo<i class="fa fa-angle-down"></i></a></li>
+                <li class="page_menu_item menu_mm"><a href="?page=hadiahPage">Hadiah Pesta<i class="fa fa-angle-down"></i></a></li>
                 <li class="page_menu_item menu_mm"><a href="?page=gimmick">Game Pesta<i class="fa fa-angle-down"></i></a></li>
             </ul>
         </div>

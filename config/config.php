@@ -10,6 +10,13 @@ $token = "eyJpdiI6Iisrd21vTXNHd2V3b09KVVFnNXVWQWc9PSIsInZhbHVlIjoiVS9zUWNsRFJjQ0
 // $databaseUsername = 'usr_prod';
 // $databasePassword = 'db@hc!k3c3';
 
+
+if(stripos($_SERVER['HTTP_HOST'], "localhost") !== FALSE) {
+	$baseURL = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . "/hciproject/pestaHCI/"; //Local
+} else {
+	$baseURL = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] . "/"; //Live
+}
+
 $koneksi = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName);
 
 // Check connection
