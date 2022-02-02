@@ -12,12 +12,7 @@
 	<link rel="apple-touch-icon" sizes="180x170" href="icons/icon-16.png">
 	<link rel="icon" type="image/png" href="icons/icon-16.png">
 
-<link rel="stylesheet" href="style.css?t=<?php echo time(); ?>">
-<style>
-	body {
-		background-color: #fff;
-	}
-</style>
+<link rel="stylesheet" href="style.css">
 
 </head>
 <body>
