@@ -5,13 +5,19 @@
 <title>Hurry Space Jam</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
-<meta name="generator" content="The Flavare">
-
+<meta name="generator" content="">
+	<meta name="author" content="theflavare">
+	<meta name="description" content="Hurry Space Jam Game supported by The Flavare">
 	<link rel="manifest" href="appmanifest.json">
 	<link rel="apple-touch-icon" sizes="180x170" href="icons/icon-16.png">
 	<link rel="icon" type="image/png" href="icons/icon-16.png">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?t=<?php echo time(); ?>">
+<style>
+	body {
+		background-color: #fff;
+	}
+</style>
 
 </head>
 <body>
