@@ -722,7 +722,7 @@ section {
 
 .page_menu_item .page_menu_selection {
 	overflow-y: scroll;
-	height: auto;
+	height: 0;
 	max-height: 200px;
 }
 
