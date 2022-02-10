@@ -3244,7 +3244,7 @@ label {
 	}
 
 	.promo-page {
-		margin: 20px 0 0 0;
+		margin: 20px 0;
 	}
 
 	.detail-promo h2 {
@@ -3290,7 +3290,8 @@ label {
 	}
 
 	.promo-wrapper {
-		margin-top: 10%;
+		padding: 0;
+		margin: 120px 0 100px 0;
 	}
 
 	.home-product h2 {
@@ -3693,6 +3694,7 @@ iframe html body {
 
 .detail-promo {
 	text-align: center;
+	margin-top: 50px;
 }
 
 .detail-promo .sosmed img {
